@@ -2,7 +2,7 @@ import { Building2, Compass, Code2, Sparkles, ArrowUpRight } from "lucide-react"
 import type { CaseItem, Category } from "@/data/cases";
 
 const categoryIcon: Record<Category, React.ComponentType<{ className?: string }>> = {
-  "Empresas": Building2,
+  "Segmentos": Building2,
   "Discovery & Design": Compass,
   "Agile Development": Code2,
   "Katalysis": Sparkles,
