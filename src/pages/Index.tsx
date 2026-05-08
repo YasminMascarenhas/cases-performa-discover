@@ -30,6 +30,19 @@ const Index = () => {
     agile: "Agile Development",
   };
 
+  useEffect(() => {
+    const applyHash = () => {
+      const key = window.location.hash.replace("#", "");
+      if (key && sectionMap[key]) {
+        setActiveCategory(sectionMap[key]);
+        document.getElementById("results")?.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+    return () => window.removeEventListener("hashchange", applyHash);
+  }, []);
+
   return (
     <div id="top" className="min-h-screen bg-background">
       <Header />
