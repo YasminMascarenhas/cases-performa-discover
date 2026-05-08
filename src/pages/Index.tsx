@@ -113,7 +113,7 @@ const Index = () => {
       </section>
 
       {/* RESULTS */}
-      <section className="container mx-auto px-6 py-16">
+      <section id="results" className="container mx-auto px-6 py-16 scroll-mt-20">
         <div className="mb-8 flex items-end justify-between">
           <div>
             <h2 className="text-2xl font-semibold text-foreground">
