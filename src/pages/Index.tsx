@@ -127,10 +127,6 @@ const Index = () => {
           </div>
         )}
 
-        {/* Anchor sections */}
-        {Object.entries(sectionMap).map(([id, cat]) => (
-          <div key={id} id={id} className="scroll-mt-20" />
-        ))}
       </section>
 
       {/* FOOTER */}
