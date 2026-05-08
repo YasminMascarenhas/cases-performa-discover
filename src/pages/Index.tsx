@@ -121,12 +121,22 @@ const Index = () => {
               {activeCategory ?? "Todos os cases"}
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              {filtered.length} {filtered.length === 1 ? "case encontrado" : "cases encontrados"}
+              {activeCategory === "Segmentos"
+                ? `${segments.length} segmentos`
+                : `${filtered.length} ${filtered.length === 1 ? "case encontrado" : "cases encontrados"}`}
             </p>
           </div>
         </div>
 
-        {filtered.length === 0 ? (
+        {activeCategory === "Segmentos" ? (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {segments
+              .filter((s) => !query.trim() || s.name.toLowerCase().includes(query.trim().toLowerCase()))
+              .map((s) => (
+                <SegmentCard key={s.name} name={s.name} icon={s.icon} />
+              ))}
+          </div>
+        ) : filtered.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border bg-card p-16 text-center">
             <p className="text-base font-medium text-foreground">Nenhum case encontrado</p>
             <p className="mt-1 text-sm text-muted-foreground">
