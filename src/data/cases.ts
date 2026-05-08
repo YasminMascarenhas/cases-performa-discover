@@ -1,0 +1,110 @@
+export type Category = "Empresas" | "Discovery & Design" | "Agile Development" | "Katalysis";
+
+export interface CaseItem {
+  id: string;
+  title: string;
+  company: string;
+  category: Category;
+  solution: string;
+  method: string;
+  description: string;
+  tags: string[];
+}
+
+export const categories: Category[] = [
+  "Empresas",
+  "Discovery & Design",
+  "Agile Development",
+  "Katalysis",
+];
+
+export const cases: CaseItem[] = [
+  {
+    id: "1",
+    title: "Plataforma de Atendimento Omnichannel",
+    company: "Banco Topázio",
+    category: "Agile Development",
+    solution: "Plataforma omnichannel",
+    method: "Scrum + DevOps",
+    description:
+      "Desenvolvimento de uma plataforma única para integrar canais digitais de atendimento, reduzindo o tempo médio de resposta em 47%.",
+    tags: ["Squad dedicado", "Cloud Native", "Microsserviços"],
+  },
+  {
+    id: "2",
+    title: "Discovery de Produto para Seguros Digitais",
+    company: "Porto Seguro",
+    category: "Discovery & Design",
+    solution: "Discovery & Design Sprint",
+    method: "Design Thinking + Lean UX",
+    description:
+      "Mapeamento de jornada e prototipação de novo produto digital para o segmento de seguros residenciais com validação junto a 120 usuários.",
+    tags: ["Pesquisa", "Prototipação", "User Research"],
+  },
+  {
+    id: "3",
+    title: "Katalysis IA para Operações de Crédito",
+    company: "Sicredi",
+    category: "Katalysis",
+    solution: "IA Generativa aplicada",
+    method: "RAG + LLMs proprietários",
+    description:
+      "Implantação de copiloto de IA para análise de crédito, automatizando triagem documental e gerando insights em tempo real.",
+    tags: ["IA Generativa", "RAG", "Automação"],
+  },
+  {
+    id: "4",
+    title: "Modernização Core Bancário",
+    company: "BV Financeira",
+    category: "Empresas",
+    solution: "Modernização legada",
+    method: "Strangler Pattern + APIs",
+    description:
+      "Migração faseada de mainframe para arquitetura cloud-first com zero downtime e ganho de 60% em performance transacional.",
+    tags: ["Cloud", "API First", "Refactoring"],
+  },
+  {
+    id: "5",
+    title: "Design System Corporativo",
+    company: "Raia Drogasil",
+    category: "Discovery & Design",
+    solution: "Design System",
+    method: "Atomic Design + Tokens",
+    description:
+      "Construção de design system unificado para 12 produtos digitais, acelerando entregas em 3x e padronizando a experiência.",
+    tags: ["Design System", "Acessibilidade", "Tokens"],
+  },
+  {
+    id: "6",
+    title: "Squad Ágil para E-commerce B2B",
+    company: "Tigre",
+    category: "Agile Development",
+    solution: "Squad full-stack",
+    method: "Kanban + CI/CD",
+    description:
+      "Squad multidisciplinar dedicado à evolução do e-commerce B2B, com releases semanais e crescimento de 38% no GMV.",
+    tags: ["E-commerce", "B2B", "CI/CD"],
+  },
+  {
+    id: "7",
+    title: "Assistente Inteligente de RH",
+    company: "Vale",
+    category: "Katalysis",
+    solution: "Chatbot com IA",
+    method: "NLP + LLM Fine-tuning",
+    description:
+      "Assistente conversacional para autoatendimento de colaboradores, resolvendo 72% das demandas sem intervenção humana.",
+    tags: ["NLP", "Chatbot", "Self-service"],
+  },
+  {
+    id: "8",
+    title: "Transformação Digital Corporativa",
+    company: "Grupo Pão de Açúcar",
+    category: "Empresas",
+    solution: "Transformação digital",
+    method: "Agile at Scale + OKRs",
+    description:
+      "Programa multianual de transformação digital com reestruturação de tribos, métricas e cultura orientada a produto.",
+    tags: ["Cultura", "Tribos", "OKRs"],
+  },
+];
