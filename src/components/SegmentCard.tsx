@@ -7,11 +7,11 @@ interface Props {
 
 export const SegmentCard = ({ name, icon: Icon }: Props) => {
   return (
-    <article className="group flex aspect-square flex-col items-center justify-center gap-5 rounded-2xl border border-border bg-card p-8 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated">
-      <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10 transition-colors group-hover:bg-primary/15">
-        <Icon className="h-10 w-10 text-primary" strokeWidth={1.75} />
+    <article className="group flex aspect-[5/3] flex-row items-center justify-start gap-4 rounded-xl border border-border bg-card px-5 py-4 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 transition-colors group-hover:bg-primary/15">
+        <Icon className="h-6 w-6 text-primary" strokeWidth={1.75} />
       </div>
-      <h3 className="text-center text-2xl font-semibold leading-tight text-foreground">
+      <h3 className="text-lg font-semibold leading-tight text-foreground">
         {name}
       </h3>
     </article>
