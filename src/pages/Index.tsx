@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
-import { cases, categories, type Category } from "@/data/cases";
+import { SegmentCard } from "@/components/SegmentCard";
+import { cases, categories, segments, type Category } from "@/data/cases";
 
 const Index = () => {
   const [query, setQuery] = useState("");

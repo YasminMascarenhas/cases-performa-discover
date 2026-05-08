@@ -11,6 +11,24 @@ export interface CaseItem {
   tags: string[];
 }
 
+import { Sprout, GraduationCap, Gamepad2, Factory, Landmark, HeartPulse, Briefcase, ShoppingBag, type LucideIcon } from "lucide-react";
+
+export interface Segment {
+  name: string;
+  icon: LucideIcon;
+}
+
+export const segments: Segment[] = [
+  { name: "Agro", icon: Sprout },
+  { name: "Educação", icon: GraduationCap },
+  { name: "E-games", icon: Gamepad2 },
+  { name: "Indústria", icon: Factory },
+  { name: "Financeiro", icon: Landmark },
+  { name: "Saúde", icon: HeartPulse },
+  { name: "Serviços", icon: Briefcase },
+  { name: "Varejo", icon: ShoppingBag },
+];
+
 export const categories: Category[] = [
   "Segmentos",
   "Discovery & Design",
