@@ -24,7 +24,7 @@ const Index = () => {
   }, [query, activeCategory]);
 
   const sectionMap: Record<string, Category> = {
-    empresas: "Empresas",
+    empresas: "Segmentos",
     katalysis: "Katalysis",
     discovery: "Discovery & Design",
     agile: "Agile Development",

@@ -1,4 +1,4 @@
-export type Category = "Empresas" | "Discovery & Design" | "Agile Development" | "Katalysis";
+export type Category = "Segmentos" | "Discovery & Design" | "Agile Development" | "Katalysis";
 
 export interface CaseItem {
   id: string;
@@ -12,7 +12,7 @@ export interface CaseItem {
 }
 
 export const categories: Category[] = [
-  "Empresas",
+  "Segmentos",
   "Discovery & Design",
   "Agile Development",
   "Katalysis",
@@ -56,7 +56,7 @@ export const cases: CaseItem[] = [
     id: "4",
     title: "Modernização Core Bancário",
     company: "BV Financeira",
-    category: "Empresas",
+    category: "Segmentos",
     solution: "Modernização legada",
     method: "Strangler Pattern + APIs",
     description:
@@ -100,7 +100,7 @@ export const cases: CaseItem[] = [
     id: "8",
     title: "Transformação Digital Corporativa",
     company: "Grupo Pão de Açúcar",
-    category: "Empresas",
+    category: "Segmentos",
     solution: "Transformação digital",
     method: "Agile at Scale + OKRs",
     description:
