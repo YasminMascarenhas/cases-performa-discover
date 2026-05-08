@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
-import { cases, categories, type Category } from "@/data/cases";
+import { SegmentCard } from "@/components/SegmentCard";
+import { cases, categories, segments, type Category } from "@/data/cases";
 
 const Index = () => {
   const [query, setQuery] = useState("");
@@ -120,12 +121,22 @@ const Index = () => {
               {activeCategory ?? "Todos os cases"}
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              {filtered.length} {filtered.length === 1 ? "case encontrado" : "cases encontrados"}
+              {activeCategory === "Segmentos"
+                ? `${segments.length} segmentos`
+                : `${filtered.length} ${filtered.length === 1 ? "case encontrado" : "cases encontrados"}`}
             </p>
           </div>
         </div>
 
-        {filtered.length === 0 ? (
+        {activeCategory === "Segmentos" ? (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {segments
+              .filter((s) => !query.trim() || s.name.toLowerCase().includes(query.trim().toLowerCase()))
+              .map((s) => (
+                <SegmentCard key={s.name} name={s.name} icon={s.icon} />
+              ))}
+          </div>
+        ) : filtered.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border bg-card p-16 text-center">
             <p className="text-base font-medium text-foreground">Nenhum case encontrado</p>
             <p className="mt-1 text-sm text-muted-foreground">
