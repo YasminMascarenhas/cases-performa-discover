@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
