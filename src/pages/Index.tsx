@@ -86,7 +86,7 @@ const Index = () => {
             <div className="mt-6 flex flex-wrap justify-center gap-2">
               <button
                 onClick={() => setActiveCategory(null)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
                   activeCategory === null
                     ? "bg-primary text-primary-foreground shadow-soft"
                     : "bg-surface text-foreground/80 hover:bg-surface/70 hover:text-foreground"
@@ -98,7 +98,7 @@ const Index = () => {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
                     activeCategory === cat
                       ? "bg-primary text-primary-foreground shadow-soft"
                       : "bg-surface text-foreground/80 hover:bg-surface/70 hover:text-foreground"
