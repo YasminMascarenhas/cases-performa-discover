@@ -11,9 +11,11 @@ export interface CaseItem {
   description: string;
   tags: string[];
   coverImage?: string;
+  logo?: string;
 }
 
 import { Sprout, GraduationCap, Gamepad2, Factory, Landmark, HeartPulse, Briefcase, ShoppingBag, type LucideIcon } from "lucide-react";
+import axiaAgroLogo from "@/assets/axia-agro-logo.png";
 
 export interface SegmentProject {
   company: string;
@@ -65,8 +67,7 @@ export const cases: CaseItem[] = [
     description:
       "Solução digital gratuita que conecta consultores e produtores à oferta certa de nutrição animal, gerando mais de R$100 milhões em oportunidades.",
     tags: ["Agro", "Mobile App", "Nutrição Animal"],
-    coverImage:
-      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
+    logo: axiaAgroLogo,
   },
   {
     id: "2",
