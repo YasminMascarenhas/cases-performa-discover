@@ -19,7 +19,7 @@ export const CaseCard = ({ item }: Props) => {
   const content = (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated">
       {item.logo ? (
-        <div className="flex h-24 w-full items-center justify-center bg-white px-6">
+        <div className="flex h-24 w-full items-center justify-center bg-surface px-6">
           <img
             src={item.logo}
             alt={`${item.company} logo`}
