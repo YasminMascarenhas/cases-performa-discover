@@ -41,10 +41,20 @@ export const SegmentCard = ({ name, icon: Icon, projects, expanded, onToggle }: 
           {projects!.map((p) => (
             <div
               key={`${p.company}-${p.title}`}
-              className="rounded-lg border border-border bg-card px-4 py-3 shadow-soft transition-colors hover:border-primary/40"
+              className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3 shadow-soft transition-colors hover:border-primary/40"
             >
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">{p.company}</p>
-              <p className="mt-0.5 text-sm font-medium text-foreground">{p.title}</p>
+              <div className="min-w-0 flex-1">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">{p.company}</p>
+                <p className="mt-0.5 text-sm font-medium text-foreground">{p.title}</p>
+              </div>
+              {p.logo && (
+                <img
+                  src={p.logo}
+                  alt={`${p.company} logo`}
+                  loading="lazy"
+                  className="h-10 w-10 shrink-0 object-contain"
+                />
+              )}
             </div>
           ))}
         </div>

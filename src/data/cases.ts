@@ -16,10 +16,13 @@ export interface CaseItem {
 
 import { Sprout, GraduationCap, Gamepad2, Factory, Landmark, HeartPulse, Briefcase, ShoppingBag, type LucideIcon } from "lucide-react";
 import axiaAgroLogo from "@/assets/axia-agro-logo.png";
+import yaraLogo from "@/assets/yara-logo.png";
+import eurochemLogo from "@/assets/eurochem-logo.png";
 
 export interface SegmentProject {
   company: string;
   title: string;
+  logo?: string;
 }
 
 export interface Segment {
@@ -33,10 +36,10 @@ export const segments: Segment[] = [
     name: "Agro",
     icon: Sprout,
     projects: [
-      { company: "Axia Agro", title: "App protocolo engorda" },
-      { company: "Axia Agro", title: "IA Strategy (Katalysis)" },
-      { company: "Eurochem", title: "Portal Tá Na Mão" },
-      { company: "Yara", title: "Portal Automatizado" },
+      { company: "Axia Agro", title: "App protocolo engorda", logo: axiaAgroLogo },
+      { company: "Axia Agro", title: "IA Strategy (Katalysis)", logo: axiaAgroLogo },
+      { company: "Eurochem", title: "Portal Tá Na Mão", logo: eurochemLogo },
+      { company: "Yara", title: "Portal Automatizado", logo: yaraLogo },
     ],
   },
   { name: "Educação", icon: GraduationCap },
