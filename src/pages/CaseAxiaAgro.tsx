@@ -81,8 +81,8 @@ const CaseAxiaAgro = () => {
       {/* DESAFIO + SOLUÇÃO + MOCKUP */}
       <section className="bg-surface/50 border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid gap-10 lg:grid-cols-[1fr_320px] lg:items-center">
-            <div className="grid gap-6 sm:grid-cols-2 max-w-2xl">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div className="grid gap-6 sm:grid-cols-2">
               <div className="flex flex-col">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
                   <Target className="h-7 w-7 text-primary" />
