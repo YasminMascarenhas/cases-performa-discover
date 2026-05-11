@@ -2,7 +2,7 @@ import { ArrowLeft, Factory, Store, Users, Target, Lightbulb, TrendingUp, Dollar
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import axiaLogo from "@/assets/axia-agro-logo.png";
-import axiaApp from "@/assets/axia-agro-app.png";
+import axiaApp from "@/assets/axia-agro-mockup.png";
 
 const stats = [
   { icon: Factory, value: "2", label: "Indústrias" },
