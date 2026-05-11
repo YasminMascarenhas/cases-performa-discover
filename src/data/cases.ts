@@ -2,6 +2,7 @@ export type Category = "Segmentos" | "Discovery & Design" | "Agile Development" 
 
 export interface CaseItem {
   id: string;
+  slug?: string;
   title: string;
   company: string;
   category: Category;
@@ -9,6 +10,7 @@ export interface CaseItem {
   method: string;
   description: string;
   tags: string[];
+  coverImage?: string;
 }
 
 import { Sprout, GraduationCap, Gamepad2, Factory, Landmark, HeartPulse, Briefcase, ShoppingBag, type LucideIcon } from "lucide-react";
@@ -54,14 +56,17 @@ export const categories: Category[] = [
 export const cases: CaseItem[] = [
   {
     id: "1",
-    title: "Plataforma de Atendimento Omnichannel",
-    company: "Banco Topázio",
-    category: "Agile Development",
-    solution: "Plataforma omnichannel",
-    method: "Scrum + DevOps",
+    slug: "axia-agro",
+    title: "App Protocolo de Engorda",
+    company: "Axia Agro",
+    category: "Segmentos",
+    solution: "Super App de Nutrição Animal",
+    method: "Discovery + Agile Development",
     description:
-      "Desenvolvimento de uma plataforma única para integrar canais digitais de atendimento, reduzindo o tempo médio de resposta em 47%.",
-    tags: ["Squad dedicado", "Cloud Native", "Microsserviços"],
+      "Solução digital gratuita que conecta consultores e produtores à oferta certa de nutrição animal, gerando mais de R$100 milhões em oportunidades.",
+    tags: ["Agro", "Mobile App", "Nutrição Animal"],
+    coverImage:
+      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "2",
