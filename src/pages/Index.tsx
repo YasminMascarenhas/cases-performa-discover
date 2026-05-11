@@ -8,6 +8,7 @@ import { cases, categories, segments, type Category } from "@/data/cases";
 const Index = () => {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
+  const [expandedSegment, setExpandedSegment] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
