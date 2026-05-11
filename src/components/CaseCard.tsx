@@ -18,7 +18,16 @@ export const CaseCard = ({ item }: Props) => {
 
   const content = (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated">
-      {item.coverImage && (
+      {item.logo ? (
+        <div className="flex h-24 w-full items-center justify-center bg-white px-6">
+          <img
+            src={item.logo}
+            alt={`${item.company} logo`}
+            loading="lazy"
+            className="max-h-16 w-auto object-contain"
+          />
+        </div>
+      ) : item.coverImage ? (
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface">
           <img
             src={item.coverImage}
@@ -27,7 +36,7 @@ export const CaseCard = ({ item }: Props) => {
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
-      )}
+      ) : null}
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-4 flex items-center justify-between">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-surface px-3 py-1 text-xs font-medium text-muted-foreground">
