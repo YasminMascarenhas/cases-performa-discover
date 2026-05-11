@@ -2,7 +2,7 @@ import { ArrowLeft, Factory, Store, Users, Target, Lightbulb, TrendingUp, Dollar
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import axiaLogo from "@/assets/axia-agro-logo.png";
-import axiaApp from "@/assets/axia-agro-app.png";
+import axiaApp from "@/assets/axia-agro-mockup.png";
 
 const stats = [
   { icon: Factory, value: "2", label: "Indústrias" },
@@ -78,39 +78,46 @@ const CaseAxiaAgro = () => {
         </div>
       </section>
 
-      {/* DESAFIO */}
-      <section className="container mx-auto px-6 py-12">
-        <div className="mx-auto max-w-3xl">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-              <Target className="h-6 w-6 text-primary" />
-            </div>
-            <h2 className="text-3xl font-bold text-foreground">Desafio</h2>
-          </div>
-          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Consultores e produtores enfrentavam dificuldades para conectar, com precisão,
-            a necessidade nutricional do rebanho com a oferta certa de produtos e serviços
-            — o que impactava diretamente a performance de vendas e o resultado no campo.
-          </p>
-        </div>
-      </section>
-
-      {/* SOLUÇÃO */}
-      <section className="border-y border-border bg-surface/50">
+      {/* DESAFIO + SOLUÇÃO + MOCKUP */}
+      <section className="bg-surface/50 border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="mx-auto max-w-3xl">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                <Lightbulb className="h-6 w-6 text-primary" />
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="aspect-square rounded-2xl border border-border bg-card p-8 shadow-soft flex flex-col">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                  <Target className="h-7 w-7 text-primary" />
+                </div>
+                <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  Consultores e produtores enfrentavam dificuldades para conectar, com
+                  precisão, a necessidade nutricional do rebanho com a oferta certa de
+                  produtos e serviços — o que impactava diretamente a performance de
+                  vendas e o resultado no campo.
+                </p>
               </div>
-              <h2 className="text-3xl font-bold text-foreground">Solução</h2>
+
+              <div className="aspect-square rounded-2xl border border-border bg-card p-8 shadow-soft flex flex-col">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                  <Lightbulb className="h-7 w-7 text-primary" />
+                </div>
+                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução</h2>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  A criação do Protocolo de Engorda dentro do Super App da Axia Agro —
+                  uma solução digital gratuita que centraliza dados, recomendações e
+                  ferramentas para que o consultor e o produtor sejam mais assertivos
+                  na nutrição animal, impulsionando os resultados do cliente e da
+                  própria Axia.
+                </p>
+              </div>
             </div>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              A criação do Protocolo de Engorda dentro do Super App da Axia Agro — uma
-              solução digital gratuita que centraliza dados, recomendações e ferramentas
-              para que o consultor e o produtor sejam mais assertivos na nutrição animal,
-              impulsionando os resultados do cliente e da própria Axia.
-            </p>
+
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src={axiaApp}
+                alt="Mockup do Super App Axia Agro - Protocolo de Engorda"
+                className="h-auto w-[280px] max-w-full drop-shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -136,36 +143,6 @@ const CaseAxiaAgro = () => {
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{label}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* MOCKUP DE SMARTPHONE */}
-      <section className="bg-[#F5F5F5]">
-        <div className="container mx-auto px-6 py-20">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-foreground">O App em ação</h2>
-            <p className="mt-3 text-base text-muted-foreground">
-              Veja a interface do Protocolo de Engodra dentro do Super App da Axia Agro.
-            </p>
-          </div>
-
-          <div className="mt-12 flex justify-center">
-            <div className="relative">
-              {/* Phone frame */}
-              <div className="relative h-[640px] w-[310px] rounded-[3rem] border-[12px] border-foreground bg-foreground p-0 shadow-elevated">
-                {/* Notch */}
-                <div className="absolute left-1/2 top-0 z-10 h-6 w-32 -translate-x-1/2 rounded-b-2xl bg-foreground" />
-                {/* Screen */}
-                <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-background">
-                  <img
-                    src={axiaApp}
-                    alt="Tela do app Protocolo de Engorda"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
