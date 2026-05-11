@@ -68,6 +68,8 @@ export const cases: CaseItem[] = [
       "Solução digital gratuita que conecta consultores e produtores à oferta certa de nutrição animal, gerando mais de R$100 milhões em oportunidades.",
     tags: ["Agro", "Mobile App", "Nutrição Animal"],
     logo: axiaAgroLogo,
+    coverImage:
+      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "2",
