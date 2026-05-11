@@ -130,11 +130,18 @@ const Index = () => {
         </div>
 
         {activeCategory === "Segmentos" ? (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
             {segments
               .filter((s) => !query.trim() || s.name.toLowerCase().includes(query.trim().toLowerCase()))
               .map((s) => (
-                <SegmentCard key={s.name} name={s.name} icon={s.icon} />
+                <SegmentCard
+                  key={s.name}
+                  name={s.name}
+                  icon={s.icon}
+                  projects={s.projects}
+                  expanded={expandedSegment === s.name}
+                  onToggle={() => setExpandedSegment(expandedSegment === s.name ? null : s.name)}
+                />
               ))}
           </div>
         ) : filtered.length === 0 ? (
