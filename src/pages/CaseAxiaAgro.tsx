@@ -61,8 +61,8 @@ const CaseAxiaAgro = () => {
                   className="rounded-2xl border border-border bg-card p-5 shadow-soft"
                 >
                   <Icon className="h-6 w-6 text-primary" strokeWidth={2} />
-                  <p className="mt-3 text-2xl font-bold leading-none text-foreground">{value}</p>
-                  <p className="mt-1.5 text-xs font-medium text-muted-foreground">{label}</p>
+                  <p className="mt-3 text-4xl font-bold leading-none text-foreground">{value}</p>
+                  <p className="mt-2 text-xs font-medium text-muted-foreground">{label}</p>
                 </div>
               ))}
             </div>
@@ -83,7 +83,7 @@ const CaseAxiaAgro = () => {
         <div className="container mx-auto px-6 py-16">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div className="grid gap-6 sm:grid-cols-2">
-              <div className="aspect-square rounded-2xl border border-border bg-card p-8 shadow-soft flex flex-col">
+              <div className="flex flex-col">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
                   <Target className="h-7 w-7 text-primary" />
                 </div>
@@ -96,7 +96,7 @@ const CaseAxiaAgro = () => {
                 </p>
               </div>
 
-              <div className="aspect-square rounded-2xl border border-border bg-card p-8 shadow-soft flex flex-col">
+              <div className="flex flex-col">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
                   <Lightbulb className="h-7 w-7 text-primary" />
                 </div>
