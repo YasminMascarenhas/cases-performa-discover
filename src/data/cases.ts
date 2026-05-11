@@ -11,6 +11,7 @@ export interface CaseItem {
   description: string;
   tags: string[];
   coverImage?: string;
+  logo?: string;
 }
 
 import { Sprout, GraduationCap, Gamepad2, Factory, Landmark, HeartPulse, Briefcase, ShoppingBag, type LucideIcon } from "lucide-react";
