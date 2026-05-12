@@ -86,25 +86,55 @@ const CaseAxiaAgroIA = () => {
 
       {/* RESULTADOS */}
       <section className="container mx-auto px-6 py-16">
-        <div>
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-              <TrendingUp className="h-6 w-6 text-primary" />
-            </div>
-            <h2 className="text-3xl font-bold text-foreground">Resultados</h2>
+        <div className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+            <TrendingUp className="h-6 w-6 text-primary" />
           </div>
+          <h2 className="text-3xl font-bold text-foreground">Resultados</h2>
+        </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {results.map(({ icon: Icon, value, label }) => (
-              <div
-                key={label}
-                className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated"
-              >
-                <Icon className="h-7 w-7 text-primary" />
-                <p className="mt-4 text-2xl font-bold leading-tight text-foreground">{value}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{label}</p>
+        <div className="mt-8 overflow-hidden rounded-3xl bg-[#F26B1F] p-8 text-white shadow-elevated md:p-10">
+          <div className="grid items-center gap-8 md:grid-cols-[1.1fr_auto_2fr_auto_1.1fr]">
+            {/* OKRs */}
+            <div>
+              <p className="text-4xl font-extrabold leading-none md:text-5xl">100% OKRs</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/95">
+                priorizados com oportunidades mapeadas para serem acelerados com projetos de IA
+              </p>
+            </div>
+
+            <div className="hidden h-32 w-px bg-white/40 md:block" />
+
+            {/* Funil */}
+            <div className="flex items-end justify-center gap-2">
+              {funnelStages.map((stage) => (
+                <div
+                  key={stage.value}
+                  className="flex items-center justify-center rounded-md bg-white px-3 text-[#F26B1F]"
+                  style={{ height: `${60 + stage.widthPct * 0.7}px`, minWidth: "72px" }}
+                >
+                  <div className="text-center">
+                    <p className="text-xl font-extrabold leading-none md:text-2xl">{stage.value}</p>
+                    <p className="mt-1 whitespace-pre-line text-[10px] font-medium leading-tight">
+                      {stage.label}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="hidden h-32 w-px bg-white/40 md:block" />
+
+            {/* NPS */}
+            <div className="flex items-center gap-4">
+              <div className="text-white">
+                <NpsGauge />
               </div>
-            ))}
+              <div>
+                <p className="text-sm text-white/95">Avaliação NPS</p>
+                <p className="text-5xl font-extrabold leading-none">100</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
