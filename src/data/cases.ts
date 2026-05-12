@@ -18,6 +18,7 @@ import { Sprout, GraduationCap, Gamepad2, Factory, Landmark, HeartPulse, Briefca
 import axiaAgroLogo from "@/assets/axia-agro-logo.png";
 import yaraLogo from "@/assets/yara-logo.png";
 import eurochemLogo from "@/assets/eurochem-logo.png";
+import axiaPortalCover from "@/assets/axia-portal-mockup.jpg";
 
 export interface SegmentProject {
   company: string;
@@ -37,7 +38,8 @@ export const segments: Segment[] = [
     icon: Sprout,
     projects: [
       { company: "Axia Agro", title: "App protocolo engorda", logo: axiaAgroLogo },
-      { company: "Axia Agro", title: "IA Strategy (Katalysis)", logo: axiaAgroLogo },
+      { company: "Axia Agro", title: "Jornada de IA (Discovery & Design)", logo: axiaAgroLogo },
+      { company: "Axia Agro", title: "Portal de Parceiros Salesforce", logo: axiaAgroLogo },
       { company: "Eurochem", title: "Portal Tá Na Mão", logo: eurochemLogo },
       { company: "Yara", title: "Portal Automatizado", logo: yaraLogo },
     ],
@@ -73,6 +75,35 @@ export const cases: CaseItem[] = [
     logo: axiaAgroLogo,
     coverImage:
       "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "9",
+    slug: "axia-agro-ia",
+    title: "Jornada de Inteligência Artificial",
+    company: "Axia Agro",
+    category: "Discovery & Design",
+    solution: "Jornada Estratégica de IA",
+    method: "Discovery + Roadmap de IA",
+    description:
+      "Construção da jornada de adoção de IA e roadmap de iniciativas com foco no real valor de negócios, priorizando oportunidades de maior impacto.",
+    tags: ["IA", "Discovery", "Estratégia"],
+    logo: axiaAgroLogo,
+    coverImage:
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "10",
+    slug: "axia-agro-portal",
+    title: "Portal de Parceiros Salesforce",
+    company: "Axia Agro",
+    category: "Agile Development",
+    solution: "Portal externo no Experience Cloud",
+    method: "Agile Development + Salesforce",
+    description:
+      "Portal de parceiros externo, amigável e integrado ao Salesforce, com cadastro digital que elimina retrabalho e padroniza a base de parceiros.",
+    tags: ["Salesforce", "Experience Cloud", "Portal"],
+    logo: axiaAgroLogo,
+    coverImage: axiaPortalCover,
   },
   {
     id: "2",
