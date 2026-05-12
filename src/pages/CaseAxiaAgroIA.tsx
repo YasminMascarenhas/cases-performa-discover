@@ -5,10 +5,9 @@ import { AxiaAgroCompanyHeader } from "@/components/AxiaAgroCompanyHeader";
 import teamPhoto from "@/assets/axia-ia-team.jpg";
 
 const funnelStages = [
-  { value: "+100", label: "Necessidades\nlevantadas", widthPct: 100 },
-  { value: "+70", label: "Ideias\ngeradas", widthPct: 78 },
-  { value: "10", label: "Ideias\nclassificadas", widthPct: 56 },
-  { value: "03", label: "Projetos\npriorizados", widthPct: 34 },
+  { value: "+100", label: "Necessidades\nlevantadas" },
+  { value: "+70", label: "Ideias\ngeradas" },
+  { value: "10", label: "Ideias\nclassificadas" },
 ];
 
 const NpsGauge = () => (
