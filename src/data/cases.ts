@@ -18,7 +18,7 @@ import { Sprout, GraduationCap, Gamepad2, Factory, Landmark, HeartPulse, Briefca
 import axiaAgroLogo from "@/assets/axia-agro-logo.png";
 import yaraLogo from "@/assets/yara-logo.png";
 import eurochemLogo from "@/assets/eurochem-logo.png";
-import axiaPortalCover from "@/assets/axia-portal-mockup.jpg";
+
 
 export interface SegmentProject {
   company: string;
