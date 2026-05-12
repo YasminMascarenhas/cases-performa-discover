@@ -107,7 +107,6 @@ const CaseAxiaAgroIA = () => {
                 className="h-auto w-full max-w-[440px]"
               />
             </div>
-            </div>
 
             <div className="hidden h-32 w-px bg-white/40 md:block" />
 
