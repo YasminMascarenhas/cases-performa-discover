@@ -85,11 +85,9 @@ const CaseAxiaAgroPortal = () => {
             <div className="flex justify-center lg:justify-end">
               <img
                 src={portalMockup}
-                alt="Lavoura com caminhão regando plantação"
+                alt="Mockup laptop com lavoura e caminhão regando plantação"
                 loading="lazy"
-                width={1024}
-                height={768}
-                className="h-auto w-[420px] max-w-full rounded-2xl shadow-elevated"
+                className="h-auto w-[460px] max-w-full"
               />
             </div>
           </div>
