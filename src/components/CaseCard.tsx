@@ -1,4 +1,4 @@
-import { Building2, Compass, Code2, Sparkles, ArrowUpRight } from "lucide-react";
+import { Building2, Compass, Code2, Bot, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { CaseItem, Category } from "@/data/cases";
 
@@ -6,7 +6,7 @@ const categoryIcon: Record<Category, React.ComponentType<{ className?: string }>
   "Segmentos": Building2,
   "Discovery & Design": Compass,
   "Agile Development": Code2,
-  "Katalysis": Sparkles,
+  "Katalysis": Bot,
 };
 
 interface Props {
@@ -49,7 +49,7 @@ export const CaseCard = ({ item }: Props) => {
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-4 flex items-center justify-between">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-surface px-3 py-1 text-xs font-medium text-muted-foreground">
-            <Icon className="h-3.5 w-3.5 text-primary" />
+            <Icon className={`h-3.5 w-3.5 ${item.category === "Katalysis" ? "text-[#8B5CF6]" : "text-primary"}`} />
             {item.category}
           </span>
           <ArrowUpRight className="h-5 w-5 text-muted-foreground/40 transition-all group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
