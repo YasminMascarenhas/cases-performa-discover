@@ -60,14 +60,23 @@ const CaseAxiaAgroPortal = () => {
                 </div>
                 <h2 className="mt-5 text-2xl font-bold text-foreground">Solução</h2>
                 <ul className="mt-4 space-y-2 text-base leading-relaxed text-muted-foreground">
-                  <li>
-                    Construção de um <strong className="font-bold text-foreground">portal externo usando Experience Cloud</strong>
+                  <li className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                    <span>
+                      Construção de um <strong className="font-bold text-foreground">portal externo usando Experience Cloud</strong>
+                    </span>
                   </li>
-                  <li>
-                    Cadastro digital de parceiros com <strong className="font-bold text-foreground">integração direta ao Salesforce</strong>
+                  <li className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                    <span>
+                      Cadastro digital de parceiros com <strong className="font-bold text-foreground">integração direta ao Salesforce</strong>
+                    </span>
                   </li>
-                  <li>
-                    Personalização do portal para manter interface <strong className="font-bold text-foreground">simples, segura e user-friendly</strong>
+                  <li className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                    <span>
+                      Personalização do portal para manter interface <strong className="font-bold text-foreground">simples, segura e user-friendly</strong>
+                    </span>
                   </li>
                 </ul>
               </div>
