@@ -90,9 +90,8 @@ const CaseAxiaAgro = () => {
                 <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                   Consultores e produtores enfrentavam dificuldades para conectar, com
-                  precisão, a necessidade nutricional do rebanho com a oferta certa de
-                  produtos e serviços — o que impactava diretamente a performance de
-                  vendas e o resultado no campo.
+                  precisão, a <strong className="font-bold text-foreground">necessidade nutricional do rebanho</strong> com a <strong className="font-bold text-foreground">oferta certa de produtos e serviços</strong> — o que impactava
+                  diretamente a performance de vendas e o resultado no campo.
                 </p>
               </div>
 
@@ -102,9 +101,8 @@ const CaseAxiaAgro = () => {
                 </div>
                 <h2 className="mt-5 text-2xl font-bold text-foreground">Solução</h2>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  A criação do Protocolo de Engorda dentro do Super App da Axia Agro —
-                  uma solução digital gratuita que centraliza dados, recomendações e
-                  ferramentas para que o consultor e o produtor sejam mais assertivos
+                  A criação do <strong className="font-bold text-foreground">Protocolo de Engorda</strong> dentro do <strong className="font-bold text-foreground">Super App da Axia Agro</strong> —
+                  uma solução digital gratuita que <strong className="font-bold text-foreground">centraliza dados, recomendações e ferramentas</strong> que ajudam o consultor e o produtor a serem mais assertivos
                   na nutrição animal, impulsionando os resultados do cliente e da
                   própria Axia.
                 </p>
