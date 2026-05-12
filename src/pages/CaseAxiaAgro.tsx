@@ -13,18 +13,18 @@ const stats = [
 const results = [
   {
     icon: DollarSign,
-    value: "+R$100Mi",
+    value: "+100 Milhões",
     label: "em oportunidades de vendas geradas em nutrição",
   },
   {
     icon: TrendingUp,
-    value: "2 dígitos",
-    label: "Taxa de conversão expressiva para o setor agropecuário",
+    value: "Taxa de conversão",
+    label: "Conversão expressiva de 2 dígitos para o setor agropecuário",
   },
   {
     icon: Smartphone,
-    value: "Massivo",
-    label: "App gratuito usado por consultores, clientes e parceiros",
+    value: "App gratuito",
+    label: "Usado massivamente por consultores, clientes e parceiros",
   },
 ];
 
