@@ -104,22 +104,31 @@ const CaseAxiaAgroIA = () => {
 
             <div className="hidden h-32 w-px bg-white/40 md:block" />
 
-            {/* Funil */}
-            <div className="flex items-end justify-center gap-2">
-              {funnelStages.map((stage) => (
-                <div
-                  key={stage.value}
-                  className="flex items-center justify-center rounded-md bg-white px-3 text-[#F26B1F]"
-                  style={{ height: `${60 + stage.widthPct * 0.7}px`, minWidth: "72px" }}
-                >
-                  <div className="text-center">
-                    <p className="text-xl font-extrabold leading-none md:text-2xl">{stage.value}</p>
-                    <p className="mt-1 whitespace-pre-line text-[10px] font-medium leading-tight">
-                      {stage.label}
-                    </p>
-                  </div>
+            {/* Funil horizontal */}
+            <div className="flex items-center justify-center gap-3">
+              <div className="relative">
+                <svg viewBox="0 0 320 140" className="h-32 w-72" preserveAspectRatio="none">
+                  <polygon points="0,0 320,30 320,110 0,140" fill="white" />
+                  <line x1="110" y1="10" x2="110" y2="133" stroke="#F26B1F" strokeWidth="2" />
+                  <line x1="215" y1="20" x2="215" y2="122" stroke="#F26B1F" strokeWidth="2" />
+                </svg>
+                <div className="absolute inset-0 grid grid-cols-3 text-[#F26B1F]">
+                  {funnelStages.map((stage) => (
+                    <div key={stage.value} className="flex flex-col items-center justify-center px-1 text-center">
+                      <p className="text-lg font-extrabold leading-none md:text-xl">{stage.value}</p>
+                      <p className="mt-1 whitespace-pre-line text-[10px] font-semibold leading-tight">
+                        {stage.label}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div className="flex flex-col items-center text-center text-white">
+                <p className="text-3xl font-extrabold leading-none md:text-4xl">03</p>
+                <p className="mt-1 whitespace-pre-line text-[11px] font-semibold leading-tight">
+                  {"Projetos\npriorizados"}
+                </p>
+              </div>
             </div>
 
             <div className="hidden h-32 w-px bg-white/40 md:block" />
