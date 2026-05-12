@@ -66,7 +66,7 @@ export const cases: CaseItem[] = [
     slug: "axia-agro",
     title: "App Protocolo de Engorda",
     company: "Axia Agro",
-    category: "Segmentos",
+    category: "Agile Development",
     solution: "Super App de Nutrição Animal",
     method: "Discovery + Agile Development",
     description:
@@ -81,7 +81,7 @@ export const cases: CaseItem[] = [
     slug: "axia-agro-ia",
     title: "AI_Strategy",
     company: "Axia Agro",
-    category: "Discovery & Design",
+    category: "Katalysis",
     solution: "Jornada Estratégica de IA",
     method: "Discovery + Roadmap de IA",
     description:
