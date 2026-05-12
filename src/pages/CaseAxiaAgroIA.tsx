@@ -3,12 +3,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { AxiaAgroCompanyHeader } from "@/components/AxiaAgroCompanyHeader";
 import teamPhoto from "@/assets/axia-ia-team.jpg";
-
-const funnelStages = [
-  { value: "+100", label: "Necessidades\nlevantadas" },
-  { value: "+70", label: "Ideias\ngeradas" },
-  { value: "10", label: "Ideias\nclassificadas" },
-];
+import funnelImage from "@/assets/axia-ia-funnel.png";
 
 const NpsGauge = () => (
   <svg viewBox="0 0 120 80" className="h-20 w-28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
@@ -104,38 +99,13 @@ const CaseAxiaAgroIA = () => {
 
             <div className="hidden h-32 w-px bg-white/40 md:block" />
 
-            {/* Funil horizontal */}
-            <div className="flex items-center justify-center gap-3">
-              <div className="relative">
-                <svg viewBox="0 0 340 150" className="h-36 w-80" preserveAspectRatio="none">
-                  {/* corpo do funil com laterais curvas */}
-                  <path
-                    d="M 20 10 Q 0 75 20 140 Q 175 155 320 118 Q 330 75 320 32 Q 175 -5 20 10 Z"
-                    fill="white"
-                  />
-                  {/* boca do funil (perspectiva esquerda) */}
-                  <ellipse cx="20" cy="75" rx="14" ry="65" fill="#E8D9B8" />
-                  {/* divisórias internas curvas */}
-                  <path d="M 125 12 Q 132 75 125 138" stroke="#F26B1F" strokeWidth="2" fill="none" />
-                  <path d="M 225 22 Q 230 75 225 128" stroke="#F26B1F" strokeWidth="2" fill="none" />
-                </svg>
-                <div className="absolute inset-0 grid grid-cols-[1fr_1fr_1fr] pl-6 text-[#F26B1F]">
-                  {funnelStages.map((stage) => (
-                    <div key={stage.value} className="flex flex-col items-center justify-center px-1 text-center">
-                      <p className="text-lg font-extrabold leading-none md:text-xl">{stage.value}</p>
-                      <p className="mt-1 whitespace-pre-line text-[10px] font-semibold leading-tight">
-                        {stage.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-col items-center text-center text-white">
-                <p className="text-3xl font-extrabold leading-none md:text-4xl">03</p>
-                <p className="mt-1 whitespace-pre-line text-[11px] font-semibold leading-tight">
-                  {"Projetos\npriorizados"}
-                </p>
-              </div>
+            {/* Funil */}
+            <div className="flex items-center justify-center">
+              <img
+                src={funnelImage}
+                alt="Funil: +100 necessidades, +70 ideias, 10 classificadas, 03 projetos priorizados"
+                className="h-auto w-full max-w-[440px]"
+              />
             </div>
 
             <div className="hidden h-32 w-px bg-white/40 md:block" />
