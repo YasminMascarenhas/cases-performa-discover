@@ -2,6 +2,7 @@ import { ArrowLeft, Target, Lightbulb, TrendingUp, BarChart3, Lightbulb as Idea,
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { AxiaAgroCompanyHeader } from "@/components/AxiaAgroCompanyHeader";
+import teamPhoto from "@/assets/axia-ia-team.jpg";
 
 const results = [
   {
@@ -57,8 +58,9 @@ const CaseAxiaAgroIA = () => {
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
                   <Lightbulb className="h-7 w-7 text-primary" />
                 </div>
-                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — Jornada Estratégica de IA</h2>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução</h2>
+                <p className="mt-4 text-base font-bold text-foreground">Jornada Estratégica de IA</p>
+                <p className="mt-2 text-base leading-relaxed text-muted-foreground">
                   Estratégia bem construída e <strong className="font-bold text-foreground">amplificada pela IA</strong> para descobrir e priorizar as <strong className="font-bold text-foreground">oportunidades de maior impacto</strong> para o negócio.
                 </p>
               </div>
@@ -66,8 +68,8 @@ const CaseAxiaAgroIA = () => {
 
             <div className="flex justify-center lg:justify-end">
               <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80"
-                alt="Workshop de estratégia de IA em laptop"
+                src={teamPhoto}
+                alt="Equipe Axia Agro em workshop de estratégia de IA"
                 loading="lazy"
                 className="h-auto w-[420px] max-w-full rounded-2xl shadow-elevated"
               />
