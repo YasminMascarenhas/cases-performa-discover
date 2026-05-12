@@ -87,7 +87,7 @@ const CaseAxiaAgroIA = () => {
           <h2 className="text-3xl font-bold text-foreground">Resultados</h2>
         </div>
 
-        <div className="mt-8 overflow-hidden rounded-3xl bg-[#F26B1F] p-8 text-white shadow-elevated md:p-10">
+        <div className="mt-8 overflow-hidden rounded-3xl bg-[#FF6E00] p-8 text-white shadow-elevated md:p-10">
           <div className="grid items-center gap-8 md:grid-cols-[1.1fr_auto_2fr_auto_1.1fr]">
             {/* OKRs */}
             <div>
