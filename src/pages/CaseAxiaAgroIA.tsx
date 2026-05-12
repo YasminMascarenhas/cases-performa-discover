@@ -3,12 +3,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { AxiaAgroCompanyHeader } from "@/components/AxiaAgroCompanyHeader";
 import teamPhoto from "@/assets/axia-ia-team.jpg";
-
-const funnelStages = [
-  { value: "+100", label: "Necessidades\nlevantadas" },
-  { value: "+70", label: "Ideias\ngeradas" },
-  { value: "10", label: "Ideias\nclassificadas" },
-];
+import funnelImage from "@/assets/axia-ia-funnel.png";
 
 const NpsGauge = () => (
   <svg viewBox="0 0 120 80" className="h-20 w-28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
