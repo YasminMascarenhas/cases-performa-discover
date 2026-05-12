@@ -38,8 +38,8 @@ export const segments: Segment[] = [
     icon: Sprout,
     projects: [
       { company: "Axia Agro", title: "App protocolo engorda", logo: axiaAgroLogo },
-      { company: "Axia Agro", title: "Jornada de IA (Discovery & Design)", logo: axiaAgroLogo },
-      { company: "Axia Agro", title: "Portal de Parceiros Salesforce", logo: axiaAgroLogo },
+      { company: "Axia Agro", title: "AI_Strategy", logo: axiaAgroLogo },
+      { company: "Axia Agro", title: "Portal Casa da Lavoura", logo: axiaAgroLogo },
       { company: "Eurochem", title: "Portal Tá Na Mão", logo: eurochemLogo },
       { company: "Yara", title: "Portal Automatizado", logo: yaraLogo },
     ],
@@ -79,7 +79,7 @@ export const cases: CaseItem[] = [
   {
     id: "9",
     slug: "axia-agro-ia",
-    title: "Jornada de Inteligência Artificial",
+    title: "AI_Strategy",
     company: "Axia Agro",
     category: "Discovery & Design",
     solution: "Jornada Estratégica de IA",
@@ -94,7 +94,7 @@ export const cases: CaseItem[] = [
   {
     id: "10",
     slug: "axia-agro-portal",
-    title: "Portal de Parceiros Salesforce",
+    title: "Portal Casa da Lavoura",
     company: "Axia Agro",
     category: "Agile Development",
     solution: "Portal externo no Experience Cloud",
