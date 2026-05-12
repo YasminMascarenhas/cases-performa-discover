@@ -38,7 +38,8 @@ export const segments: Segment[] = [
     icon: Sprout,
     projects: [
       { company: "Axia Agro", title: "App protocolo engorda", logo: axiaAgroLogo },
-      { company: "Axia Agro", title: "IA Strategy (Katalysis)", logo: axiaAgroLogo },
+      { company: "Axia Agro", title: "Jornada de IA (Discovery & Design)", logo: axiaAgroLogo },
+      { company: "Axia Agro", title: "Portal de Parceiros Salesforce", logo: axiaAgroLogo },
       { company: "Eurochem", title: "Portal Tá Na Mão", logo: eurochemLogo },
       { company: "Yara", title: "Portal Automatizado", logo: yaraLogo },
     ],
