@@ -107,12 +107,19 @@ const CaseAxiaAgroIA = () => {
             {/* Funil horizontal */}
             <div className="flex items-center justify-center gap-3">
               <div className="relative">
-                <svg viewBox="0 0 320 140" className="h-32 w-72" preserveAspectRatio="none">
-                  <polygon points="0,0 320,30 320,110 0,140" fill="white" />
-                  <line x1="110" y1="10" x2="110" y2="133" stroke="#F26B1F" strokeWidth="2" />
-                  <line x1="215" y1="20" x2="215" y2="122" stroke="#F26B1F" strokeWidth="2" />
+                <svg viewBox="0 0 340 150" className="h-36 w-80" preserveAspectRatio="none">
+                  {/* corpo do funil com laterais curvas */}
+                  <path
+                    d="M 20 10 Q 0 75 20 140 Q 175 155 320 118 Q 330 75 320 32 Q 175 -5 20 10 Z"
+                    fill="white"
+                  />
+                  {/* boca do funil (perspectiva esquerda) */}
+                  <ellipse cx="20" cy="75" rx="14" ry="65" fill="#E8D9B8" />
+                  {/* divisórias internas curvas */}
+                  <path d="M 125 12 Q 132 75 125 138" stroke="#F26B1F" strokeWidth="2" fill="none" />
+                  <path d="M 225 22 Q 230 75 225 128" stroke="#F26B1F" strokeWidth="2" fill="none" />
                 </svg>
-                <div className="absolute inset-0 grid grid-cols-3 text-[#F26B1F]">
+                <div className="absolute inset-0 grid grid-cols-[1fr_1fr_1fr] pl-6 text-[#F26B1F]">
                   {funnelStages.map((stage) => (
                     <div key={stage.value} className="flex flex-col items-center justify-center px-1 text-center">
                       <p className="text-lg font-extrabold leading-none md:text-xl">{stage.value}</p>
