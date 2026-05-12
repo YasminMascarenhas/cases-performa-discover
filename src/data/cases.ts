@@ -96,7 +96,7 @@ export const cases: CaseItem[] = [
     slug: "axia-agro-portal",
     title: "Portal Casa da Lavoura",
     company: "Axia Agro",
-    category: "Agile Development",
+    category: "Segmentos",
     solution: "Portal externo no Experience Cloud",
     method: "Agile Development + Salesforce",
     description:
