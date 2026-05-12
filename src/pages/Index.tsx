@@ -47,7 +47,7 @@ const Index = () => {
 
   return (
     <div id="top" className="min-h-screen bg-background">
-      <Header />
+      
 
       {/* HERO */}
       <section className="border-b border-border bg-gradient-to-b from-background to-surface">
