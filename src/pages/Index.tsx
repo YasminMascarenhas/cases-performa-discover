@@ -47,7 +47,6 @@ const Index = () => {
 
   return (
     <div id="top" className="min-h-screen bg-background">
-      <Header />
       
 
       {/* HERO */}
