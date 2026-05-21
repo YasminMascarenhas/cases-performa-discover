@@ -59,7 +59,7 @@ const Index = () => {
 
       {/* HERO */}
       <section className="border-b border-border bg-gradient-to-b from-background to-surface">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="container mx-auto px-6 py-12 md:py-16">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-block rounded-full border border-primary/30 bg-card px-3 py-1 text-xs font-medium text-primary">
               Performa IT · O futuro, hoje.
