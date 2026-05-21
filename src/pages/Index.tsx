@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
 import { SegmentCard } from "@/components/SegmentCard";
 import { cases, categories, segments, type Category } from "@/data/cases";
+import performaLogo from "@/assets/performa-logo-icon.png";
 
 const Index = () => {
   const [query, setQuery] = useState("");
@@ -47,6 +48,13 @@ const Index = () => {
 
   return (
     <div id="top" className="min-h-screen bg-background">
+      <img
+        src={performaLogo}
+        alt="Performa IT"
+        className="fixed top-4 right-4 z-50 h-10 w-auto"
+      />
+
+
       
 
       {/* HERO */}
