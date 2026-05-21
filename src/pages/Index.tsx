@@ -48,6 +48,13 @@ const Index = () => {
 
   return (
     <div id="top" className="min-h-screen bg-background">
+      <img
+        src={performaLogo}
+        alt="Performa IT"
+        className="fixed top-4 right-4 z-50 h-10 w-auto"
+      />
+
+
       
 
       {/* HERO */}
