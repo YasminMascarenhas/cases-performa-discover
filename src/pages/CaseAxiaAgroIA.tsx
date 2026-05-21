@@ -25,7 +25,7 @@ const NpsGauge = () => (
 const CaseAxiaAgroIA = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      
 
       <div className="container mx-auto px-6 pt-8">
         <Link
