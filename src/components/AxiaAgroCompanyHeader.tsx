@@ -1,5 +1,6 @@
 import { Factory, Store, Users } from "lucide-react";
 import axiaLogo from "@/assets/axia-agro-logo.png";
+import heroImage from "@/assets/axia-colheitadeiras.jpg";
 
 const stats = [
   { icon: Factory, value: "2", label: "Indústrias" },
