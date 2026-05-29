@@ -1,5 +1,6 @@
 import { Factory, Store, Users } from "lucide-react";
 import axiaLogo from "@/assets/axia-agro-logo.png";
+import heroImage from "@/assets/axia-colheitadeiras.jpg";
 
 const stats = [
   { icon: Factory, value: "2", label: "Indústrias" },
@@ -34,8 +35,8 @@ export const AxiaAgroCompanyHeader = () => (
 
       <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-elevated">
         <img
-          src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1400&q=80"
-          alt="Produtor cuidando do rebanho no campo"
+          src={heroImage}
+          alt="Colheitadeiras trabalhando em lavoura de soja"
           className="h-full w-full object-cover"
         />
       </div>
