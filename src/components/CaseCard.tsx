@@ -48,7 +48,7 @@ export const CaseCard = ({ item }: Props) => {
       ) : null}
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-3">
-          <h3 className="text-xl font-black leading-snug text-foreground">{item.title}</h3>
+          <h3 className="text-lg font-semibold leading-snug text-foreground">{item.title}</h3>
           <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground/40 transition-all group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </div>
 
