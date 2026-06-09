@@ -45,6 +45,7 @@ import crodaLogo from "@/assets/croda-logo.png.asset.json";
 import crodaCover from "@/assets/croda-cover.png.asset.json";
 import eatonLogo from "@/assets/eaton-logo.png.asset.json";
 import eatonCover from "@/assets/eaton-cover.png.asset.json";
+import eatonLifeCover from "@/assets/eaton-life-cover.png.asset.json";
 
 
 
