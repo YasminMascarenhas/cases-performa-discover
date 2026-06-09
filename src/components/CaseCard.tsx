@@ -38,7 +38,7 @@ export const CaseCard = ({ item, variant = "default" }: Props) => {
                     src={item.logo}
                     alt={`${item.company} logo`}
                     loading="lazy"
-                    className={`w-auto object-contain ${item.company === "ALE Combustíveis" ? "max-h-10 md:max-h-12" : item.company === "BorgWarner" ? "max-h-20 md:max-h-28" : item.company === "Cogna" ? "max-h-10 md:max-h-12" : "max-h-16 md:max-h-20"}`}
+                    className={`w-auto object-contain ${item.company === "ALE Combustíveis" ? "max-h-10 md:max-h-12" : item.company === "BorgWarner" ? "max-h-20 md:max-h-28" : item.company === "Cogna" ? "max-h-7 md:max-h-8" : "max-h-16 md:max-h-20"}`}
                   />
                 </div>
               )}
