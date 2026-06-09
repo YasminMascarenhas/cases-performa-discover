@@ -4,18 +4,25 @@ import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
 import { CompanyRow } from "@/components/CompanyRow";
 import { SegmentCard } from "@/components/SegmentCard";
-import { cases, categories, segments, type Category, type CaseItem } from "@/data/cases";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { cases, categories, segments, type Category, type CaseItem, type SegmentName } from "@/data/cases";
 import performaLogo from "@/assets/performa-logo-icon.png";
 
 const Index = () => {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
+  const [activeSegment, setActiveSegment] = useState<SegmentName | null>(null);
+  const [segmentsOpen, setSegmentsOpen] = useState(false);
   const [expandedSegment, setExpandedSegment] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return cases.filter((c) => {
-      const matchesCat = !activeCategory || c.category === activeCategory;
+      const matchesCat =
+        !activeCategory ||
+        (activeCategory === "Segmentos"
+          ? !!activeSegment && c.segment === activeSegment
+          : c.category === activeCategory);
       const matchesQuery =
         !q ||
         c.title.toLowerCase().includes(q) ||
@@ -25,7 +32,7 @@ const Index = () => {
         c.tags.some((t) => t.toLowerCase().includes(q));
       return matchesCat && matchesQuery;
     });
-  }, [query, activeCategory]);
+  }, [query, activeCategory, activeSegment]);
 
   const sectionMap: Record<string, Category> = {
     empresas: "Segmentos",
@@ -46,6 +53,22 @@ const Index = () => {
     window.addEventListener("hashchange", applyHash);
     return () => window.removeEventListener("hashchange", applyHash);
   }, []);
+
+  const handleCategoryClick = (cat: Category) => {
+    if (cat === "Segmentos") {
+      setSegmentsOpen(true);
+    } else {
+      setActiveCategory(cat);
+      setActiveSegment(null);
+    }
+  };
+
+  const handleSegmentSelect = (name: SegmentName) => {
+    setActiveSegment(name);
+    setActiveCategory("Segmentos");
+    setSegmentsOpen(false);
+  };
+
 
   return (
     <div id="top" className="min-h-screen bg-background">
@@ -94,9 +117,12 @@ const Index = () => {
             </div>
 
             {/* Chips */}
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
               <button
-                onClick={() => setActiveCategory(null)}
+                onClick={() => {
+                  setActiveCategory(null);
+                  setActiveSegment(null);
+                }}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
                   activeCategory === null
                     ? "bg-primary text-primary-foreground shadow-soft"
@@ -105,20 +131,38 @@ const Index = () => {
               >
                 Todos
               </button>
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
-                    activeCategory === cat
-                      ? "bg-primary text-primary-foreground shadow-soft"
-                      : "bg-surface text-foreground/80 hover:bg-surface/70 hover:text-foreground"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+              {categories.map((cat) => {
+                const isSegments = cat === "Segmentos";
+                const isActive = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => handleCategoryClick(cat)}
+                    className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
+                      isActive
+                        ? "bg-primary text-primary-foreground shadow-soft"
+                        : "bg-surface text-foreground/80 hover:bg-surface/70 hover:text-foreground"
+                    }`}
+                  >
+                    <span>{cat}</span>
+                    {isSegments && activeSegment && (
+                      <span className="flex items-center gap-1 rounded-full bg-white/20 px-2 py-0.5 text-xs font-semibold">
+                        {activeSegment}
+                        <X
+                          className="h-3 w-3 cursor-pointer"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveSegment(null);
+                            setActiveCategory(null);
+                          }}
+                        />
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
             </div>
+
           </div>
         </div>
       </section>
@@ -127,20 +171,18 @@ const Index = () => {
       <section id="results" className="pt-6 pb-16 scroll-mt-20">
 
 
-        {activeCategory === "Segmentos" ? (
-          <div className="container mx-auto px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
-            {segments
-              .filter((s) => !query.trim() || s.name.toLowerCase().includes(query.trim().toLowerCase()))
-              .map((s) => (
-                <SegmentCard
-                  key={s.name}
-                  name={s.name}
-                  icon={s.icon}
-                  projects={s.projects}
-                  expanded={expandedSegment === s.name}
-                  onToggle={() => setExpandedSegment(expandedSegment === s.name ? null : s.name)}
-                />
-              ))}
+        {activeCategory === "Segmentos" && !activeSegment ? (
+          <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
+            <p className="text-base font-medium text-foreground">Selecione um segmento</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Abra o menu lateral para escolher um segmento e ver seus cases.
+            </p>
+            <button
+              onClick={() => setSegmentsOpen(true)}
+              className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-soft transition-colors hover:bg-primary/90"
+            >
+              Abrir segmentos
+            </button>
           </div>
         ) : filtered.length === 0 ? (
           <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
@@ -177,6 +219,7 @@ const Index = () => {
           </div>
         )}
 
+
       </section>
 
 
@@ -189,7 +232,45 @@ const Index = () => {
           <p className="text-sm font-medium text-primary">o futuro, hoje.</p>
         </div>
       </footer>
+
+      {/* SEGMENTS SIDEBAR */}
+      <Sheet open={segmentsOpen} onOpenChange={setSegmentsOpen}>
+        <SheetContent
+          side="left"
+          className="w-[300px] bg-white p-0 sm:w-[340px]"
+        >
+          <div className="flex h-full flex-col">
+            <div className="flex items-center justify-between border-b border-border px-5 py-4">
+              <h2 className="text-base font-semibold text-foreground">Segmentos</h2>
+            </div>
+            <nav className="flex-1 overflow-y-auto p-3">
+              <ul className="flex flex-col gap-1">
+                {segments.map((s) => {
+                  const Icon = s.icon;
+                  const isActive = activeSegment === (s.name as SegmentName);
+                  return (
+                    <li key={s.name}>
+                      <button
+                        onClick={() => handleSegmentSelect(s.name as SegmentName)}
+                        className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                          isActive
+                            ? "bg-[#FFF0E6] text-primary"
+                            : "text-foreground hover:bg-surface"
+                        }`}
+                      >
+                        <Icon className="h-5 w-5 text-primary" />
+                        <span>{s.name}</span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
+        </SheetContent>
+      </Sheet>
     </div>
+
   );
 };
 
