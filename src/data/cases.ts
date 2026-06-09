@@ -204,5 +204,21 @@ export const cases: CaseItem[] = [
     logo: continentalLogo.url,
     coverImage: continentalCover.url,
   },
+  {
+    id: "15",
+    slug: "croda-plataforma-digital",
+    title: "Plataforma Digital",
+    company: "Croda",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Plataforma sob medida",
+    method: "Design Thinking + Agile Development",
+    description:
+      "Solução sob medida com regras, aprovações e rastreabilidade para gerenciar eventos de curto e longo prazo ligados às pesquisas científicas.",
+    tags: ["Design Thinking", "Service Design", "Product Design", "Desenvolvimento", "Sustentação"],
+    logo: crodaLogo.url,
+    coverImage: crodaCover.url,
+  },
 ];
+
 
