@@ -12,7 +12,7 @@ export const BorgWarnerCompanyHeader = () => (
   <section className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div>
-        <img src={logo.url} alt="BorgWarner" className="h-12 w-auto" />
+        <img src={logo.url} alt="BorgWarner" className="h-20 w-auto md:h-24" />
 
         <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
           <strong className="font-bold text-foreground">BorgWarner</strong> é líder global em tecnologias de propulsão e eletrificação automotiva,
