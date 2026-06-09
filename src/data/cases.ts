@@ -46,6 +46,7 @@ import crodaCover from "@/assets/croda-cover.png.asset.json";
 import eatonLogo from "@/assets/eaton-logo.png.asset.json";
 import eatonCover from "@/assets/eaton-cover.png.asset.json";
 import eatonLifeCover from "@/assets/eaton-life-cover.png.asset.json";
+import eatonPortoFelizCover from "@/assets/eaton-porto-feliz-cover.png.asset.json";
 
 
 
@@ -268,7 +269,7 @@ export const cases: CaseItem[] = [
       "Aplicativo para gestão de propostas comerciais com automação de processos e mais autonomia para os usuários da planta de Porto Feliz.",
     tags: ["Power Systems", "Power BI", "Cotações", "Indústria"],
     logo: eatonLogo.url,
-    coverImage: eatonCover.url,
+    coverImage: eatonPortoFelizCover.url,
   },
 ];
 
