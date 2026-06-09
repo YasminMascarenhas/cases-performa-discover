@@ -18,6 +18,8 @@ import { Sprout, GraduationCap, Gamepad2, Factory, Landmark, HeartPulse, Briefca
 import axiaAgroLogo from "@/assets/axia-agro-logo.png";
 import yaraLogo from "@/assets/yara-logo.png";
 import eurochemLogo from "@/assets/eurochem-logo.png";
+import casaDaLavouraCover from "@/assets/casa-da-lavoura.jpg.asset.json";
+
 
 
 export interface SegmentProject {
@@ -103,8 +105,7 @@ export const cases: CaseItem[] = [
       "Portal de parceiros externo, amigável e integrado ao Salesforce, com cadastro digital que elimina retrabalho e padroniza a base de parceiros.",
     tags: ["Salesforce", "Experience Cloud", "Portal"],
     logo: axiaAgroLogo,
-    coverImage:
-      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
+    coverImage: casaDaLavouraCover.url,
   },
   {
     id: "2",
