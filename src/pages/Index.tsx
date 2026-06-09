@@ -137,7 +137,9 @@ const Index = () => {
                     onClick={() => handleCategoryClick(cat)}
                     className={`rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
                       isActive
-                        ? "bg-primary text-primary-foreground shadow-soft"
+                        ? cat === "Katalysis"
+                          ? "bg-[#7C3AED] text-white shadow-soft"
+                          : "bg-primary text-primary-foreground shadow-soft"
                         : "bg-surface text-foreground/80 hover:bg-surface/70 hover:text-foreground"
                     }`}
                   >
