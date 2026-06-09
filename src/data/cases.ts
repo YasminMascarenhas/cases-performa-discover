@@ -222,6 +222,21 @@ export const cases: CaseItem[] = [
     logo: crodaLogo.url,
     coverImage: crodaCover.url,
   },
+  {
+    id: "16",
+    slug: "eaton-blue-sapphire",
+    title: "Blue Sapphire CPDI",
+    company: "Eaton",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Power Apps + Power BI",
+    method: "Agile Development + Automação",
+    description:
+      "Sistema para elaboração de cotações e propostas com 80% de melhoria no tempo de criação — de 15min para 3min, com mais agilidade e menos erros.",
+    tags: ["Power Apps", "Power BI", "Automação", "Cotações"],
+    logo: eatonLogo.url,
+    coverImage: eatonCover.url,
+  },
 ];
 
 
