@@ -72,3 +72,18 @@
     @apply font-semibold tracking-tight;
   }
 }
+
+/* PDF export mode — strips chrome from case pages rendered inside the offscreen iframe */
+body.pdf-mode footer {
+  display: none !important;
+}
+body.pdf-mode div.container.pt-8:has(a[href="/"]) {
+  display: none !important;
+}
+body.pdf-mode-no-header [data-pdf-section="company-header"] {
+  display: none !important;
+}
+body.pdf-mode .min-h-screen {
+  min-height: 0 !important;
+}
+
