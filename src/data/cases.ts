@@ -16,6 +16,7 @@ export interface CaseItem {
   title: string;
   company: string;
   category: Category;
+  extraCategories?: Category[];
   segment?: SegmentName;
   solution: string;
   method: string;
@@ -173,6 +174,7 @@ export const cases: CaseItem[] = [
     company: "Cogna",
     segment: "Educação",
     category: "Katalysis",
+    extraCategories: ["Discovery & Design"],
     solution: "Jornada do aluno com IA",
     method: "Discovery & Design + Katalysis",
     description:
