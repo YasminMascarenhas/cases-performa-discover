@@ -111,6 +111,18 @@ const Index = () => {
         className="fixed top-4 right-4 z-50 h-10 w-auto"
       />
 
+      {/* Export PDF button */}
+      <button
+        onClick={() => setSelectionMode(true)}
+        className={`fixed top-5 right-20 z-50 inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-transparent px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 ${selectionMode ? "hidden" : ""}`}
+        style={{ fontFamily: "Poppins, sans-serif" }}
+      >
+        <FileDown className="h-4 w-4" />
+        Exportar PDF
+      </button>
+
+
+
 
       
 
@@ -239,9 +251,17 @@ const Index = () => {
               ) : (
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {filtered.map((c) => (
-                    <CaseCard key={c.id} item={c} variant="featured" />
+                    <CaseCard
+                      key={c.id}
+                      item={c}
+                      variant="featured"
+                      selectable={selectionMode}
+                      selected={selectedIds.has(c.id)}
+                      onSelectToggle={toggleSelect}
+                    />
                   ))}
                 </div>
+
               )}
             </div>
           </div>
@@ -273,16 +293,33 @@ const Index = () => {
                 return a.company.localeCompare(b.company, "pt-BR");
               });
               return groups.map((g) => (
-                <CompanyRow key={g.company} company={g.company} logo={g.logo} items={g.items} />
+                <CompanyRow
+                  key={g.company}
+                  company={g.company}
+                  logo={g.logo}
+                  items={g.items}
+                  selectable={selectionMode}
+                  selectedIds={selectedIds}
+                  onSelectToggle={toggleSelect}
+                />
               ));
+
             })()}
           </div>
         ) : (
           <div className="container mx-auto px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((c) => (
-              <CaseCard key={c.id} item={c} variant="featured" />
+              <CaseCard
+                key={c.id}
+                item={c}
+                variant="featured"
+                selectable={selectionMode}
+                selected={selectedIds.has(c.id)}
+                onSelectToggle={toggleSelect}
+              />
             ))}
           </div>
+
         )}
       </section>
 
