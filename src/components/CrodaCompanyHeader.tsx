@@ -12,7 +12,7 @@ export const CrodaCompanyHeader = () => (
   <section className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div>
-        <img src={logo.url} alt="Croda" className="-ml-2 h-16 w-auto object-left md:h-20" />
+        <img src={logo.url} alt="Croda" className="-ml-2 h-24 w-auto object-left md:h-32" />
 
         <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
           <strong className="font-bold text-foreground">Empresa britânica com referência global em ingredientes sustentáveis e de alta performance</strong>,
