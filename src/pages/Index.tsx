@@ -167,20 +167,62 @@ const Index = () => {
 
       {/* RESULTS */}
       <section id="results" className="pt-6 pb-16 scroll-mt-20">
+        {activeCategory === "Segmentos" ? (
+          <div className="flex w-full items-stretch">
+            {/* Segments sidebar */}
+            <aside className="w-[260px] shrink-0 border-r border-border bg-white shadow-[1px_0_2px_rgba(0,0,0,0.04)]">
+              <div className="sticky top-0 px-4 py-5">
+                <h2 className="px-2 pb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                  Segmentos
+                </h2>
+                <ul className="flex flex-col gap-1">
+                  {segments.map((s) => {
+                    const Icon = s.icon;
+                    const isActive = activeSegment === (s.name as SegmentName);
+                    return (
+                      <li key={s.name}>
+                        <button
+                          onClick={() => handleSegmentSelect(s.name as SegmentName)}
+                          className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                            isActive
+                              ? "bg-[#FFF0E6] text-primary"
+                              : "text-foreground hover:bg-surface"
+                          }`}
+                        >
+                          <Icon className={`h-5 w-5 ${isActive ? "text-primary" : "text-primary"}`} />
+                          <span>{s.name}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </aside>
 
-
-        {activeCategory === "Segmentos" && !activeSegment ? (
-          <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
-            <p className="text-base font-medium text-foreground">Selecione um segmento</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Abra o menu lateral para escolher um segmento e ver seus cases.
-            </p>
-            <button
-              onClick={() => setSegmentsOpen(true)}
-              className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-soft transition-colors hover:bg-primary/90"
-            >
-              Abrir segmentos
-            </button>
+            {/* Right column */}
+            <div className="min-w-0 flex-1 px-6 py-6">
+              {!activeSegment ? (
+                <div className="rounded-2xl border border-dashed border-border bg-card p-16 text-center">
+                  <p className="text-base font-medium text-foreground">Selecione um segmento</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Escolha um segmento na barra lateral para ver os cases.
+                  </p>
+                </div>
+              ) : filtered.length === 0 ? (
+                <div className="rounded-2xl border border-dashed border-border bg-card p-16 text-center">
+                  <p className="text-base font-medium text-foreground">Nenhum case encontrado</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Tente ajustar a busca ou selecionar outro segmento.
+                  </p>
+                </div>
+              ) : (
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {filtered.map((c) => (
+                    <CaseCard key={c.id} item={c} variant="featured" />
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         ) : filtered.length === 0 ? (
           <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
@@ -216,8 +258,6 @@ const Index = () => {
             ))}
           </div>
         )}
-
-
       </section>
 
 
@@ -231,42 +271,6 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* SEGMENTS SIDEBAR */}
-      <Sheet open={segmentsOpen} onOpenChange={setSegmentsOpen}>
-        <SheetContent
-          side="left"
-          className="w-[300px] bg-white p-0 sm:w-[340px]"
-        >
-          <div className="flex h-full flex-col">
-            <div className="flex items-center justify-between border-b border-border px-5 py-4">
-              <h2 className="text-base font-semibold text-foreground">Segmentos</h2>
-            </div>
-            <nav className="flex-1 overflow-y-auto p-3">
-              <ul className="flex flex-col gap-1">
-                {segments.map((s) => {
-                  const Icon = s.icon;
-                  const isActive = activeSegment === (s.name as SegmentName);
-                  return (
-                    <li key={s.name}>
-                      <button
-                        onClick={() => handleSegmentSelect(s.name as SegmentName)}
-                        className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
-                          isActive
-                            ? "bg-[#FFF0E6] text-primary"
-                            : "text-foreground hover:bg-surface"
-                        }`}
-                      >
-                        <Icon className="h-5 w-5 text-primary" />
-                        <span>{s.name}</span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </nav>
-          </div>
-        </SheetContent>
-      </Sheet>
     </div>
 
   );
