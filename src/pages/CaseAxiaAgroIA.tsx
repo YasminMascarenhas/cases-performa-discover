@@ -40,7 +40,7 @@ const CaseAxiaAgroIA = () => {
       <AxiaAgroCompanyHeader />
 
       {/* DESAFIO + SOLUÇÃO + MOCKUP */}
-      <section className="bg-surface/50 border-y border-border">
+      <section className="bg-surface border-y border-border">
         <div className="container mx-auto px-6 py-16">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div className="grid gap-6 sm:grid-cols-2">
