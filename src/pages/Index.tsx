@@ -124,19 +124,8 @@ const Index = () => {
       </section>
 
       {/* RESULTS */}
-      <section id="results" className="container mx-auto px-6 py-16 scroll-mt-20">
-        <div className="mb-8 flex items-end justify-between">
-          <div>
-            <h2 className="text-2xl font-semibold text-foreground">
-              {activeCategory ?? "Todos os cases"}
-            </h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {activeCategory === "Segmentos"
-                ? `${segments.length} segmentos`
-                : `${filtered.length} ${filtered.length === 1 ? "case encontrado" : "cases encontrados"}`}
-            </p>
-          </div>
-        </div>
+      <section id="results" className="container mx-auto px-6 pt-6 pb-16 scroll-mt-20">
+
 
         {activeCategory === "Segmentos" ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
