@@ -149,7 +149,7 @@ const Index = () => {
               Tente ajustar a busca ou selecionar outra categoria.
             </p>
           </div>
-        ) : (
+        ) : activeCategory === null ? (
           <div className="flex flex-col gap-4">
             {(() => {
               const groups: { company: string; logo?: string; items: CaseItem[] }[] = [];
@@ -168,6 +168,12 @@ const Index = () => {
                 <CompanyRow key={g.company} company={g.company} logo={g.logo} items={g.items} />
               ));
             })()}
+          </div>
+        ) : (
+          <div className="container mx-auto px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {filtered.map((c) => (
+              <CaseCard key={c.id} item={c} />
+            ))}
           </div>
         )}
 
