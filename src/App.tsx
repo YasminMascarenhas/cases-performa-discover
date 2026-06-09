@@ -13,6 +13,7 @@ import CaseCognaAIJourney from "./pages/CaseCognaAIJourney.tsx";
 import CaseContinentalPortal from "./pages/CaseContinentalPortal.tsx";
 import CaseCrodaPlataforma from "./pages/CaseCrodaPlataforma.tsx";
 import CaseEatonBlueSapphire from "./pages/CaseEatonBlueSapphire.tsx";
+import CaseEatonLifeSafety from "./pages/CaseEatonLifeSafety.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
