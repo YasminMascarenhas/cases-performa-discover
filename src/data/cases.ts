@@ -36,6 +36,8 @@ import aleLogo from "@/assets/ale-logo.png.asset.json";
 import aleCover from "@/assets/ale-cover.png.asset.json";
 import borgwarnerLogo from "@/assets/borgwarner-logo.png.asset.json";
 import borgwarnerCover from "@/assets/borgwarner-sign.jpg.asset.json";
+import cognaLogo from "@/assets/cogna-logo.png.asset.json";
+import cognaCover from "@/assets/cogna-cover.jpg.asset.json";
 
 
 
@@ -64,7 +66,7 @@ export const segments: Segment[] = [
       { company: "Yara", title: "Portal Automatizado", logo: yaraLogo },
     ],
   },
-  { name: "Educação", icon: GraduationCap },
+  { name: "Educação", icon: GraduationCap, projects: [{ company: "Cogna", title: "AI Journey", logo: cognaLogo.url }] },
   { name: "E-games", icon: Gamepad2 },
   {
     name: "Indústria",
@@ -163,6 +165,21 @@ export const cases: CaseItem[] = [
     tags: ["Portal B2B", "Pós-vendas", "ERP", "Indústria", "Autopeças"],
     logo: borgwarnerLogo.url,
     coverImage: borgwarnerCover.url,
+  },
+  {
+    id: "13",
+    slug: "cogna-ai-journey",
+    title: "AI Journey",
+    company: "Cogna",
+    segment: "Educação",
+    category: "Katalysis",
+    solution: "Jornada do aluno com IA",
+    method: "Discovery & Design + Katalysis",
+    description:
+      "Mapeamento da jornada do aluno e cocriação do TO-BE com IA, automatizando o atendimento dos tutores e elevando retenção e engajamento.",
+    tags: ["IA", "Educação", "Discovery", "Katalysis", "Jornada do aluno"],
+    logo: cognaLogo.url,
+    coverImage: cognaCover.url,
   },
 ];
 
