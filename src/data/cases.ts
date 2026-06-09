@@ -41,6 +41,8 @@ import cognaLogo from "@/assets/cogna-logo.png.asset.json";
 import cognaCover from "@/assets/cogna-cover.jpg.asset.json";
 import continentalLogo from "@/assets/continental-logo.png.asset.json";
 import continentalCover from "@/assets/continental-cover.webp.asset.json";
+import crodaLogo from "@/assets/croda-logo.png.asset.json";
+import crodaCover from "@/assets/croda-cover.png.asset.json";
 
 
 
