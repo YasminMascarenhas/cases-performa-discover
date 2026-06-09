@@ -117,9 +117,12 @@ const Index = () => {
             </div>
 
             {/* Chips */}
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
               <button
-                onClick={() => setActiveCategory(null)}
+                onClick={() => {
+                  setActiveCategory(null);
+                  setActiveSegment(null);
+                }}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
                   activeCategory === null
                     ? "bg-primary text-primary-foreground shadow-soft"
@@ -128,20 +131,38 @@ const Index = () => {
               >
                 Todos
               </button>
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
-                    activeCategory === cat
-                      ? "bg-primary text-primary-foreground shadow-soft"
-                      : "bg-surface text-foreground/80 hover:bg-surface/70 hover:text-foreground"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+              {categories.map((cat) => {
+                const isSegments = cat === "Segmentos";
+                const isActive = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => handleCategoryClick(cat)}
+                    className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
+                      isActive
+                        ? "bg-primary text-primary-foreground shadow-soft"
+                        : "bg-surface text-foreground/80 hover:bg-surface/70 hover:text-foreground"
+                    }`}
+                  >
+                    <span>{cat}</span>
+                    {isSegments && activeSegment && (
+                      <span className="flex items-center gap-1 rounded-full bg-white/20 px-2 py-0.5 text-xs font-semibold">
+                        {activeSegment}
+                        <X
+                          className="h-3 w-3 cursor-pointer"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveSegment(null);
+                            setActiveCategory(null);
+                          }}
+                        />
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
             </div>
+
           </div>
         </div>
       </section>
