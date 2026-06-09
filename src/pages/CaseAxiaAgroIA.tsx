@@ -3,7 +3,42 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { AxiaAgroCompanyHeader } from "@/components/AxiaAgroCompanyHeader";
 import teamPhoto from "@/assets/axia-ia-team.jpg";
-import funnelImage from "@/assets/axia-ia-funnel.png";
+
+const funnelStages = [
+  { value: "+100", label: "necessidades" },
+  { value: "+70", label: "ideias" },
+  { value: "10", label: "classificadas" },
+  { value: "03", label: "projetos priorizados" },
+];
+
+const FunnelSvg = () => (
+  <svg viewBox="0 0 320 220" className="h-auto w-full max-w-[360px]" xmlns="http://www.w3.org/2000/svg">
+    {funnelStages.map((stage, i) => {
+      const top = i * 50;
+      const leftTop = 20 + i * 30;
+      const rightTop = 320 - leftTop;
+      const leftBottom = 20 + (i + 1) * 30;
+      const rightBottom = 320 - leftBottom;
+      return (
+        <g key={stage.label}>
+          <polygon
+            points={`${leftTop},${top} ${rightTop},${top} ${rightBottom},${top + 45} ${leftBottom},${top + 45}`}
+            fill="#FF6E00"
+            fillOpacity={0.15 + i * 0.22}
+            stroke="#FF6E00"
+            strokeWidth="1.5"
+          />
+          <text x="160" y={top + 22} textAnchor="middle" fontSize="16" fontWeight="700" fill="#1a1a1a" fontFamily="Poppins, sans-serif">
+            {stage.value}
+          </text>
+          <text x="160" y={top + 38} textAnchor="middle" fontSize="11" fill="#525252" fontFamily="Poppins, sans-serif">
+            {stage.label}
+          </text>
+        </g>
+      );
+    })}
+  </svg>
+);
 
 const NpsGauge = () => (
   <svg viewBox="0 0 120 80" className="h-20 w-28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
@@ -98,11 +133,7 @@ const CaseAxiaAgroIA = () => {
 
           {/* Funil */}
           <div className="flex items-center justify-center rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated">
-            <img
-              src={funnelImage}
-              alt="Funil: +100 necessidades, +70 ideias, 10 classificadas, 03 projetos priorizados"
-              className="h-auto w-full max-w-[440px]"
-            />
+            <FunnelSvg />
           </div>
 
           {/* NPS */}
