@@ -58,12 +58,23 @@ const CaseAleCockpit = () => {
             </div>
 
             <div className="flex justify-center lg:justify-end">
-              <img
-                src={cockpitMockup.url}
-                alt="AM&S Cockpit Tático — dashboard"
-                loading="lazy"
-                className="h-auto w-[460px] max-w-full rounded-2xl shadow-elevated"
-              />
+              <div className="w-[480px] max-w-full">
+                {/* Laptop mockup */}
+                <div className="rounded-t-2xl border-[10px] border-b-[14px] border-zinc-800 bg-zinc-800 shadow-elevated">
+                  <div className="overflow-hidden rounded-sm bg-white">
+                    <img
+                      src={cockpitMockup.url}
+                      alt="AM&S Cockpit Tático — dashboard"
+                      loading="lazy"
+                      className="block h-auto w-full"
+                    />
+                  </div>
+                </div>
+                {/* Base */}
+                <div className="relative mx-auto h-3 w-[110%] -translate-x-[5%] rounded-b-xl bg-gradient-to-b from-zinc-300 to-zinc-400 shadow-md">
+                  <div className="absolute left-1/2 top-0 h-1.5 w-16 -translate-x-1/2 rounded-b-md bg-zinc-500/60" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
