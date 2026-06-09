@@ -171,22 +171,21 @@ const Index = () => {
       <section id="results" className="pt-6 pb-16 scroll-mt-20">
 
 
-        {activeCategory === "Segmentos" ? (
-          <div className="container mx-auto px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
-            {segments
-              .filter((s) => !query.trim() || s.name.toLowerCase().includes(query.trim().toLowerCase()))
-              .map((s) => (
-                <SegmentCard
-                  key={s.name}
-                  name={s.name}
-                  icon={s.icon}
-                  projects={s.projects}
-                  expanded={expandedSegment === s.name}
-                  onToggle={() => setExpandedSegment(expandedSegment === s.name ? null : s.name)}
-                />
-              ))}
+        {activeCategory === "Segmentos" && !activeSegment ? (
+          <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
+            <p className="text-base font-medium text-foreground">Selecione um segmento</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Abra o menu lateral para escolher um segmento e ver seus cases.
+            </p>
+            <button
+              onClick={() => setSegmentsOpen(true)}
+              className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-soft transition-colors hover:bg-primary/90"
+            >
+              Abrir segmentos
+            </button>
           </div>
-        ) : filtered.length === 0 ? (
+        ) : null}
+        {!(activeCategory === "Segmentos" && !activeSegment) && (
           <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
             <p className="text-base font-medium text-foreground">Nenhum case encontrado</p>
             <p className="mt-1 text-sm text-muted-foreground">
