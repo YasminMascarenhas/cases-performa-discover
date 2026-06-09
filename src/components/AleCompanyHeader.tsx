@@ -1,5 +1,6 @@
 import { Clock, Warehouse, Users } from "lucide-react";
 import aleLogo from "@/assets/ale-logo.png.asset.json";
+import aleCover from "@/assets/ale-cover.png.asset.json";
 
 const stats = [
   { icon: Clock, value: "+30 Anos", label: "de história" },
