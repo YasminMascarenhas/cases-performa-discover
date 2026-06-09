@@ -66,7 +66,13 @@ export const segments: Segment[] = [
   },
   { name: "Educação", icon: GraduationCap },
   { name: "E-games", icon: Gamepad2 },
-  { name: "Indústria", icon: Factory },
+  {
+    name: "Indústria",
+    icon: Factory,
+    projects: [
+      { company: "BorgWarner", title: "Portal B2B", logo: borgwarnerLogo.url },
+    ],
+  },
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
