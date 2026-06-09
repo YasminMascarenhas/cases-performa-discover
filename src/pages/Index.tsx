@@ -55,10 +55,8 @@ const Index = () => {
   }, []);
 
   const handleCategoryClick = (cat: Category) => {
-    if (cat === "Segmentos") {
-      setSegmentsOpen(true);
-    } else {
-      setActiveCategory(cat);
+    setActiveCategory(cat);
+    if (cat !== "Segmentos") {
       setActiveSegment(null);
     }
   };
@@ -66,8 +64,8 @@ const Index = () => {
   const handleSegmentSelect = (name: SegmentName) => {
     setActiveSegment(name);
     setActiveCategory("Segmentos");
-    setSegmentsOpen(false);
   };
+
 
 
   return (
