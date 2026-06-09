@@ -3,8 +3,8 @@ import logo from "@/assets/borgwarner-logo.png.asset.json";
 import cover from "@/assets/borgwarner-team.jpg.asset.json";
 
 const stats = [
-  { icon: Milestone, value: "130+ Anos", label: "de história" },
-  { icon: Globe2, value: "+24 Países", label: "de presença" },
+  { icon: Milestone, value: "130+", label: "anos de história" },
+  { icon: Globe2, value: "+24", label: "países" },
   { icon: Users, value: "40k", label: "Colaboradores" },
 ];
 
