@@ -85,6 +85,7 @@ export const segments: Segment[] = [
       { company: "Croda", title: "Plataforma Digital", logo: crodaLogo.url },
       { company: "Eaton", title: "Blue Sapphire CPDI", logo: eatonLogo.url },
       { company: "Eaton", title: "Life Safety + Power BI", logo: eatonLogo.url },
+      { company: "Eaton", title: "Porto Feliz Power Systems", logo: eatonLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
@@ -253,6 +254,21 @@ export const cases: CaseItem[] = [
     tags: ["Life Safety", "Power BI", "Cotações", "Indústria"],
     logo: eatonLogo.url,
     coverImage: eatonLifeCover.url,
+  },
+  {
+    id: "18",
+    slug: "eaton-porto-feliz",
+    title: "Porto Feliz Power Systems",
+    company: "Eaton",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Power Systems + Power BI",
+    method: "Agile Development + Power BI",
+    description:
+      "Aplicativo para gestão de propostas comerciais com automação de processos e mais autonomia para os usuários da planta de Porto Feliz.",
+    tags: ["Power Systems", "Power BI", "Cotações", "Indústria"],
+    logo: eatonLogo.url,
+    coverImage: eatonCover.url,
   },
 ];
 
