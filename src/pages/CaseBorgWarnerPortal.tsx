@@ -27,7 +27,7 @@ const CaseBorgWarnerPortal = () => {
       <BorgWarnerCompanyHeader />
 
       {/* DESAFIO + SOLUÇÃO */}
-      <section className="bg-surface/50 border-y border-border">
+      <section className="bg-surface border-y border-border">
         <div className="container mx-auto px-6 py-16">
           <div className="grid gap-8 sm:grid-cols-2">
             <div className="flex flex-col">
