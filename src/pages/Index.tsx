@@ -156,7 +156,7 @@ const Index = () => {
         {activeCategory === "Segmentos" ? (
           <div className="flex w-full items-stretch">
             {/* Segments sidebar */}
-            <aside className="w-[200px] shrink-0 bg-surface">
+            <aside className="w-[200px] shrink-0 bg-white">
               <div className="sticky top-0 px-3 py-5">
 
                 <ul className="flex flex-col gap-1">
