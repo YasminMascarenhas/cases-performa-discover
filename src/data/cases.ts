@@ -76,6 +76,7 @@ export const segments: Segment[] = [
     icon: Factory,
     projects: [
       { company: "BorgWarner", title: "Portal B2B", logo: borgwarnerLogo.url },
+      { company: "Continental", title: "Portal Web SAP", logo: continentalLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
