@@ -34,6 +34,9 @@ import casaDaLavouraCover from "@/assets/casa-da-lavoura.jpg.asset.json";
 import aiStrategyCover from "@/assets/ai-strategy.jpg.asset.json";
 import aleLogo from "@/assets/ale-logo.png.asset.json";
 import aleCover from "@/assets/ale-cover.png.asset.json";
+import borgwarnerLogo from "@/assets/borgwarner-logo.png.asset.json";
+import borgwarnerCover from "@/assets/borgwarner-sign.jpg.asset.json";
+
 
 
 
