@@ -4,18 +4,25 @@ import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
 import { CompanyRow } from "@/components/CompanyRow";
 import { SegmentCard } from "@/components/SegmentCard";
-import { cases, categories, segments, type Category, type CaseItem } from "@/data/cases";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { cases, categories, segments, type Category, type CaseItem, type SegmentName } from "@/data/cases";
 import performaLogo from "@/assets/performa-logo-icon.png";
 
 const Index = () => {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
+  const [activeSegment, setActiveSegment] = useState<SegmentName | null>(null);
+  const [segmentsOpen, setSegmentsOpen] = useState(false);
   const [expandedSegment, setExpandedSegment] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return cases.filter((c) => {
-      const matchesCat = !activeCategory || c.category === activeCategory;
+      const matchesCat =
+        !activeCategory ||
+        (activeCategory === "Segmentos"
+          ? !!activeSegment && c.segment === activeSegment
+          : c.category === activeCategory);
       const matchesQuery =
         !q ||
         c.title.toLowerCase().includes(q) ||
@@ -25,7 +32,7 @@ const Index = () => {
         c.tags.some((t) => t.toLowerCase().includes(q));
       return matchesCat && matchesQuery;
     });
-  }, [query, activeCategory]);
+  }, [query, activeCategory, activeSegment]);
 
   const sectionMap: Record<string, Category> = {
     empresas: "Segmentos",
@@ -46,6 +53,22 @@ const Index = () => {
     window.addEventListener("hashchange", applyHash);
     return () => window.removeEventListener("hashchange", applyHash);
   }, []);
+
+  const handleCategoryClick = (cat: Category) => {
+    if (cat === "Segmentos") {
+      setSegmentsOpen(true);
+    } else {
+      setActiveCategory(cat);
+      setActiveSegment(null);
+    }
+  };
+
+  const handleSegmentSelect = (name: SegmentName) => {
+    setActiveSegment(name);
+    setActiveCategory("Segmentos");
+    setSegmentsOpen(false);
+  };
+
 
   return (
     <div id="top" className="min-h-screen bg-background">
