@@ -89,9 +89,9 @@ const CaseAxiaAgroIA = () => {
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {/* OKRs */}
-          <div className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated">
-            <p className="text-4xl font-extrabold leading-none text-primary md:text-5xl">100% OKRs</p>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+          <div className="rounded-2xl border border-primary bg-primary p-6 shadow-soft transition-all hover:shadow-elevated">
+            <p className="text-4xl font-extrabold leading-none text-white md:text-5xl">100% OKRs</p>
+            <p className="mt-4 text-base leading-relaxed text-white">
               priorizados com oportunidades mapeadas para serem acelerados com projetos de IA
             </p>
           </div>
@@ -106,13 +106,13 @@ const CaseAxiaAgroIA = () => {
           </div>
 
           {/* NPS */}
-          <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated">
-            <div className="text-primary">
+          <div className="flex items-center gap-4 rounded-2xl border border-primary bg-primary p-6 shadow-soft transition-all hover:shadow-elevated">
+            <div className="text-white">
               <NpsGauge />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Avaliação NPS</p>
-              <p className="text-5xl font-extrabold leading-none text-foreground">100</p>
+              <p className="text-sm text-white">Avaliação NPS</p>
+              <p className="text-5xl font-extrabold leading-none text-white">100</p>
             </div>
           </div>
         </div>
