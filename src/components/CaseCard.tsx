@@ -47,16 +47,10 @@ export const CaseCard = ({ item }: Props) => {
         </div>
       ) : null}
       <div className="flex flex-1 flex-col p-6">
-        <div className="mb-4 flex items-center justify-between">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-surface px-3 py-1 text-xs font-medium text-muted-foreground">
-            <Icon className={`h-3.5 w-3.5 ${item.category === "Katalysis" ? "text-[#8B5CF6]" : "text-primary"}`} />
-            {item.category}
-          </span>
-          <ArrowUpRight className="h-5 w-5 text-muted-foreground/40 transition-all group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-lg font-semibold leading-snug text-foreground">{item.title}</h3>
+          <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground/40 transition-all group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </div>
-
-        <p className="text-xs font-semibold uppercase tracking-wider text-primary">{item.company}</p>
-        <h3 className="mt-1.5 text-lg font-semibold leading-snug text-foreground">{item.title}</h3>
 
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
 
@@ -69,14 +63,6 @@ export const CaseCard = ({ item }: Props) => {
             <span className="text-muted-foreground">Método</span>
             <span className="text-right font-medium text-foreground">{item.method}</span>
           </div>
-        </div>
-
-        <div className="mt-5 flex flex-wrap gap-1.5">
-          {item.tags.map((t) => (
-            <span key={t} className="rounded-md bg-surface px-2 py-0.5 text-[11px] font-medium text-muted-foreground">
-              {t}
-            </span>
-          ))}
         </div>
       </div>
     </article>
