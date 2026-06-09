@@ -11,6 +11,7 @@ import CaseAleCockpit from "./pages/CaseAleCockpit.tsx";
 import CaseBorgWarnerPortal from "./pages/CaseBorgWarnerPortal.tsx";
 import CaseCognaAIJourney from "./pages/CaseCognaAIJourney.tsx";
 import CaseContinentalPortal from "./pages/CaseContinentalPortal.tsx";
+import CaseCrodaPlataforma from "./pages/CaseCrodaPlataforma.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/case/borgwarner-portal-b2b" element={<CaseBorgWarnerPortal />} />
           <Route path="/case/cogna-ai-journey" element={<CaseCognaAIJourney />} />
           <Route path="/case/continental-portal-sap" element={<CaseContinentalPortal />} />
+          <Route path="/case/croda-plataforma-digital" element={<CaseCrodaPlataforma />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -41,6 +41,8 @@ import cognaLogo from "@/assets/cogna-logo.png.asset.json";
 import cognaCover from "@/assets/cogna-cover.jpg.asset.json";
 import continentalLogo from "@/assets/continental-logo.png.asset.json";
 import continentalCover from "@/assets/continental-cover.webp.asset.json";
+import crodaLogo from "@/assets/croda-logo.png.asset.json";
+import crodaCover from "@/assets/croda-cover.png.asset.json";
 
 
 
@@ -77,6 +79,7 @@ export const segments: Segment[] = [
     projects: [
       { company: "BorgWarner", title: "Portal B2B", logo: borgwarnerLogo.url },
       { company: "Continental", title: "Portal Web SAP", logo: continentalLogo.url },
+      { company: "Croda", title: "Plataforma Digital", logo: crodaLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
@@ -201,5 +204,21 @@ export const cases: CaseItem[] = [
     logo: continentalLogo.url,
     coverImage: continentalCover.url,
   },
+  {
+    id: "15",
+    slug: "croda-plataforma-digital",
+    title: "Plataforma Digital",
+    company: "Croda",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Plataforma sob medida",
+    method: "Design Thinking + Agile Development",
+    description:
+      "Solução sob medida com regras, aprovações e rastreabilidade para gerenciar eventos de curto e longo prazo ligados às pesquisas científicas.",
+    tags: ["Design Thinking", "Service Design", "Product Design", "Desenvolvimento", "Sustentação"],
+    logo: crodaLogo.url,
+    coverImage: crodaCover.url,
+  },
 ];
+
 
