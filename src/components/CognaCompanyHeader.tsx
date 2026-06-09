@@ -12,7 +12,7 @@ export const CognaCompanyHeader = () => (
   <section className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div>
-        <img src={logo.url} alt="Cogna Educação" className="h-28 w-auto md:h-36" />
+        <img src={logo.url} alt="Cogna Educação" className="h-16 w-auto md:h-20" />
 
         <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
           <strong className="font-bold text-foreground">Uma das maiores organizações de educação do mundo</strong>,
