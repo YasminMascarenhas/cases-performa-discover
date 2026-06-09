@@ -11,6 +11,7 @@ export interface CaseItem {
   description: string;
   tags: string[];
   coverImage?: string;
+  coverPosition?: string;
   logo?: string;
 }
 
