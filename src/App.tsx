@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import CaseAxiaAgro from "./pages/CaseAxiaAgro.tsx";
 import CaseAxiaAgroIA from "./pages/CaseAxiaAgroIA.tsx";
 import CaseAxiaAgroPortal from "./pages/CaseAxiaAgroPortal.tsx";
+import CaseAleCockpit from "./pages/CaseAleCockpit.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/case/axia-agro" element={<CaseAxiaAgro />} />
           <Route path="/case/axia-agro-ia" element={<CaseAxiaAgroIA />} />
           <Route path="/case/axia-agro-portal" element={<CaseAxiaAgroPortal />} />
+          <Route path="/case/ale-cockpit-tatico" element={<CaseAleCockpit />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
