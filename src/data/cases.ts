@@ -11,6 +11,7 @@ export interface CaseItem {
   description: string;
   tags: string[];
   coverImage?: string;
+  coverPosition?: string;
   logo?: string;
 }
 
@@ -92,6 +93,7 @@ export const cases: CaseItem[] = [
     tags: ["IA", "Discovery", "Estratégia"],
     logo: axiaAgroLogo,
     coverImage: aiStrategyCover.url,
+    coverPosition: "center 70%",
   },
   {
     id: "10",

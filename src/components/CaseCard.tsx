@@ -26,6 +26,7 @@ export const CaseCard = ({ item, variant = "default" }: Props) => {
             src={item.coverImage}
             alt={`${item.company} — ${item.title}`}
             loading="lazy"
+            style={item.coverPosition ? { objectPosition: item.coverPosition } : undefined}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {isFeatured && (
