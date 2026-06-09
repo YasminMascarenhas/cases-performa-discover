@@ -12,7 +12,7 @@ export const EatonCompanyHeader = () => (
   <section className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div>
-        <img src={logo.url} alt="Eaton" className="-ml-2 h-24 w-auto object-left md:h-32" />
+        <img src={logo.url} alt="Eaton" className="-ml-2 h-16 w-auto object-left md:h-20" />
 
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           <strong className="font-bold text-foreground">Líder global em soluções de gestão de energia elétrica, hidráulica e mecânica.</strong>{" "}
