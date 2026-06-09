@@ -2,8 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
+import { CompanyRow } from "@/components/CompanyRow";
 import { SegmentCard } from "@/components/SegmentCard";
-import { cases, categories, segments, type Category } from "@/data/cases";
+import { cases, categories, segments, type Category, type CaseItem } from "@/data/cases";
 import performaLogo from "@/assets/performa-logo-icon.png";
 
 const Index = () => {
@@ -160,10 +161,24 @@ const Index = () => {
             </p>
           </div>
         ) : (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((c) => (
-              <CaseCard key={c.id} item={c} />
-            ))}
+          <div className="flex flex-col gap-6">
+            {(() => {
+              const groups: { company: string; logo?: string; items: CaseItem[] }[] = [];
+              const idx = new Map<string, number>();
+              filtered.forEach((c) => {
+                if (!idx.has(c.company)) {
+                  idx.set(c.company, groups.length);
+                  groups.push({ company: c.company, logo: c.logo, items: [c] });
+                } else {
+                  const g = groups[idx.get(c.company)!];
+                  g.items.push(c);
+                  if (!g.logo && c.logo) g.logo = c.logo;
+                }
+              });
+              return groups.map((g) => (
+                <CompanyRow key={g.company} company={g.company} logo={g.logo} items={g.items} />
+              ));
+            })()}
           </div>
         )}
 
