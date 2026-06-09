@@ -60,16 +60,6 @@ const CaseEatonBlueSapphire = () => {
                   <strong className="font-bold text-foreground">80% de melhoria no tempo de criação de proposta</strong> —
                   de 15min antes para 3min depois.
                 </p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
 
