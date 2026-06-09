@@ -167,7 +167,7 @@ const Index = () => {
                       <li key={s.name}>
                         <button
                           onClick={() => handleSegmentSelect(s.name as SegmentName)}
-                          className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
+                          className={`flex w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-sm font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
                             isActive
                               ? "bg-[#FFF0E6] text-primary"
                               : "text-foreground hover:bg-surface"
