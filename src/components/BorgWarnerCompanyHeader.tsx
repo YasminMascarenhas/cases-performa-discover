@@ -15,7 +15,7 @@ export const BorgWarnerCompanyHeader = () => (
         <img src={logo.url} alt="BorgWarner" className="h-28 w-auto md:h-36" />
 
         <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
-          <strong className="font-bold text-foreground">BorgWarner</strong> é líder global em tecnologias de propulsão e eletrificação automotiva,
+          BorgWarner é <strong className="font-bold text-foreground">líder global em tecnologias de propulsão e eletrificação automotiva</strong>,
           se destaca pelo desenvolvimento de motores elétricos, transmissões avançadas, sistemas de
           gerenciamento térmico e eletrônica de potência, impulsionando a eficiência e sustentabilidade
           da mobilidade.
