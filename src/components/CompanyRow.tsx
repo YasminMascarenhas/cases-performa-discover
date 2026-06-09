@@ -49,7 +49,7 @@ export const CompanyRow = ({ company, logo, items }: Props) => {
               src={logo}
               alt={`${company} logo`}
               loading="lazy"
-              className="max-h-20 w-auto object-contain md:max-h-24"
+              className={`w-auto object-contain ${company === "Continental" ? "max-h-28 md:max-h-32" : "max-h-20 md:max-h-24"}`}
             />
           ) : (
             <span className="text-center text-base font-semibold text-foreground">{company}</span>
