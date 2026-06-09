@@ -22,7 +22,7 @@ const Index = () => {
         !activeCategory ||
         (activeCategory === "Segmentos"
           ? !!activeSegment && c.segment === activeSegment
-          : c.category === activeCategory);
+          : c.category === activeCategory || c.extraCategories?.includes(activeCategory));
       const matchesQuery =
         !q ||
         c.title.toLowerCase().includes(q) ||

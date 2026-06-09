@@ -174,6 +174,7 @@ export const cases: CaseItem[] = [
     company: "Cogna",
     segment: "Educação",
     category: "Katalysis",
+    extraCategories: ["Discovery & Design"],
     solution: "Jornada do aluno com IA",
     method: "Discovery & Design + Katalysis",
     description:
