@@ -184,8 +184,7 @@ const Index = () => {
               Abrir segmentos
             </button>
           </div>
-        ) : null}
-        {!(activeCategory === "Segmentos" && !activeSegment) && (
+        ) : filtered.length === 0 ? (
           <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
             <p className="text-base font-medium text-foreground">Nenhum case encontrado</p>
             <p className="mt-1 text-sm text-muted-foreground">
@@ -219,6 +218,7 @@ const Index = () => {
             ))}
           </div>
         )}
+
 
       </section>
 
