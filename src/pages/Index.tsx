@@ -114,7 +114,7 @@ const Index = () => {
       {/* Export PDF button */}
       <button
         onClick={() => setSelectionMode(true)}
-        className={`fixed top-5 right-20 z-50 inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-transparent px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 ${selectionMode ? "hidden" : ""}`}
+        className={`fixed top-5 right-20 z-50 inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-white px-4 py-2 text-sm font-medium text-primary shadow-soft transition-colors hover:bg-primary/10 ${selectionMode ? "hidden" : ""}`}
         style={{ fontFamily: "Poppins, sans-serif" }}
       >
         <FileDown className="h-4 w-4" />
