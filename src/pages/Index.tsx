@@ -156,8 +156,9 @@ const Index = () => {
         {activeCategory === "Segmentos" ? (
           <div className="flex w-full items-stretch">
             {/* Segments sidebar */}
-            <aside className="w-[260px] shrink-0 border-r border-border bg-white shadow-[1px_0_2px_rgba(0,0,0,0.04)]">
-              <div className="sticky top-0 px-4 py-5">
+            <aside className="w-[200px] shrink-0 bg-white">
+              <div className="sticky top-0 px-3 py-5">
+
                 <ul className="flex flex-col gap-1">
                   {segments.map((s) => {
                     const Icon = s.icon;
