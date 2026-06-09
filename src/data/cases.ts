@@ -16,6 +16,7 @@ export interface CaseItem {
   title: string;
   company: string;
   category: Category;
+  extraCategories?: Category[];
   segment?: SegmentName;
   solution: string;
   method: string;
