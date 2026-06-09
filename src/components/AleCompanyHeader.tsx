@@ -1,5 +1,6 @@
 import { Clock, Warehouse, Users } from "lucide-react";
 import aleLogo from "@/assets/ale-logo.png.asset.json";
+import aleCover from "@/assets/ale-cover.png.asset.json";
 
 const stats = [
   { icon: Clock, value: "+30 Anos", label: "de história" },
@@ -40,7 +41,7 @@ export const AleCompanyHeader = () => (
 
       <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-elevated">
         <img
-          src="https://images.unsplash.com/photo-1545262810-77515befe149?auto=format&fit=crop&w=1400&q=80"
+          src={aleCover.url}
           alt="Posto de combustível ALE"
           className="h-full w-full object-cover"
         />
