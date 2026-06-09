@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { BorgWarnerCompanyHeader } from "@/components/BorgWarnerCompanyHeader";
 
 
-const results = [
+const results: { icon: typeof Map; label: string; highlight?: string }[] = [
   { icon: Map, label: "Maior alcance e distribuição" },
   { icon: Package, label: "Melhor acompanhamento de estoque e entregas" },
   { icon: Handshake, label: "Agilidade no atendimento ao cliente em canal exclusivo" },
-  { icon: Cloud, label: "100% integrada ao ERP" },
+  { icon: Cloud, label: "integrada ao ERP", highlight: "100%" },
   { icon: Settings, label: "Escala na operação de vendas de reposição de peças" },
 ];
 
@@ -66,13 +66,16 @@ const CaseBorgWarnerPortal = () => {
         </div>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {results.map(({ icon: Icon, label }) => (
+          {results.map(({ icon: Icon, label, highlight }) => (
             <div
               key={label}
               className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated"
             >
               <Icon className="h-7 w-7 text-primary" />
-              <p className="mt-4 text-base font-semibold leading-snug text-foreground">{label}</p>
+              {highlight && (
+                <p className="mt-4 text-3xl font-bold leading-none text-primary">{highlight}</p>
+              )}
+              <p className={`${highlight ? "mt-2" : "mt-4"} text-base font-semibold leading-snug text-foreground`}>{label}</p>
             </div>
           ))}
         </div>
