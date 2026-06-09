@@ -9,7 +9,7 @@ const stats = [
 ];
 
 export const EatonCompanyHeader = () => (
-  <section className="container mx-auto px-6 py-12">
+  <section data-pdf-section="company-header" className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
       <div>
         <img src={logo.url} alt="Eaton" className="-ml-2 h-16 w-auto object-left md:h-20" />
