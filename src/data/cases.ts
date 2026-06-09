@@ -166,5 +166,20 @@ export const cases: CaseItem[] = [
     logo: borgwarnerLogo.url,
     coverImage: borgwarnerCover.url,
   },
+  {
+    id: "13",
+    slug: "cogna-ai-journey",
+    title: "AI Journey",
+    company: "Cogna",
+    segment: "Educação",
+    category: "Katalysis",
+    solution: "Jornada do aluno com IA",
+    method: "Discovery & Design + Katalysis",
+    description:
+      "Mapeamento da jornada do aluno e cocriação do TO-BE com IA, automatizando o atendimento dos tutores e elevando retenção e engajamento.",
+    tags: ["IA", "Educação", "Discovery", "Katalysis", "Jornada do aluno"],
+    logo: cognaLogo.url,
+    coverImage: cognaCover.url,
+  },
 ];
 
