@@ -133,11 +133,7 @@ const CaseAxiaAgroIA = () => {
 
           {/* Funil */}
           <div className="flex items-center justify-center rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated">
-            <img
-              src={funnelImage}
-              alt="Funil: +100 necessidades, +70 ideias, 10 classificadas, 03 projetos priorizados"
-              className="h-auto w-full max-w-[440px]"
-            />
+            <FunnelSvg />
           </div>
 
           {/* NPS */}
