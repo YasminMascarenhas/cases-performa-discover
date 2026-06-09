@@ -14,7 +14,7 @@ export const EatonCompanyHeader = () => (
       <div>
         <img src={logo.url} alt="Eaton" className="-ml-2 h-16 w-auto object-left md:h-20" />
 
-        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+        <p className="mt-16 max-w-xl text-base leading-relaxed text-muted-foreground">
           <strong className="font-bold text-foreground">Líder global em soluções de gestão de energia elétrica, hidráulica e mecânica.</strong>{" "}
           Comprometida com a eficiência energética e a sustentabilidade, investe em tecnologia para
           tornar o uso da energia mais seguro, confiável e inteligente.
