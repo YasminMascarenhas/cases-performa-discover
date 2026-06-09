@@ -14,15 +14,14 @@ export const AleCompanyHeader = () => (
         <img src={aleLogo.url} alt="ALE Combustíveis" className="h-24 w-auto" />
 
         <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
-          ALE Combustíveis é a quarta maior distribuidora privada de combustíveis do Brasil.
+          <strong className="font-bold text-foreground">ALE Combustíveis</strong> é a quarta maior distribuidora privada de combustíveis do Brasil.
           Fundada em 1996, a empresa atua em 21 estados e no Distrito Federal, com aproximadamente
           1.500 postos de serviço e 43 bases de distribuição. Desde 2018, a ALE faz parte do Grupo
           Glencore, sediado na Suíça.
         </p>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
           A empresa é reconhecida pela inovação em combustíveis mais eficientes e sustentáveis,
-          atendendo milhões de clientes com forte foco em excelência logística, tecnologia e
-          descarbonização.
+          <strong className="font-bold text-foreground"> atendendo milhões de clientes com forte foco em excelência logística, tecnologia e descarbonização</strong>.
         </p>
 
         <div className="mt-10 grid grid-cols-3 gap-4">
