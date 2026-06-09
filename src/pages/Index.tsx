@@ -334,7 +334,35 @@ const Index = () => {
         </div>
       </footer>
 
+      {/* Floating selection bar */}
+      {selectionMode && (
+        <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
+          <div className="flex items-center gap-3 rounded-2xl border border-border bg-card px-5 py-3 shadow-elevated">
+            <span className="text-sm font-medium text-foreground">
+              {selectedIds.size} {selectedIds.size === 1 ? "case selecionado" : "cases selecionados"}
+            </span>
+            <button
+              onClick={cancelSelection}
+              disabled={exporting}
+              className="rounded-lg border border-border bg-transparent px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-surface disabled:opacity-50"
+            >
+              Cancelar
+            </button>
+            <button
+              onClick={handleExport}
+              disabled={selectedIds.size === 0 || exporting}
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-40"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              {exporting ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileDown className="h-4 w-4" />}
+              {exporting ? "Gerando..." : "Exportar PDF"}
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
+
 
   );
 };
