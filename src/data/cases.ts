@@ -32,6 +32,7 @@ import yaraLogo from "@/assets/yara-logo.png";
 import eurochemLogo from "@/assets/eurochem-logo.png";
 import casaDaLavouraCover from "@/assets/casa-da-lavoura.jpg.asset.json";
 import aiStrategyCover from "@/assets/ai-strategy.jpg.asset.json";
+import aleLogo from "@/assets/ale-logo.png.asset.json";
 
 
 
@@ -206,5 +207,21 @@ export const cases: CaseItem[] = [
     description:
       "Programa multianual de transformação digital com reestruturação de tribos, métricas e cultura orientada a produto.",
     tags: ["Cultura", "Tribos", "OKRs"],
+  },
+  {
+    id: "11",
+    slug: "ale-cockpit-tatico",
+    title: "AM&S Cockpit Tático",
+    company: "ALE Combustíveis",
+    segment: "Varejo",
+    category: "Agile Development",
+    solution: "Sustentação evolutiva N3",
+    method: "Support Leader + pacote mensal de horas",
+    description:
+      "Modelo de sustentação evolutiva com Support Leader dedicado, reduzindo o Lead Time em 92,9% e aumentando em 70% os chamados resolvidos.",
+    tags: ["Sustentação", "N3", "Support Leader", "AM&S", "Cockpit"],
+    logo: aleLogo.url,
+    coverImage:
+      "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1200&q=80",
   },
 ];
