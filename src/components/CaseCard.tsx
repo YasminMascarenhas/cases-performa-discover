@@ -11,21 +11,38 @@ const categoryIcon: Record<Category, React.ComponentType<{ className?: string }>
 
 interface Props {
   item: CaseItem;
+  variant?: "default" | "featured";
 }
 
-export const CaseCard = ({ item }: Props) => {
+export const CaseCard = ({ item, variant = "default" }: Props) => {
   const Icon = categoryIcon[item.category];
+  const isFeatured = variant === "featured";
 
   const content = (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated">
       {item.coverImage ? (
-        <div className="relative aspect-[21/9] w-full overflow-hidden bg-surface">
+        <div className={`relative w-full overflow-hidden bg-surface ${isFeatured ? "aspect-[32/9]" : "aspect-[21/9]"}`}>
           <img
             src={item.coverImage}
             alt={`${item.company} — ${item.title}`}
             loading="lazy"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
+          {isFeatured && (
+            <>
+              <div className="absolute inset-0 bg-white/60" />
+              {item.logo && (
+                <div className="absolute inset-0 flex items-center justify-center p-4">
+                  <img
+                    src={item.logo}
+                    alt={`${item.company} logo`}
+                    loading="lazy"
+                    className="max-h-16 w-auto object-contain md:max-h-20"
+                  />
+                </div>
+              )}
+            </>
+          )}
         </div>
       ) : null}
       <div className="flex flex-1 flex-col p-6">
