@@ -232,7 +232,11 @@ const Index = () => {
                   if (!g.logo && c.logo) g.logo = c.logo;
                 }
               });
-              groups.sort((a, b) => a.company.localeCompare(b.company, "pt-BR"));
+              groups.sort((a, b) => {
+                if (a.company === "Axia Agro") return -1;
+                if (b.company === "Axia Agro") return 1;
+                return a.company.localeCompare(b.company, "pt-BR");
+              });
               return groups.map((g) => (
                 <CompanyRow key={g.company} company={g.company} logo={g.logo} items={g.items} />
               ));
