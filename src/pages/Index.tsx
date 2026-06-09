@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
 import { CompanyRow } from "@/components/CompanyRow";
 import { SegmentCard } from "@/components/SegmentCard";
-import { Sheet, SheetContent } from "@/components/ui/sheet";
+
 import { cases, categories, segments, type Category, type CaseItem, type SegmentName } from "@/data/cases";
 import performaLogo from "@/assets/performa-logo-icon.png";
 
@@ -12,7 +12,7 @@ const Index = () => {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [activeSegment, setActiveSegment] = useState<SegmentName | null>(null);
-  const [segmentsOpen, setSegmentsOpen] = useState(false);
+  
   const [expandedSegment, setExpandedSegment] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
