@@ -232,7 +232,45 @@ const Index = () => {
           <p className="text-sm font-medium text-primary">o futuro, hoje.</p>
         </div>
       </footer>
+
+      {/* SEGMENTS SIDEBAR */}
+      <Sheet open={segmentsOpen} onOpenChange={setSegmentsOpen}>
+        <SheetContent
+          side="left"
+          className="w-[300px] bg-white p-0 sm:w-[340px]"
+        >
+          <div className="flex h-full flex-col">
+            <div className="flex items-center justify-between border-b border-border px-5 py-4">
+              <h2 className="text-base font-semibold text-foreground">Segmentos</h2>
+            </div>
+            <nav className="flex-1 overflow-y-auto p-3">
+              <ul className="flex flex-col gap-1">
+                {segments.map((s) => {
+                  const Icon = s.icon;
+                  const isActive = activeSegment === (s.name as SegmentName);
+                  return (
+                    <li key={s.name}>
+                      <button
+                        onClick={() => handleSegmentSelect(s.name as SegmentName)}
+                        className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                          isActive
+                            ? "bg-[#FFF0E6] text-primary"
+                            : "text-foreground hover:bg-surface"
+                        }`}
+                      >
+                        <Icon className="h-5 w-5 text-primary" />
+                        <span>{s.name}</span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
+        </SheetContent>
+      </Sheet>
     </div>
+
   );
 };
 
