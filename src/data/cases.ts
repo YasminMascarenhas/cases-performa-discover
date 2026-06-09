@@ -39,6 +39,8 @@ import borgwarnerLogo from "@/assets/borgwarner-logo.png.asset.json";
 import borgwarnerCover from "@/assets/borgwarner-sign.jpg.asset.json";
 import cognaLogo from "@/assets/cogna-logo.png.asset.json";
 import cognaCover from "@/assets/cogna-cover.jpg.asset.json";
+import continentalLogo from "@/assets/continental-logo.png.asset.json";
+import continentalCover from "@/assets/continental-cover.webp.asset.json";
 
 
 
@@ -74,6 +76,7 @@ export const segments: Segment[] = [
     icon: Factory,
     projects: [
       { company: "BorgWarner", title: "Portal B2B", logo: borgwarnerLogo.url },
+      { company: "Continental", title: "Portal Web SAP", logo: continentalLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
@@ -182,6 +185,21 @@ export const cases: CaseItem[] = [
     tags: ["IA", "Educação", "Discovery", "Katalysis", "Jornada do aluno"],
     logo: cognaLogo.url,
     coverImage: cognaCover.url,
+  },
+  {
+    id: "14",
+    slug: "continental-portal-sap",
+    title: "Portal Web SAP",
+    company: "Continental",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Portal Web integrado ao SAP",
+    method: "Agile Development + .NET Core",
+    description:
+      "Gestão de pedidos do início ao fim, com informações em tempo real e mais autonomia para clientes e equipe de vendas, integrada ao SAP.",
+    tags: ["Portal Cliente", ".NET Core", "Integração SAP", "E-commerce B2B"],
+    logo: continentalLogo.url,
+    coverImage: continentalCover.url,
   },
 ];
 
