@@ -12,7 +12,7 @@ export const ContinentalCompanyHeader = () => (
   <section className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div>
-        <img src={logo.url} alt="Continental" className="-ml-2 h-20 w-auto object-left md:h-24" />
+        <img src={logo.url} alt="Continental" className="-ml-6 h-20 w-auto object-left md:h-24" />
 
         <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
           <strong className="font-bold text-foreground">Uma das maiores fornecedoras de tecnologia automotiva do mundo</strong>,
