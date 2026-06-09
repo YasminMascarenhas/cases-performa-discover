@@ -87,38 +87,32 @@ const CaseAxiaAgroIA = () => {
           <h2 className="text-3xl font-bold text-foreground">Resultados</h2>
         </div>
 
-        <div className="mt-8 overflow-hidden rounded-3xl bg-[#FF6E00] p-8 text-white shadow-elevated md:p-10">
-          <div className="grid items-center gap-8 md:grid-cols-[1.1fr_auto_2fr_auto_1.1fr]">
-            {/* OKRs */}
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {/* OKRs */}
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated">
+            <p className="text-4xl font-extrabold leading-none text-primary md:text-5xl">100% OKRs</p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              priorizados com oportunidades mapeadas para serem acelerados com projetos de IA
+            </p>
+          </div>
+
+          {/* Funil */}
+          <div className="flex items-center justify-center rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated">
+            <img
+              src={funnelImage}
+              alt="Funil: +100 necessidades, +70 ideias, 10 classificadas, 03 projetos priorizados"
+              className="h-auto w-full max-w-[440px]"
+            />
+          </div>
+
+          {/* NPS */}
+          <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:border-primary/40 hover:shadow-elevated">
+            <div className="text-primary">
+              <NpsGauge />
+            </div>
             <div>
-              <p className="text-4xl font-extrabold leading-none md:text-5xl">100% OKRs</p>
-              <p className="mt-3 text-sm leading-relaxed text-white/95">
-                priorizados com oportunidades mapeadas para serem acelerados com projetos de IA
-              </p>
-            </div>
-
-            <div className="hidden h-32 w-px bg-white/40 md:block" />
-
-            {/* Funil */}
-            <div className="flex items-center justify-center">
-              <img
-                src={funnelImage}
-                alt="Funil: +100 necessidades, +70 ideias, 10 classificadas, 03 projetos priorizados"
-                className="h-auto w-full max-w-[440px]"
-              />
-            </div>
-
-            <div className="hidden h-32 w-px bg-white/40 md:block" />
-
-            {/* NPS */}
-            <div className="flex items-center gap-4">
-              <div className="text-white">
-                <NpsGauge />
-              </div>
-              <div>
-                <p className="text-sm text-white/95">Avaliação NPS</p>
-                <p className="text-5xl font-extrabold leading-none">100</p>
-              </div>
+              <p className="text-sm text-muted-foreground">Avaliação NPS</p>
+              <p className="text-5xl font-extrabold leading-none text-foreground">100</p>
             </div>
           </div>
         </div>
