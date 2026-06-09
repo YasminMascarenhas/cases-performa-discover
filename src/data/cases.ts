@@ -45,6 +45,7 @@ import crodaLogo from "@/assets/croda-logo.png.asset.json";
 import crodaCover from "@/assets/croda-cover.png.asset.json";
 import eatonLogo from "@/assets/eaton-logo.png.asset.json";
 import eatonCover from "@/assets/eaton-cover.png.asset.json";
+import eatonLifeCover from "@/assets/eaton-life-cover.png.asset.json";
 
 
 
@@ -83,6 +84,7 @@ export const segments: Segment[] = [
       { company: "Continental", title: "Portal Web SAP", logo: continentalLogo.url },
       { company: "Croda", title: "Plataforma Digital", logo: crodaLogo.url },
       { company: "Eaton", title: "Blue Sapphire CPDI", logo: eatonLogo.url },
+      { company: "Eaton", title: "Life Safety + Power BI", logo: eatonLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
@@ -236,6 +238,21 @@ export const cases: CaseItem[] = [
     tags: ["Power Apps", "Power BI", "Automação", "Cotações"],
     logo: eatonLogo.url,
     coverImage: eatonCover.url,
+  },
+  {
+    id: "17",
+    slug: "eaton-life-safety",
+    title: "Life Safety + Power BI",
+    company: "Eaton",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Life Safety + Power BI",
+    method: "Agile Development + Power BI",
+    description:
+      "Sistema focado em facilitar cotações no segmento Life Safety, com insights de dados para decisões comerciais e mais previsibilidade.",
+    tags: ["Life Safety", "Power BI", "Cotações", "Indústria"],
+    logo: eatonLogo.url,
+    coverImage: eatonLifeCover.url,
   },
 ];
 

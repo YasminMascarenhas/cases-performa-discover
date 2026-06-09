@@ -13,6 +13,7 @@ import CaseCognaAIJourney from "./pages/CaseCognaAIJourney.tsx";
 import CaseContinentalPortal from "./pages/CaseContinentalPortal.tsx";
 import CaseCrodaPlataforma from "./pages/CaseCrodaPlataforma.tsx";
 import CaseEatonBlueSapphire from "./pages/CaseEatonBlueSapphire.tsx";
+import CaseEatonLifeSafety from "./pages/CaseEatonLifeSafety.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/case/continental-portal-sap" element={<CaseContinentalPortal />} />
           <Route path="/case/croda-plataforma-digital" element={<CaseCrodaPlataforma />} />
           <Route path="/case/eaton-blue-sapphire" element={<CaseEatonBlueSapphire />} />
+          <Route path="/case/eaton-life-safety" element={<CaseEatonLifeSafety />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
