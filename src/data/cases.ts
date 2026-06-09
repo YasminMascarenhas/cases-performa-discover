@@ -33,6 +33,7 @@ import eurochemLogo from "@/assets/eurochem-logo.png";
 import casaDaLavouraCover from "@/assets/casa-da-lavoura.jpg.asset.json";
 import aiStrategyCover from "@/assets/ai-strategy.jpg.asset.json";
 import aleLogo from "@/assets/ale-logo.png.asset.json";
+import aleCover from "@/assets/ale-cover.png.asset.json";
 
 
 
@@ -221,7 +222,6 @@ export const cases: CaseItem[] = [
       "Modelo de sustentação evolutiva com Support Leader dedicado, reduzindo o Lead Time em 92,9% e aumentando em 70% os chamados resolvidos.",
     tags: ["Sustentação", "N3", "Support Leader", "AM&S", "Cockpit"],
     logo: aleLogo.url,
-    coverImage:
-      "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1200&q=80",
+    coverImage: aleCover.url,
   },
 ];
