@@ -34,6 +34,9 @@ import casaDaLavouraCover from "@/assets/casa-da-lavoura.jpg.asset.json";
 import aiStrategyCover from "@/assets/ai-strategy.jpg.asset.json";
 import aleLogo from "@/assets/ale-logo.png.asset.json";
 import aleCover from "@/assets/ale-cover.png.asset.json";
+import borgwarnerLogo from "@/assets/borgwarner-logo.png.asset.json";
+import borgwarnerCover from "@/assets/borgwarner-sign.jpg.asset.json";
+
 
 
 
@@ -63,7 +66,13 @@ export const segments: Segment[] = [
   },
   { name: "Educação", icon: GraduationCap },
   { name: "E-games", icon: Gamepad2 },
-  { name: "Indústria", icon: Factory },
+  {
+    name: "Indústria",
+    icon: Factory,
+    projects: [
+      { company: "BorgWarner", title: "Portal B2B", logo: borgwarnerLogo.url },
+    ],
+  },
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
@@ -140,4 +149,20 @@ export const cases: CaseItem[] = [
     logo: aleLogo.url,
     coverImage: aleCover.url,
   },
+  {
+    id: "12",
+    slug: "borgwarner-portal-b2b",
+    title: "Portal B2B",
+    company: "BorgWarner",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Sistema de autosserviço B2B",
+    method: "Agile Development + Integração ERP",
+    description:
+      "Plataforma de autosserviço que automatiza o pós-vendas de reposição de autopeças, com mais autonomia para distribuidores e integração total ao ERP.",
+    tags: ["Portal B2B", "Pós-vendas", "ERP", "Indústria", "Autopeças"],
+    logo: borgwarnerLogo.url,
+    coverImage: borgwarnerCover.url,
+  },
 ];
+
