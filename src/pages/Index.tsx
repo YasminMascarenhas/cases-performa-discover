@@ -1,19 +1,54 @@
 import { useEffect, useMemo, useState } from "react";
-import { Search, X } from "lucide-react";
+import { Search, X, FileDown, Loader2 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
 import { CompanyRow } from "@/components/CompanyRow";
 import { SegmentCard } from "@/components/SegmentCard";
+import { exportCasesPdf } from "@/lib/exportCasesPdf";
+import { toast } from "sonner";
 
 import { cases, categories, segments, type Category, type CaseItem, type SegmentName } from "@/data/cases";
 import performaLogo from "@/assets/performa-logo-icon.png";
+
 
 const Index = () => {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [activeSegment, setActiveSegment] = useState<SegmentName | null>(null);
-  
-  const [expandedSegment, setExpandedSegment] = useState<string | null>(null);
+  const [selectionMode, setSelectionMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [exporting, setExporting] = useState(false);
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const cancelSelection = () => {
+    setSelectionMode(false);
+    setSelectedIds(new Set());
+  };
+
+  const handleExport = async () => {
+    const items = cases.filter((c) => selectedIds.has(c.id));
+    if (items.length === 0) return;
+    setExporting(true);
+    try {
+      await exportCasesPdf(items);
+      toast.success("PDF gerado com sucesso");
+      cancelSelection();
+    } catch (e) {
+      console.error(e);
+      toast.error("Erro ao gerar PDF");
+    } finally {
+      setExporting(false);
+    }
+  };
+
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
