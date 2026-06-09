@@ -43,13 +43,13 @@ export const CompanyRow = ({ company, logo, items }: Props) => {
     <div className="relative bg-surface px-6 py-5 md:py-6">
       <div className="flex items-stretch gap-5 md:gap-6">
         {/* Logo */}
-        <div className="flex w-[160px] shrink-0 items-center justify-center pr-4 md:w-[200px] md:pr-6">
+        <div className="flex w-[120px] shrink-0 items-center justify-center pr-3 md:w-[150px] md:pr-4">
           {logo ? (
             <img
               src={logo}
               alt={`${company} logo`}
               loading="lazy"
-              className="max-h-28 w-auto object-contain md:max-h-32"
+              className="max-h-20 w-auto object-contain md:max-h-24"
             />
           ) : (
             <span className="text-center text-base font-semibold text-foreground">{company}</span>
