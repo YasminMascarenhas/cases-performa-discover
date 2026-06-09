@@ -39,6 +39,8 @@ import borgwarnerLogo from "@/assets/borgwarner-logo.png.asset.json";
 import borgwarnerCover from "@/assets/borgwarner-sign.jpg.asset.json";
 import cognaLogo from "@/assets/cogna-logo.png.asset.json";
 import cognaCover from "@/assets/cogna-cover.jpg.asset.json";
+import continentalLogo from "@/assets/continental-logo.png.asset.json";
+import continentalCover from "@/assets/continental-cover.webp.asset.json";
 
 
 
