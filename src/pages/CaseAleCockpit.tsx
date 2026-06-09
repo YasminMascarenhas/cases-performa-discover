@@ -6,7 +6,7 @@ import cockpitMockup from "@/assets/ale-cockpit.png.asset.json";
 const results = [
   { icon: Timer, value: "92,9%", label: "de redução do Lead Time" },
   { icon: TrendingDown, value: "12 meses", label: "de queda contínua do Lead Time" },
-  { icon: Gauge, value: "15,5x", label: "mais rápido que o ano anterior" },
+  { icon: Gauge, value: "15,5x", label: "Lead Time mais rápido que o ano anterior" },
   { icon: CheckCircle2, value: "+70%", label: "de aumento de chamados resolvidos" },
 ];
 
