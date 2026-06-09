@@ -158,9 +158,6 @@ const Index = () => {
             {/* Segments sidebar */}
             <aside className="w-[260px] shrink-0 border-r border-border bg-white shadow-[1px_0_2px_rgba(0,0,0,0.04)]">
               <div className="sticky top-0 px-4 py-5">
-                <h2 className="px-2 pb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                  Segmentos
-                </h2>
                 <ul className="flex flex-col gap-1">
                   {segments.map((s) => {
                     const Icon = s.icon;
