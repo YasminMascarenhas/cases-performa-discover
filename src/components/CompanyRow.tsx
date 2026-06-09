@@ -7,9 +7,13 @@ interface Props {
   company: string;
   logo?: string;
   items: CaseItem[];
+  selectable?: boolean;
+  selectedIds?: Set<string>;
+  onSelectToggle?: (id: string) => void;
 }
 
-export const CompanyRow = ({ company, logo, items }: Props) => {
+export const CompanyRow = ({ company, logo, items, selectable, selectedIds, onSelectToggle }: Props) => {
+
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [canLeft, setCanLeft] = useState(false);
   const [canRight, setCanRight] = useState(false);
@@ -64,9 +68,15 @@ export const CompanyRow = ({ company, logo, items }: Props) => {
           >
             {items.map((c) => (
               <div key={c.id} className="w-[300px] shrink-0 md:w-[340px]">
-                <CaseCard item={c} />
+                <CaseCard
+                  item={c}
+                  selectable={selectable}
+                  selected={selectedIds?.has(c.id)}
+                  onSelectToggle={onSelectToggle}
+                />
               </div>
             ))}
+
           </div>
 
           {canLeft && (
