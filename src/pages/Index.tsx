@@ -124,11 +124,11 @@ const Index = () => {
       </section>
 
       {/* RESULTS */}
-      <section id="results" className="container mx-auto px-6 pt-6 pb-16 scroll-mt-20">
+      <section id="results" className="pt-6 pb-16 scroll-mt-20">
 
 
         {activeCategory === "Segmentos" ? (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
+          <div className="container mx-auto px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
             {segments
               .filter((s) => !query.trim() || s.name.toLowerCase().includes(query.trim().toLowerCase()))
               .map((s) => (
@@ -143,14 +143,14 @@ const Index = () => {
               ))}
           </div>
         ) : filtered.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-border bg-card p-16 text-center">
+          <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
             <p className="text-base font-medium text-foreground">Nenhum case encontrado</p>
             <p className="mt-1 text-sm text-muted-foreground">
               Tente ajustar a busca ou selecionar outra categoria.
             </p>
           </div>
         ) : (
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
             {(() => {
               const groups: { company: string; logo?: string; items: CaseItem[] }[] = [];
               const idx = new Map<string, number>();
@@ -172,6 +172,7 @@ const Index = () => {
         )}
 
       </section>
+
 
       {/* FOOTER */}
       <footer className="border-t border-border bg-surface">
