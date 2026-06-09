@@ -30,7 +30,7 @@ export const CaseCard = ({ item, variant = "default" }: Props) => {
           />
           {isFeatured && (
             <>
-              <div className="absolute inset-0 bg-white/60" />
+              <div className="absolute inset-0 bg-white/85" />
               {item.logo && (
                 <div className="absolute inset-0 flex items-center justify-center p-4">
                   <img
