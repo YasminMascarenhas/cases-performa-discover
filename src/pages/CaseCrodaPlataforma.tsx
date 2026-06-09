@@ -1,7 +1,7 @@
 import { ArrowLeft, Target, Lightbulb, TrendingUp, ClipboardCheck, Timer, Users, MessageCircle, Search, RefreshCw } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CrodaCompanyHeader } from "@/components/CrodaCompanyHeader";
-import mockup from "@/assets/croda-mockup.png.asset.json";
+
 
 const results = [
   { icon: ClipboardCheck, label: "100% customizado" },
@@ -31,54 +31,44 @@ const CaseCrodaPlataforma = () => {
 
       <section className="bg-surface border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="flex flex-col gap-10">
-              <div>
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                  <Target className="h-7 w-7 text-primary" />
-                </div>
-                <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  <strong className="font-bold text-foreground">Processo lento, burocrático e sem visibilidade</strong>,
-                  dificultando o monitoramento de status ligados às pesquisas científicas. Não existia
-                  uma solução pronta que atendesse suas necessidades, e adaptar um ERP seria caro e demorado.
-                </p>
+          <div className="grid gap-12 lg:grid-cols-2">
+            <div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                <Target className="h-7 w-7 text-primary" />
               </div>
-
-              <div>
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                  <Lightbulb className="h-7 w-7 text-primary" />
-                </div>
-                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — Plataforma Digital</h2>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  <strong className="font-bold text-foreground">Solução sob medida</strong> com um sistema
-                  com regras, aprovações e rastreabilidade para gerenciar eventos de curto e longo prazo,
-                  centralizando as informações de forma simples e eficiente.
-                </p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                <strong className="font-bold text-foreground">Processo lento, burocrático e sem visibilidade</strong>,
+                dificultando o monitoramento de status ligados às pesquisas científicas. Não existia
+                uma solução pronta que atendesse suas necessidades, e adaptar um ERP seria caro e demorado.
+              </p>
             </div>
 
-            <div className="relative flex justify-center">
-              <img
-                src={mockup.url}
-                alt="Mockup Plataforma Digital Croda"
-                loading="lazy"
-                className="h-auto w-full max-w-sm object-contain"
-              />
+            <div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                <Lightbulb className="h-7 w-7 text-primary" />
+              </div>
+              <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — Plataforma Digital</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                <strong className="font-bold text-foreground">Solução sob medida</strong> com um sistema
+                com regras, aprovações e rastreabilidade para gerenciar eventos de curto e longo prazo,
+                centralizando as informações de forma simples e eficiente.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-foreground"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
+
 
       <section className="container mx-auto px-6 py-16">
         <div className="flex items-center gap-3">
