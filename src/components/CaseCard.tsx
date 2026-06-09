@@ -1,4 +1,4 @@
-import { Building2, Compass, Code2, Bot, ArrowUpRight } from "lucide-react";
+import { Building2, Compass, Code2, Bot, ArrowUpRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { CaseItem, Category } from "@/data/cases";
 
@@ -12,14 +12,33 @@ const categoryIcon: Record<Category, React.ComponentType<{ className?: string }>
 interface Props {
   item: CaseItem;
   variant?: "default" | "featured";
+  selectable?: boolean;
+  selected?: boolean;
+  onSelectToggle?: (id: string) => void;
 }
 
-export const CaseCard = ({ item, variant = "default" }: Props) => {
+export const CaseCard = ({ item, variant = "default", selectable = false, selected = false, onSelectToggle }: Props) => {
   const Icon = categoryIcon[item.category];
   const isFeatured = variant === "featured";
 
+  const borderClass = selectable && selected
+    ? "border-primary ring-2 ring-primary/30"
+    : selectable
+      ? "border-border opacity-70 hover:opacity-100"
+      : "border-border";
+
   const content = (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated">
+    <article className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-card shadow-soft transition-all duration-300 ${selectable ? "" : "hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated"} ${borderClass}`}>
+      {selectable && (
+        <span
+          className={`pointer-events-none absolute left-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-md border-2 transition-colors ${
+            selected ? "border-primary bg-primary text-white" : "border-primary/70 bg-white/90"
+          }`}
+          aria-hidden="true"
+        >
+          {selected && <Check className="h-4 w-4" />}
+        </span>
+      )}
       {item.coverImage ? (
         <div className={`relative w-full overflow-hidden bg-surface ${isFeatured ? "aspect-[32/9]" : "aspect-[21/9]"}`}>
           <img
@@ -49,7 +68,9 @@ export const CaseCard = ({ item, variant = "default" }: Props) => {
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-3">
           <h3 className="text-lg font-extrabold leading-snug text-foreground">{item.title}</h3>
-          <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground/40 transition-all group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          {!selectable && (
+            <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground/40 transition-all group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          )}
         </div>
 
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
@@ -68,6 +89,19 @@ export const CaseCard = ({ item, variant = "default" }: Props) => {
     </article>
   );
 
+  if (selectable) {
+    return (
+      <button
+        type="button"
+        onClick={() => onSelectToggle?.(item.id)}
+        className="block h-full w-full cursor-pointer text-left outline-none focus-visible:outline-none"
+        aria-pressed={selected}
+      >
+        {content}
+      </button>
+    );
+  }
+
   if (item.slug) {
     return (
       <Link to={`/case/${item.slug}`} className="block h-full">
@@ -77,3 +111,4 @@ export const CaseCard = ({ item, variant = "default" }: Props) => {
   }
   return content;
 };
+
