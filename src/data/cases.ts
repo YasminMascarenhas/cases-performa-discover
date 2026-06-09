@@ -93,6 +93,7 @@ export const cases: CaseItem[] = [
     tags: ["IA", "Discovery", "Estratégia"],
     logo: axiaAgroLogo,
     coverImage: aiStrategyCover.url,
+    coverPosition: "center 70%",
   },
   {
     id: "10",
