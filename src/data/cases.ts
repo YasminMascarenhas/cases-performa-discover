@@ -84,6 +84,7 @@ export const segments: Segment[] = [
       { company: "Continental", title: "Portal Web SAP", logo: continentalLogo.url },
       { company: "Croda", title: "Plataforma Digital", logo: crodaLogo.url },
       { company: "Eaton", title: "Blue Sapphire CPDI", logo: eatonLogo.url },
+      { company: "Eaton", title: "Life Safety + Power BI", logo: eatonLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
