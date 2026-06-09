@@ -1,19 +1,54 @@
 import { useEffect, useMemo, useState } from "react";
-import { Search, X } from "lucide-react";
+import { Search, X, FileDown, Loader2 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CaseCard } from "@/components/CaseCard";
 import { CompanyRow } from "@/components/CompanyRow";
 import { SegmentCard } from "@/components/SegmentCard";
+import { exportCasesPdf } from "@/lib/exportCasesPdf";
+import { toast } from "sonner";
 
 import { cases, categories, segments, type Category, type CaseItem, type SegmentName } from "@/data/cases";
 import performaLogo from "@/assets/performa-logo-icon.png";
+
 
 const Index = () => {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [activeSegment, setActiveSegment] = useState<SegmentName | null>(null);
-  
-  const [expandedSegment, setExpandedSegment] = useState<string | null>(null);
+  const [selectionMode, setSelectionMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [exporting, setExporting] = useState(false);
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const cancelSelection = () => {
+    setSelectionMode(false);
+    setSelectedIds(new Set());
+  };
+
+  const handleExport = async () => {
+    const items = cases.filter((c) => selectedIds.has(c.id));
+    if (items.length === 0) return;
+    setExporting(true);
+    try {
+      await exportCasesPdf(items);
+      toast.success("PDF gerado com sucesso");
+      cancelSelection();
+    } catch (e) {
+      console.error(e);
+      toast.error("Erro ao gerar PDF");
+    } finally {
+      setExporting(false);
+    }
+  };
+
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -75,6 +110,18 @@ const Index = () => {
         alt="Performa IT"
         className="fixed top-4 right-4 z-50 h-10 w-auto"
       />
+
+      {/* Export PDF button */}
+      <button
+        onClick={() => setSelectionMode(true)}
+        className={`fixed top-5 right-20 z-50 inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-transparent px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/10 ${selectionMode ? "hidden" : ""}`}
+        style={{ fontFamily: "Poppins, sans-serif" }}
+      >
+        <FileDown className="h-4 w-4" />
+        Exportar PDF
+      </button>
+
+
 
 
       
@@ -204,9 +251,17 @@ const Index = () => {
               ) : (
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {filtered.map((c) => (
-                    <CaseCard key={c.id} item={c} variant="featured" />
+                    <CaseCard
+                      key={c.id}
+                      item={c}
+                      variant="featured"
+                      selectable={selectionMode}
+                      selected={selectedIds.has(c.id)}
+                      onSelectToggle={toggleSelect}
+                    />
                   ))}
                 </div>
+
               )}
             </div>
           </div>
@@ -238,16 +293,33 @@ const Index = () => {
                 return a.company.localeCompare(b.company, "pt-BR");
               });
               return groups.map((g) => (
-                <CompanyRow key={g.company} company={g.company} logo={g.logo} items={g.items} />
+                <CompanyRow
+                  key={g.company}
+                  company={g.company}
+                  logo={g.logo}
+                  items={g.items}
+                  selectable={selectionMode}
+                  selectedIds={selectedIds}
+                  onSelectToggle={toggleSelect}
+                />
               ));
+
             })()}
           </div>
         ) : (
           <div className="container mx-auto px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((c) => (
-              <CaseCard key={c.id} item={c} variant="featured" />
+              <CaseCard
+                key={c.id}
+                item={c}
+                variant="featured"
+                selectable={selectionMode}
+                selected={selectedIds.has(c.id)}
+                onSelectToggle={toggleSelect}
+              />
             ))}
           </div>
+
         )}
       </section>
 
@@ -262,7 +334,35 @@ const Index = () => {
         </div>
       </footer>
 
+      {/* Floating selection bar */}
+      {selectionMode && (
+        <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
+          <div className="flex items-center gap-3 rounded-2xl border border-border bg-card px-5 py-3 shadow-elevated">
+            <span className="text-sm font-medium text-foreground">
+              {selectedIds.size} {selectedIds.size === 1 ? "case selecionado" : "cases selecionados"}
+            </span>
+            <button
+              onClick={cancelSelection}
+              disabled={exporting}
+              className="rounded-lg border border-border bg-transparent px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-surface disabled:opacity-50"
+            >
+              Cancelar
+            </button>
+            <button
+              onClick={handleExport}
+              disabled={selectedIds.size === 0 || exporting}
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-40"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              {exporting ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileDown className="h-4 w-4" />}
+              {exporting ? "Gerando..." : "Exportar PDF"}
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
+
 
   );
 };

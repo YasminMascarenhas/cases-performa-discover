@@ -9,7 +9,7 @@ const stats = [
 ];
 
 export const AleCompanyHeader = () => (
-  <section className="container mx-auto px-6 py-12">
+  <section data-pdf-section="company-header" className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div>
         <img src={aleLogo.url} alt="ALE Combustíveis" className="h-24 w-auto" />
