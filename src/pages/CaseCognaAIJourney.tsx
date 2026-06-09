@@ -36,35 +36,45 @@ const CaseCognaAIJourney = () => {
       {/* DESAFIO + SOLUÇÃO */}
       <section className="bg-surface border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid gap-8 sm:grid-cols-2">
-            <div className="flex flex-col">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                <Target className="h-7 w-7 text-primary" />
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div className="flex flex-col gap-10">
+              <div className="flex flex-col">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                  <Target className="h-7 w-7 text-primary" />
+                </div>
+                <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  <strong className="font-bold text-foreground">Transformar a jornada do aluno com IA</strong>,
+                  aumentando a retenção, garantindo mentorias mais eficazes e maior engajamento através de
+                  um atendimento excepcional dos tutores impulsionados pela Inteligência Artificial.
+                </p>
               </div>
-              <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                <strong className="font-bold text-foreground">Transformar a jornada do aluno com IA</strong>,
-                aumentando a retenção, garantindo mentorias mais eficazes e maior engajamento através de
-                um atendimento excepcional dos tutores impulsionados pela Inteligência Artificial.
-              </p>
+
+              <div className="flex flex-col">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                  <Lightbulb className="h-7 w-7 text-primary" />
+                </div>
+                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — AI Journey</h2>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  Combinação de <strong className="font-bold text-foreground">metodologias ágeis, design estratégico e ferramentas validadas no mercado</strong> para:
+                </p>
+                <ul className="mt-4 space-y-2 text-base leading-relaxed text-muted-foreground">
+                  {solutionItems.map((s) => (
+                    <li key={s} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <div className="flex flex-col">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                <Lightbulb className="h-7 w-7 text-primary" />
-              </div>
-              <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — AI Journey</h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Combinação de <strong className="font-bold text-foreground">metodologias ágeis, design estratégico e ferramentas validadas no mercado</strong> para:
-              </p>
-              <ul className="mt-4 space-y-2 text-base leading-relaxed text-muted-foreground">
-                {solutionItems.map((s) => (
-                  <li key={s} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span>{s}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="lg:sticky lg:top-8">
+              <img
+                src={mockup.url}
+                alt="Mockup AI Journey Cogna"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -92,18 +102,6 @@ const CaseCognaAIJourney = () => {
         </div>
       </section>
 
-      {/* MOCKUP */}
-      <section className="bg-surface border-t border-border">
-        <div className="container mx-auto px-6 py-16">
-          <div className="mx-auto max-w-5xl">
-            <img
-              src={mockup.url}
-              alt="Mockup AI Journey Cogna"
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </section>
 
       <footer className="border-t border-border bg-surface">
         <div className="container mx-auto flex flex-col items-center justify-between gap-3 px-6 py-8 md:flex-row">
