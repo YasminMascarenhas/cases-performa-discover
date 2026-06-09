@@ -1,11 +1,22 @@
 export type Category = "Segmentos" | "Discovery & Design" | "Agile Development" | "Katalysis";
 
+export type SegmentName =
+  | "Agro"
+  | "Educação"
+  | "E-games"
+  | "Indústria"
+  | "Financeiro"
+  | "Saúde"
+  | "Serviços"
+  | "Varejo";
+
 export interface CaseItem {
   id: string;
   slug?: string;
   title: string;
   company: string;
   category: Category;
+  segment?: SegmentName;
   solution: string;
   method: string;
   description: string;
