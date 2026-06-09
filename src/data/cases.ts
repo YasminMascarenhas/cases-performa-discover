@@ -239,6 +239,21 @@ export const cases: CaseItem[] = [
     logo: eatonLogo.url,
     coverImage: eatonCover.url,
   },
+  {
+    id: "17",
+    slug: "eaton-life-safety",
+    title: "Life Safety + Power BI",
+    company: "Eaton",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Life Safety + Power BI",
+    method: "Agile Development + Power BI",
+    description:
+      "Sistema focado em facilitar cotações no segmento Life Safety, com insights de dados para decisões comerciais e mais previsibilidade.",
+    tags: ["Life Safety", "Power BI", "Cotações", "Indústria"],
+    logo: eatonLogo.url,
+    coverImage: eatonLifeCover.url,
+  },
 ];
 
 
