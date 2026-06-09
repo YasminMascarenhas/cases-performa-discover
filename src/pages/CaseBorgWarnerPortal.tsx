@@ -1,7 +1,7 @@
 import { ArrowLeft, Target, Lightbulb, TrendingUp, Map, Package, Handshake, Cloud, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 import { BorgWarnerCompanyHeader } from "@/components/BorgWarnerCompanyHeader";
-import closingImage from "@/assets/borgwarner-sign.jpg.asset.json";
+
 
 const results = [
   { icon: Map, label: "Maior alcance e distribuição" },
@@ -78,16 +78,6 @@ const CaseBorgWarnerPortal = () => {
         </div>
       </section>
 
-      {/* IMAGEM DE ENCERRAMENTO */}
-      <section className="container mx-auto px-6 pb-16">
-        <div className="overflow-hidden rounded-3xl shadow-elevated">
-          <img
-            src={closingImage.url}
-            alt="Unidade BorgWarner"
-            className="h-auto w-full object-cover"
-          />
-        </div>
-      </section>
 
       <footer className="border-t border-border bg-surface">
         <div className="container mx-auto flex flex-col items-center justify-between gap-3 px-6 py-8 md:flex-row">
