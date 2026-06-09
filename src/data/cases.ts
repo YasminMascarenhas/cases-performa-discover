@@ -66,7 +66,7 @@ export const segments: Segment[] = [
       { company: "Yara", title: "Portal Automatizado", logo: yaraLogo },
     ],
   },
-  { name: "Educação", icon: GraduationCap },
+  { name: "Educação", icon: GraduationCap, projects: [{ company: "Cogna", title: "AI Journey", logo: cognaLogo.url }] },
   { name: "E-games", icon: Gamepad2 },
   {
     name: "Indústria",
