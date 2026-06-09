@@ -19,6 +19,7 @@ import axiaAgroLogo from "@/assets/axia-agro-logo.png";
 import yaraLogo from "@/assets/yara-logo.png";
 import eurochemLogo from "@/assets/eurochem-logo.png";
 import casaDaLavouraCover from "@/assets/casa-da-lavoura.jpg.asset.json";
+import aiStrategyCover from "@/assets/ai-strategy.jpg.asset.json";
 
 
 
@@ -90,8 +91,7 @@ export const cases: CaseItem[] = [
       "Construção da jornada de adoção de IA e roadmap de iniciativas com foco no real valor de negócios, priorizando oportunidades de maior impacto.",
     tags: ["IA", "Discovery", "Estratégia"],
     logo: axiaAgroLogo,
-    coverImage:
-      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80",
+    coverImage: aiStrategyCover.url,
   },
   {
     id: "10",
