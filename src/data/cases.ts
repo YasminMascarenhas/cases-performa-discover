@@ -143,4 +143,20 @@ export const cases: CaseItem[] = [
     logo: aleLogo.url,
     coverImage: aleCover.url,
   },
+  {
+    id: "12",
+    slug: "borgwarner-portal-b2b",
+    title: "Portal B2B",
+    company: "BorgWarner",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Sistema de autosserviço B2B",
+    method: "Agile Development + Integração ERP",
+    description:
+      "Plataforma de autosserviço que automatiza o pós-vendas de reposição de autopeças, com mais autonomia para distribuidores e integração total ao ERP.",
+    tags: ["Portal B2B", "Pós-vendas", "ERP", "Indústria", "Autopeças"],
+    logo: borgwarnerLogo.url,
+    coverImage: borgwarnerCover.url,
+  },
 ];
+
