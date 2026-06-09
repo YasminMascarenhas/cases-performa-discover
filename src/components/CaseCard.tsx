@@ -19,7 +19,7 @@ export const CaseCard = ({ item }: Props) => {
   const content = (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elevated">
       {item.coverImage ? (
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface">
+        <div className="relative aspect-[21/9] w-full overflow-hidden bg-surface">
           <img
             src={item.coverImage}
             alt={`${item.company} — ${item.title}`}
