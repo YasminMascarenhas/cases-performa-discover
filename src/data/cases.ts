@@ -204,7 +204,7 @@ export const cases: CaseItem[] = [
     title: "Portal Web SAP",
     company: "Continental",
     segment: "Indústria",
-    category: "Agile Development",
+    category: "Segmentos",
     solution: "Portal Web integrado ao SAP",
     method: "Agile Development + .NET Core",
     description:
