@@ -2,7 +2,7 @@ import { ArrowLeft, Target, Lightbulb, TrendingUp, Smartphone, RefreshCw, Clipbo
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { AxiaAgroCompanyHeader } from "@/components/AxiaAgroCompanyHeader";
-import portalMockup from "@/assets/axia-portal-laptop.png";
+
 
 const results = [
   {
@@ -42,55 +42,42 @@ const CaseAxiaAgroPortal = () => {
       {/* DESAFIO + SOLUÇÃO + MOCKUP */}
       <section className="bg-surface border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="flex flex-col">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                  <Target className="h-7 w-7 text-primary" />
-                </div>
-                <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  Necessidade de criar um <strong className="font-bold text-foreground">portal de parceiros externo</strong>, amigável e <strong className="font-bold text-foreground">integrado ao Salesforce</strong>, evitando cadastros manuais e fluxos desconexos.
-                </p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="flex flex-col">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                <Target className="h-7 w-7 text-primary" />
               </div>
-
-              <div className="flex flex-col">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                  <Lightbulb className="h-7 w-7 text-primary" />
-                </div>
-                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução</h2>
-                <ul className="mt-4 space-y-2 text-base leading-relaxed text-muted-foreground">
-                  <li className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
-                    <span>
-                      Construção de um <strong className="font-bold text-foreground">portal externo usando Experience Cloud</strong>
-                    </span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
-                    <span>
-                      Cadastro digital de parceiros com <strong className="font-bold text-foreground">integração direta ao Salesforce</strong>
-                    </span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
-                    <span>
-                      Personalização do portal para manter interface <strong className="font-bold text-foreground">simples, segura e user-friendly</strong>
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Necessidade de criar um <strong className="font-bold text-foreground">portal de parceiros externo</strong>, amigável e <strong className="font-bold text-foreground">integrado ao Salesforce</strong>, evitando cadastros manuais e fluxos desconexos.
+              </p>
             </div>
 
-            <div className="flex justify-center lg:justify-end">
-              <img
-                src={portalMockup}
-                alt="Lavoura com caminhão regando plantação"
-                loading="lazy"
-                width={1024}
-                height={768}
-                className="h-auto w-[420px] max-w-full rounded-2xl shadow-elevated"
-              />
+            <div className="flex flex-col">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                <Lightbulb className="h-7 w-7 text-primary" />
+              </div>
+              <h2 className="mt-5 text-2xl font-bold text-foreground">Solução</h2>
+              <ul className="mt-4 space-y-2 text-base leading-relaxed text-muted-foreground">
+                <li className="flex gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                  <span>
+                    Construção de um <strong className="font-bold text-foreground">portal externo usando Experience Cloud</strong>
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                  <span>
+                    Cadastro digital de parceiros com <strong className="font-bold text-foreground">integração direta ao Salesforce</strong>
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />
+                  <span>
+                    Personalização do portal para manter interface <strong className="font-bold text-foreground">simples, segura e user-friendly</strong>
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
