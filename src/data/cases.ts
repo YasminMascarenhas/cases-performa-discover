@@ -58,6 +58,7 @@ import gpaClienteMaisCover from "@/assets/gpa-cliente-mais-cover.png.asset.json"
 import gpaGamificationCover from "@/assets/gpa-gamification-cover.png.asset.json";
 import gpaProgramaClienteMaisCover from "@/assets/gpa-cliente-mais-v2-cover.png.asset.json";
 import gpaPraJaMarketingCover from "@/assets/gpa-praja-marketing-cover.png.asset.json";
+import gpaAcessibilidadeCover from "@/assets/gpa-acessibilidade-cover.png.asset.json";
 
 
 
@@ -104,7 +105,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }, { company: "GPA", title: "Acessibilidade", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -404,6 +405,21 @@ export const cases: CaseItem[] = [
     tags: ["Varejo", "Gamificação", "Entregadores", "Design Thinking", "Lean Inception"],
     logo: gpaLogo.url,
     coverImage: gpaPraJaMarketingCover.url,
+  },
+  {
+    id: "27",
+    slug: "gpa-acessibilidade",
+    title: "Acessibilidade",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Adequação à Lei Brasileira de Inclusão",
+    method: "Discovery + Revisão de UX + Acessibilidade web/app",
+    description:
+      "Revisão completa da experiência digital do GPA para garantir navegação acessível, funcional e inclusiva no site e no app, em conformidade com a LBI.",
+    tags: ["Varejo", "Acessibilidade", "LBI", "Inclusão", "Web & App"],
+    logo: gpaLogo.url,
+    coverImage: gpaAcessibilidadeCover.url,
   },
 ];
 
