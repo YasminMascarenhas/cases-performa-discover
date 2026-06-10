@@ -24,6 +24,7 @@ import CaseGpaPlataformaLogistica from "./pages/CaseGpaPlataformaLogistica.tsx";
 import CaseGpaClienteMais from "./pages/CaseGpaClienteMais.tsx";
 import CaseGpaGamification from "./pages/CaseGpaGamification.tsx";
 import CaseGpaProgramaClienteMais from "./pages/CaseGpaProgramaClienteMais.tsx";
+import CaseGpaPraJaMarketing from "./pages/CaseGpaPraJaMarketing.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -63,6 +64,7 @@ const App = () => {
           <Route path="/case/gpa-cliente-mais" element={<CaseGpaClienteMais />} />
           <Route path="/case/gpa-gamification" element={<CaseGpaGamification />} />
           <Route path="/case/gpa-programa-cliente-mais" element={<CaseGpaProgramaClienteMais />} />
+          <Route path="/case/gpa-praja-marketing" element={<CaseGpaPraJaMarketing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

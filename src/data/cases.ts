@@ -57,6 +57,7 @@ import gpaCover from "@/assets/gpa-cover.png.asset.json";
 import gpaClienteMaisCover from "@/assets/gpa-cliente-mais-cover.png.asset.json";
 import gpaGamificationCover from "@/assets/gpa-gamification-cover.png.asset.json";
 import gpaProgramaClienteMaisCover from "@/assets/gpa-cliente-mais-v2-cover.png.asset.json";
+import gpaPraJaMarketingCover from "@/assets/gpa-praja-marketing-cover.png.asset.json";
 
 
 
@@ -103,7 +104,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -388,6 +389,21 @@ export const cases: CaseItem[] = [
     tags: ["Varejo", "App", "Jornada do cliente", "Benchmarking", "Discovery"],
     logo: gpaLogo.url,
     coverImage: gpaProgramaClienteMaisCover.url,
+  },
+  {
+    id: "26",
+    slug: "gpa-praja-marketing",
+    title: "Pra Já + Marketing",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Gamificação para entregadores",
+    method: "Ciência comportamental + Design Thinking + Lean Inception",
+    description:
+      "Sistema de gamificação que torna a experiência dos entregadores mais engajadora, melhorando o NPS e facilitando a expansão das entregas.",
+    tags: ["Varejo", "Gamificação", "Entregadores", "Design Thinking", "Lean Inception"],
+    logo: gpaLogo.url,
+    coverImage: gpaPraJaMarketingCover.url,
   },
 ];
 
