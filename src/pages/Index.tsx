@@ -273,6 +273,74 @@ const Index = () => {
               )}
             </div>
           </div>
+        ) : activeCategory === null ? (
+          <div className="flex w-full items-stretch">
+            {/* Companies sidebar */}
+            <aside className="w-[200px] shrink-0 bg-white">
+              <div className="sticky top-0 px-3 py-5">
+                <ul className="flex flex-col gap-1">
+                  <li>
+                    <button
+                      onClick={() => setActiveCompany(null)}
+                      className={`flex w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-sm font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
+                        activeCompany === null
+                          ? "bg-[#FFF0E6] text-primary"
+                          : "text-foreground hover:bg-surface"
+                      }`}
+                      style={{ fontFamily: "Poppins, sans-serif" }}
+                    >
+                      <span>Todas as empresas</span>
+                    </button>
+                  </li>
+                  {companyList.map((name) => {
+                    const isActive = activeCompany === name;
+                    return (
+                      <li key={name}>
+                        <button
+                          onClick={() => setActiveCompany(name)}
+                          className={`flex w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-sm font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
+                            isActive
+                              ? "bg-[#FFF0E6] text-primary"
+                              : "text-foreground hover:bg-surface"
+                          }`}
+                          style={{ fontFamily: "Poppins, sans-serif" }}
+                        >
+                          <span>{name}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </aside>
+
+            {/* Right column */}
+            <div className="min-w-0 flex-1 px-6 py-6">
+              {filtered.length === 0 ? (
+                <div className="rounded-2xl border border-dashed border-border bg-card p-16 text-center">
+                  <p className="text-base font-medium text-foreground">Nenhum case encontrado</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Tente ajustar a busca ou selecionar outra empresa.
+                  </p>
+                </div>
+              ) : (
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {[...filtered]
+                    .sort((a, b) => a.company.localeCompare(b.company, "pt-BR"))
+                    .map((c) => (
+                      <CaseCard
+                        key={c.id}
+                        item={c}
+                        variant="featured"
+                        selectable={selectionMode}
+                        selected={selectedIds.has(c.id)}
+                        onSelectToggle={toggleSelect}
+                      />
+                    ))}
+                </div>
+              )}
+            </div>
+          </div>
         ) : filtered.length === 0 ? (
           <div className="container mx-auto px-6 rounded-2xl border border-dashed border-border bg-card p-16 text-center">
             <p className="text-base font-medium text-foreground">Nenhum case encontrado</p>
@@ -280,40 +348,7 @@ const Index = () => {
               Tente ajustar a busca ou selecionar outra categoria.
             </p>
           </div>
-        ) : activeCategory === null ? (
-          <div className="flex flex-col gap-4">
-            {(() => {
-              const groups: { company: string; logo?: string; items: CaseItem[] }[] = [];
-              const idx = new Map<string, number>();
-              filtered.forEach((c) => {
-                if (!idx.has(c.company)) {
-                  idx.set(c.company, groups.length);
-                  groups.push({ company: c.company, logo: c.logo, items: [c] });
-                } else {
-                  const g = groups[idx.get(c.company)!];
-                  g.items.push(c);
-                  if (!g.logo && c.logo) g.logo = c.logo;
-                }
-              });
-              groups.sort((a, b) => {
-                if (a.company === "Axia Agro") return -1;
-                if (b.company === "Axia Agro") return 1;
-                return a.company.localeCompare(b.company, "pt-BR");
-              });
-              return groups.map((g) => (
-                <CompanyRow
-                  key={g.company}
-                  company={g.company}
-                  logo={g.logo}
-                  items={g.items}
-                  selectable={selectionMode}
-                  selectedIds={selectedIds}
-                  onSelectToggle={toggleSelect}
-                />
-              ));
 
-            })()}
-          </div>
         ) : (
           <div className="container mx-auto px-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((c) => (
