@@ -12,7 +12,7 @@ export const HpeCompanyHeader = () => (
   <section data-pdf-section="company-header" className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
       <div>
-        <img src={logo.url} alt="HPE — Hewlett Packard Enterprise" className="h-20 w-auto md:h-24" />
+        <img src={logo.url} alt="HPE — Hewlett Packard Enterprise" className="h-12 w-auto md:h-14" />
 
         <p className="mt-10 max-w-xl text-base leading-relaxed text-muted-foreground">
           <strong className="font-bold text-foreground">Uma das principais empresas globais de tecnologia.</strong>{" "}
