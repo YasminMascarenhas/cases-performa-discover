@@ -107,7 +107,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }, { company: "GPA", title: "Acessibilidade", logo: gpaLogo.url }, { company: "GPA", title: "Produtos Próximos ao Vencimento", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }, { company: "GPA", title: "Acessibilidade", logo: gpaLogo.url }, { company: "GPA", title: "Produtos Próximos ao Vencimento", logo: gpaLogo.url }, { company: "GPA", title: "Migração para GCP", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -437,6 +437,21 @@ export const cases: CaseItem[] = [
     tags: ["Varejo", "Design Sprint", "Lean Inception", "UX/UI", "App"],
     logo: gpaLogo.url,
     coverImage: gpaVencimentoCover.url,
+  },
+  {
+    id: "29",
+    slug: "gpa-migracao-gcp",
+    title: "Migração para GCP",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Agile Development",
+    solution: "Migração da estrutura para a AWS",
+    method: "Agile Development + Migração Cloud",
+    description:
+      "Migração da estrutura com zero impacto em produção, maior estabilidade, melhor desempenho e visibilidade técnica em 14 dias.",
+    tags: ["Varejo", "Cloud", "GCP", "Migração", "DevOps"],
+    logo: gpaLogo.url,
+    coverImage: gpaGcpCover.url,
   },
 ];
 
