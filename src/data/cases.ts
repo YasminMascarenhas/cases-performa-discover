@@ -58,6 +58,7 @@ import gpaClienteMaisCover from "@/assets/gpa-cliente-mais-cover.png.asset.json"
 import gpaGamificationCover from "@/assets/gpa-gamification-cover.png.asset.json";
 import gpaProgramaClienteMaisCover from "@/assets/gpa-cliente-mais-v2-cover.png.asset.json";
 import gpaPraJaMarketingCover from "@/assets/gpa-praja-marketing-cover.png.asset.json";
+import gpaAcessibilidadeCover from "@/assets/gpa-acessibilidade-cover.png.asset.json";
 
 
 
