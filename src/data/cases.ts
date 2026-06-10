@@ -292,6 +292,21 @@ export const cases: CaseItem[] = [
     logo: eatonLogo.url,
     coverImage: eatonBlueGuardianCover.url,
   },
+  {
+    id: "20",
+    slug: "eduflex-poc-ia",
+    title: "POC IA Educação Inclusiva",
+    company: "EduFlex",
+    segment: "Educação",
+    category: "Katalysis",
+    solution: "POC com IA para adaptação de atividades",
+    method: "Katalysis + IA aplicada à BNCC",
+    description:
+      "POC com IA que adapta atividades escolares ao perfil cognitivo e sensorial de cada estudante, apoiando professores em inclusão e personalização.",
+    tags: ["IA", "Educação Inclusiva", "BNCC", "POC", "Katalysis"],
+    logo: eduflexLogo.url,
+    coverImage: eduflexCover.url,
+  },
 ];
 
 
