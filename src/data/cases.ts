@@ -55,6 +55,7 @@ import eurochemCaseCover from "@/assets/eurochem-cover.png.asset.json";
 import gpaLogo from "@/assets/gpa-logo.png.asset.json";
 import gpaCover from "@/assets/gpa-cover.png.asset.json";
 import gpaClienteMaisCover from "@/assets/gpa-cliente-mais-cover.png.asset.json";
+import gpaGamificationCover from "@/assets/gpa-gamification-cover.png.asset.json";
 
 
 
