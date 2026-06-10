@@ -473,6 +473,21 @@ export const cases: CaseItem[] = [
     logo: sebLogo.url,
     coverImage: sebVentiladorMockup.url,
   },
+  {
+    id: "31",
+    slug: "seb-processos-digitais",
+    title: "Processos Digitais Integrados",
+    company: "Groupe SEB",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Gestão industrial integrada",
+    method: "Agile Development + Integração SAP",
+    description:
+      "Transformação da gestão industrial com soluções digitais integradas, aumentando eficiência, reduzindo perdas e impulsionando a performance nas fábricas.",
+    tags: ["Indústria", "SAP", "TPM", "Manutenção", "B2B"],
+    logo: sebLogo.url,
+    coverImage: sebCover.url,
+  },
 ];
 
 
