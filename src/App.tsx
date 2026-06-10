@@ -19,6 +19,7 @@ import CaseEatonLifeSafety from "./pages/CaseEatonLifeSafety.tsx";
 import CaseEatonPortoFeliz from "./pages/CaseEatonPortoFeliz.tsx";
 import CaseEatonBlueGuardian from "./pages/CaseEatonBlueGuardian.tsx";
 import CaseEduFlexPocIA from "./pages/CaseEduFlexPocIA.tsx";
+import CaseEurochemTaNaMao from "./pages/CaseEurochemTaNaMao.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -53,6 +54,7 @@ const App = () => {
           <Route path="/case/eaton-porto-feliz" element={<CaseEatonPortoFeliz />} />
           <Route path="/case/eaton-blue-guardian" element={<CaseEatonBlueGuardian />} />
           <Route path="/case/eduflex-poc-ia" element={<CaseEduFlexPocIA />} />
+          <Route path="/case/eurochem-ta-na-mao" element={<CaseEurochemTaNaMao />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
