@@ -61,7 +61,7 @@ import gpaPraJaMarketingCover from "@/assets/gpa-praja-marketing-cover.png.asset
 import gpaAcessibilidadeCover from "@/assets/gpa-acessibilidade-cover.png.asset.json";
 import gpaVencimentoCover from "@/assets/gpa-vencimento-cover.png.asset.json";
 import gpaGcpCover from "@/assets/gpa-gcp-cover.png.asset.json";
-import sebLogo from "@/assets/seb-logo.png.asset.json";
+import sebLogo from "@/assets/seb-logo-v2.png.asset.json";
 import sebCover from "@/assets/seb-cover.jpg.asset.json";
 import sebVentiladorMockup from "@/assets/seb-ventilador-mockup.png.asset.json";
 
