@@ -158,7 +158,7 @@ export const cases: CaseItem[] = [
     title: "AM&S Cockpit Tático",
     company: "ALE Combustíveis",
     segment: "Varejo",
-    category: "Agile Development",
+    category: "Segmentos",
     solution: "Sustentação evolutiva N3",
     method: "Support Leader + pacote mensal de horas",
     description:
