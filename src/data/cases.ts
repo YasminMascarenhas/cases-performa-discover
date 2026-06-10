@@ -422,6 +422,21 @@ export const cases: CaseItem[] = [
     logo: gpaLogo.url,
     coverImage: gpaAcessibilidadeCover.url,
   },
+  {
+    id: "28",
+    slug: "gpa-vencimento",
+    title: "Produtos Próximos ao Vencimento",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Destaque e ofertas no app",
+    method: "Design Sprint + Lean Inception + UX/UI",
+    description:
+      "Produtos próximos do vencimento ganharam destaque e ofertas no app, reduzindo perdas de estoque e melhorando a experiência do cliente.",
+    tags: ["Varejo", "Design Sprint", "Lean Inception", "UX/UI", "App"],
+    logo: gpaLogo.url,
+    coverImage: gpaVencimentoCover.url,
+  },
 ];
 
 
