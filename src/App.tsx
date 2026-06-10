@@ -17,6 +17,7 @@ import CaseCrodaPlataforma from "./pages/CaseCrodaPlataforma.tsx";
 import CaseEatonBlueSapphire from "./pages/CaseEatonBlueSapphire.tsx";
 import CaseEatonLifeSafety from "./pages/CaseEatonLifeSafety.tsx";
 import CaseEatonPortoFeliz from "./pages/CaseEatonPortoFeliz.tsx";
+import CaseEatonBlueGuardian from "./pages/CaseEatonBlueGuardian.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => {
           <Route path="/case/eaton-blue-sapphire" element={<CaseEatonBlueSapphire />} />
           <Route path="/case/eaton-life-safety" element={<CaseEatonLifeSafety />} />
           <Route path="/case/eaton-porto-feliz" element={<CaseEatonPortoFeliz />} />
+          <Route path="/case/eaton-blue-guardian" element={<CaseEatonBlueGuardian />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

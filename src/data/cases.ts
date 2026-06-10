@@ -47,6 +47,7 @@ import eatonLogo from "@/assets/eaton-logo.png.asset.json";
 import eatonCover from "@/assets/eaton-cover.png.asset.json";
 import eatonLifeCover from "@/assets/eaton-life-cover.png.asset.json";
 import eatonPortoFelizCover from "@/assets/eaton-porto-feliz-cover.png.asset.json";
+import eatonBlueGuardianCover from "@/assets/eaton-blue-guardian-cover.png.asset.json";
 
 
 
@@ -87,6 +88,7 @@ export const segments: Segment[] = [
       { company: "Eaton", title: "Blue Sapphire CPDI", logo: eatonLogo.url },
       { company: "Eaton", title: "Life Safety + Power BI", logo: eatonLogo.url },
       { company: "Eaton", title: "Porto Feliz Power Systems", logo: eatonLogo.url },
+      { company: "Eaton", title: "Blue Guardian", logo: eatonLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
