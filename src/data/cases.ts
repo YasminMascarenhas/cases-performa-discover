@@ -59,6 +59,7 @@ import gpaGamificationCover from "@/assets/gpa-gamification-cover.png.asset.json
 import gpaProgramaClienteMaisCover from "@/assets/gpa-cliente-mais-v2-cover.png.asset.json";
 import gpaPraJaMarketingCover from "@/assets/gpa-praja-marketing-cover.png.asset.json";
 import gpaAcessibilidadeCover from "@/assets/gpa-acessibilidade-cover.png.asset.json";
+import gpaVencimentoCover from "@/assets/gpa-vencimento-cover.png.asset.json";
 
 
 
@@ -105,7 +106,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }, { company: "GPA", title: "Acessibilidade", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }, { company: "GPA", title: "Acessibilidade", logo: gpaLogo.url }, { company: "GPA", title: "Produtos Próximos ao Vencimento", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -420,6 +421,21 @@ export const cases: CaseItem[] = [
     tags: ["Varejo", "Acessibilidade", "LBI", "Inclusão", "Web & App"],
     logo: gpaLogo.url,
     coverImage: gpaAcessibilidadeCover.url,
+  },
+  {
+    id: "28",
+    slug: "gpa-vencimento",
+    title: "Produtos Próximos ao Vencimento",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Destaque e ofertas no app",
+    method: "Design Sprint + Lean Inception + UX/UI",
+    description:
+      "Produtos próximos do vencimento ganharam destaque e ofertas no app, reduzindo perdas de estoque e melhorando a experiência do cliente.",
+    tags: ["Varejo", "Design Sprint", "Lean Inception", "UX/UI", "App"],
+    logo: gpaLogo.url,
+    coverImage: gpaVencimentoCover.url,
   },
 ];
 
