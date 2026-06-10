@@ -1,7 +1,7 @@
 import { ArrowLeft, Target, Lightbulb, TrendingUp, Smartphone, Wifi, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SebCompanyHeader } from "@/components/SebCompanyHeader";
-import sideImage from "@/assets/seb-cover.jpg.asset.json";
+import sideImage from "@/assets/seb-ventilador-mockup.png.asset.json";
 
 const results = [
   { icon: Smartphone, label: "Primeiro ventilador do mercado controlado via app" },
