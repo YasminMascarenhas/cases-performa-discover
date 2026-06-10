@@ -70,6 +70,7 @@ const App = () => {
           <Route path="/case/gpa-praja-marketing" element={<CaseGpaPraJaMarketing />} />
           <Route path="/case/gpa-acessibilidade" element={<CaseGpaAcessibilidade />} />
           <Route path="/case/gpa-vencimento" element={<CaseGpaVencimento />} />
+          <Route path="/case/gpa-migracao-gcp" element={<CaseGpaMigracaoGcp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
