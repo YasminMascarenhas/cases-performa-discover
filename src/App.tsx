@@ -27,6 +27,7 @@ import CaseGpaProgramaClienteMais from "./pages/CaseGpaProgramaClienteMais.tsx";
 import CaseGpaPraJaMarketing from "./pages/CaseGpaPraJaMarketing.tsx";
 import CaseGpaAcessibilidade from "./pages/CaseGpaAcessibilidade.tsx";
 import CaseGpaVencimento from "./pages/CaseGpaVencimento.tsx";
+import CaseGpaMigracaoGcp from "./pages/CaseGpaMigracaoGcp.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
