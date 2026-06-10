@@ -60,6 +60,7 @@ import gpaProgramaClienteMaisCover from "@/assets/gpa-cliente-mais-v2-cover.png.
 import gpaPraJaMarketingCover from "@/assets/gpa-praja-marketing-cover.png.asset.json";
 import gpaAcessibilidadeCover from "@/assets/gpa-acessibilidade-cover.png.asset.json";
 import gpaVencimentoCover from "@/assets/gpa-vencimento-cover.png.asset.json";
+import gpaGcpCover from "@/assets/gpa-gcp-cover.png.asset.json";
 
 
 
