@@ -61,6 +61,8 @@ import gpaPraJaMarketingCover from "@/assets/gpa-praja-marketing-cover.png.asset
 import gpaAcessibilidadeCover from "@/assets/gpa-acessibilidade-cover.png.asset.json";
 import gpaVencimentoCover from "@/assets/gpa-vencimento-cover.png.asset.json";
 import gpaGcpCover from "@/assets/gpa-gcp-cover.png.asset.json";
+import sebLogo from "@/assets/seb-logo.png.asset.json";
+import sebCover from "@/assets/seb-cover.jpg.asset.json";
 
 
 
@@ -102,6 +104,7 @@ export const segments: Segment[] = [
       { company: "Eaton", title: "Life Safety + Power BI", logo: eatonLogo.url },
       { company: "Eaton", title: "Porto Feliz Power Systems", logo: eatonLogo.url },
       { company: "Eaton", title: "Blue Guardian", logo: eatonLogo.url },
+      { company: "Groupe SEB", title: "Ventilador por App Mobile", logo: sebLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
@@ -452,6 +455,21 @@ export const cases: CaseItem[] = [
     tags: ["Varejo", "Cloud", "GCP", "Migração", "DevOps"],
     logo: gpaLogo.url,
     coverImage: gpaGcpCover.url,
+  },
+  {
+    id: "30",
+    slug: "seb-ventilador-app",
+    title: "Ventilador por App Mobile",
+    company: "Groupe SEB",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "App Mobile pioneiro no mercado",
+    method: "Swift + Kotlin + Firebase",
+    description:
+      "App pioneiro para controlar o ventilador Arno Ultra Silence Force via Bluetooth, com interface intuitiva, alta performance e Machine Learning.",
+    tags: ["Indústria", "Mobile App", "Bluetooth", "Swift", "Kotlin", "Firebase"],
+    logo: sebLogo.url,
+    coverImage: sebCover.url,
   },
 ];
 
