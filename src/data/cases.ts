@@ -326,6 +326,21 @@ export const cases: CaseItem[] = [
     logo: eurochemLogoSvg.url,
     coverImage: eurochemCaseCover.url,
   },
+  {
+    id: "22",
+    slug: "gpa-plataforma-logistica",
+    title: "Plataforma Logística",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Integração com Instaleap",
+    method: "Discovery & Design + Integração Logística",
+    description:
+      "Integração com a Instaleap para expandir as entregas próprias do GPA, ampliando cobertura logística e gerando R$ 5,2 milhões de receita incremental.",
+    tags: ["Varejo", "Logística", "Instaleap", "Entregas", "Discovery"],
+    logo: gpaLogo.url,
+    coverImage: gpaCover.url,
+  },
 ];
 
 
