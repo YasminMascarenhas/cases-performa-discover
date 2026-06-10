@@ -59,6 +59,7 @@ const Index = () => {
         (activeCategory === "Segmentos"
           ? !!activeSegment && c.segment === activeSegment
           : c.category === activeCategory || c.extraCategories?.includes(activeCategory));
+      const matchesCompany = activeCategory !== null || !activeCompany || c.company === activeCompany;
       const matchesQuery =
         !q ||
         c.title.toLowerCase().includes(q) ||
@@ -66,9 +67,15 @@ const Index = () => {
         c.solution.toLowerCase().includes(q) ||
         c.method.toLowerCase().includes(q) ||
         c.tags.some((t) => t.toLowerCase().includes(q));
-      return matchesCat && matchesQuery;
+      return matchesCat && matchesCompany && matchesQuery;
     });
-  }, [query, activeCategory, activeSegment]);
+  }, [query, activeCategory, activeSegment, activeCompany]);
+
+  const companyList = useMemo(() => {
+    const set = new Set<string>();
+    cases.forEach((c) => set.add(c.company));
+    return Array.from(set).sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, []);
 
   const sectionMap: Record<string, Category> = {
     empresas: "Segmentos",
