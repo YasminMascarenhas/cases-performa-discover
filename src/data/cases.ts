@@ -265,6 +265,7 @@ export const cases: CaseItem[] = [
     company: "Eaton",
     segment: "Indústria",
     category: "Agile Development",
+    extraCategories: ["Discovery & Design"],
     solution: "Power Systems + Power BI",
     method: "Agile Development + Power BI",
     description:
@@ -280,6 +281,7 @@ export const cases: CaseItem[] = [
     company: "Eaton",
     segment: "Indústria",
     category: "Agile Development",
+    extraCategories: ["Discovery & Design"],
     solution: "IA preditiva para Forecast Financeiro",
     method: "Agile Development + IA",
     description:
