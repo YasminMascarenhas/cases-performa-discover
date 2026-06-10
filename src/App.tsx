@@ -29,6 +29,7 @@ import CaseGpaAcessibilidade from "./pages/CaseGpaAcessibilidade.tsx";
 import CaseGpaVencimento from "./pages/CaseGpaVencimento.tsx";
 import CaseGpaMigracaoGcp from "./pages/CaseGpaMigracaoGcp.tsx";
 import CaseSebVentiladorApp from "./pages/CaseSebVentiladorApp.tsx";
+import CaseSebProcessosDigitais from "./pages/CaseSebProcessosDigitais.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -73,6 +74,7 @@ const App = () => {
           <Route path="/case/gpa-vencimento" element={<CaseGpaVencimento />} />
           <Route path="/case/gpa-migracao-gcp" element={<CaseGpaMigracaoGcp />} />
           <Route path="/case/seb-ventilador-app" element={<CaseSebVentiladorApp />} />
+          <Route path="/case/seb-processos-digitais" element={<CaseSebProcessosDigitais />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

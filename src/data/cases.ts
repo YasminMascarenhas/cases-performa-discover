@@ -106,6 +106,7 @@ export const segments: Segment[] = [
       { company: "Eaton", title: "Porto Feliz Power Systems", logo: eatonLogo.url },
       { company: "Eaton", title: "Blue Guardian", logo: eatonLogo.url },
       { company: "Groupe SEB", title: "Ventilador por App Mobile", logo: sebLogo.url },
+      { company: "Groupe SEB", title: "Processos Digitais Integrados", logo: sebLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
@@ -471,6 +472,21 @@ export const cases: CaseItem[] = [
     tags: ["Indústria", "Mobile App", "Bluetooth", "Swift", "Kotlin", "Firebase"],
     logo: sebLogo.url,
     coverImage: sebVentiladorMockup.url,
+  },
+  {
+    id: "31",
+    slug: "seb-processos-digitais",
+    title: "Processos Digitais Integrados",
+    company: "Groupe SEB",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "Gestão industrial integrada",
+    method: "Agile Development + Integração SAP",
+    description:
+      "Transformação da gestão industrial com soluções digitais integradas, aumentando eficiência, reduzindo perdas e impulsionando a performance nas fábricas.",
+    tags: ["Indústria", "SAP", "TPM", "Manutenção", "B2B"],
+    logo: sebLogo.url,
+    coverImage: sebCover.url,
   },
 ];
 
