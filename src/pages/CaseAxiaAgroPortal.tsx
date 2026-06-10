@@ -2,7 +2,7 @@ import { ArrowLeft, Target, Lightbulb, TrendingUp, Smartphone, RefreshCw, Clipbo
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { AxiaAgroCompanyHeader } from "@/components/AxiaAgroCompanyHeader";
-import portalMockup from "@/assets/axia-portal-laptop.png";
+
 
 const results = [
   {
