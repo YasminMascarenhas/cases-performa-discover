@@ -333,7 +333,7 @@ export const cases: CaseItem[] = [
     title: "Plataforma Logística",
     company: "GPA",
     segment: "Varejo",
-    category: "Discovery & Design",
+    category: "Segmentos",
     solution: "Integração com Instaleap",
     method: "Discovery & Design + Integração Logística",
     description:
