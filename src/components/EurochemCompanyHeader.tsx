@@ -12,7 +12,7 @@ export const EurochemCompanyHeader = () => (
   <section data-pdf-section="company-header" className="container mx-auto px-6 py-12">
     <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
       <div>
-        <img src={logo.url} alt="EuroChem" className="h-10 w-auto md:h-12" />
+        <img src={logo.url} alt="EuroChem" className="-ml-2 h-16 w-auto md:-ml-3 md:h-20" />
 
         <p className="mt-10 max-w-xl text-base leading-relaxed text-muted-foreground">
           <strong className="font-bold text-foreground">Líder mundial na produção de fertilizantes nitrogenados, fosfatados e potássicos.</strong>{" "}
