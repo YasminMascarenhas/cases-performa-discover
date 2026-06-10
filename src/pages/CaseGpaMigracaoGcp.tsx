@@ -48,13 +48,13 @@ const CaseGpaMigracaoGcp = () => {
 
       <section className="bg-surface border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="space-y-10">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
             <div>
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
                 <Target className="h-7 w-7 text-primary" />
               </div>
               <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 <strong className="font-bold text-foreground">Modernizar o ecossistema de tecnologia do GPA.</strong>
               </p>
             </div>
@@ -64,7 +64,7 @@ const CaseGpaMigracaoGcp = () => {
                 <Lightbulb className="h-7 w-7 text-primary" />
               </div>
               <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — Migração para GCP</h2>
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 <strong className="font-bold text-foreground">Migração da estrutura para a AWS com zero impacto em produção,</strong>{" "}
                 com maior estabilidade, melhor desempenho e visibilidade técnica em 14 dias.
               </p>
