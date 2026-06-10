@@ -456,6 +456,21 @@ export const cases: CaseItem[] = [
     logo: gpaLogo.url,
     coverImage: gpaGcpCover.url,
   },
+  {
+    id: "30",
+    slug: "seb-ventilador-app",
+    title: "Ventilador por App Mobile",
+    company: "Groupe SEB",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "App Mobile pioneiro no mercado",
+    method: "Swift + Kotlin + Firebase",
+    description:
+      "App pioneiro para controlar o ventilador Arno Ultra Silence Force via Bluetooth, com interface intuitiva, alta performance e Machine Learning.",
+    tags: ["Indústria", "Mobile App", "Bluetooth", "Swift", "Kotlin", "Firebase"],
+    logo: sebLogo.url,
+    coverImage: sebCover.url,
+  },
 ];
 
 
