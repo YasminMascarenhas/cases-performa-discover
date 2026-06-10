@@ -61,6 +61,8 @@ import gpaPraJaMarketingCover from "@/assets/gpa-praja-marketing-cover.png.asset
 import gpaAcessibilidadeCover from "@/assets/gpa-acessibilidade-cover.png.asset.json";
 import gpaVencimentoCover from "@/assets/gpa-vencimento-cover.png.asset.json";
 import gpaGcpCover from "@/assets/gpa-gcp-cover.png.asset.json";
+import sebLogo from "@/assets/seb-logo.png.asset.json";
+import sebCover from "@/assets/seb-cover.jpg.asset.json";
 
 
 
@@ -102,6 +104,7 @@ export const segments: Segment[] = [
       { company: "Eaton", title: "Life Safety + Power BI", logo: eatonLogo.url },
       { company: "Eaton", title: "Porto Feliz Power Systems", logo: eatonLogo.url },
       { company: "Eaton", title: "Blue Guardian", logo: eatonLogo.url },
+      { company: "Groupe SEB", title: "Ventilador por App Mobile", logo: sebLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
