@@ -47,7 +47,7 @@ const CaseGpaClienteMais = () => {
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
                   <Lightbulb className="h-7 w-7 text-primary" />
                 </div>
-                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — Programa Cliente Mais</h2>
+                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — Precificação Justa</h2>
                 <ul className="mt-4 space-y-3 text-base leading-relaxed text-muted-foreground">
                   <li className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />

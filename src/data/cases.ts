@@ -101,7 +101,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -345,7 +345,7 @@ export const cases: CaseItem[] = [
   {
     id: "23",
     slug: "gpa-cliente-mais",
-    title: "Programa Cliente Mais",
+    title: "Precificação Justa",
     company: "GPA",
     segment: "Varejo",
     category: "Discovery & Design",
