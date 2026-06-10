@@ -56,6 +56,7 @@ import gpaLogo from "@/assets/gpa-logo.png.asset.json";
 import gpaCover from "@/assets/gpa-cover.png.asset.json";
 import gpaClienteMaisCover from "@/assets/gpa-cliente-mais-cover.png.asset.json";
 import gpaGamificationCover from "@/assets/gpa-gamification-cover.png.asset.json";
+import gpaProgramaClienteMaisCover from "@/assets/gpa-cliente-mais-v2-cover.png.asset.json";
 
 
 
@@ -102,7 +103,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -372,6 +373,21 @@ export const cases: CaseItem[] = [
     tags: ["Varejo", "Gamification", "Design Sprint", "Discovery", "Prototyping"],
     logo: gpaLogo.url,
     coverImage: gpaGamificationCover.url,
+  },
+  {
+    id: "25",
+    slug: "gpa-programa-cliente-mais",
+    title: "Programa Cliente Mais",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Nova funcionalidade no app",
+    method: "Discovery + Benchmarking + Prototipação",
+    description:
+      "Mapeamento da jornada e prototipação de nova funcionalidade no app, gerando aumento expressivo no tráfego do Pão de Açúcar e do Clube Extra.",
+    tags: ["Varejo", "App", "Jornada do cliente", "Benchmarking", "Discovery"],
+    logo: gpaLogo.url,
+    coverImage: gpaProgramaClienteMaisCover.url,
   },
 ];
 
