@@ -105,7 +105,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }, { company: "GPA", title: "Acessibilidade", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
