@@ -406,6 +406,21 @@ export const cases: CaseItem[] = [
     logo: gpaLogo.url,
     coverImage: gpaPraJaMarketingCover.url,
   },
+  {
+    id: "27",
+    slug: "gpa-acessibilidade",
+    title: "Acessibilidade",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Adequação à Lei Brasileira de Inclusão",
+    method: "Discovery + Revisão de UX + Acessibilidade web/app",
+    description:
+      "Revisão completa da experiência digital do GPA para garantir navegação acessível, funcional e inclusiva no site e no app, em conformidade com a LBI.",
+    tags: ["Varejo", "Acessibilidade", "LBI", "Inclusão", "Web & App"],
+    logo: gpaLogo.url,
+    coverImage: gpaAcessibilidadeCover.url,
+  },
 ];
 
 
