@@ -101,7 +101,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -341,6 +341,21 @@ export const cases: CaseItem[] = [
     tags: ["Varejo", "Logística", "Instaleap", "Entregas", "Discovery"],
     logo: gpaLogo.url,
     coverImage: gpaCover.url,
+  },
+  {
+    id: "23",
+    slug: "gpa-cliente-mais",
+    title: "Programa Cliente Mais",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Cobrança e comunicação de peso variável",
+    method: "Discovery & Design + Redesign App/WhatsApp",
+    description:
+      "Programa que transforma a experiência de compra de itens com peso variável, com cobrança justa e comunicação clara — gerando R$ 539k de receita em 66 dias.",
+    tags: ["Varejo", "Peso variável", "App", "WhatsApp", "Discovery"],
+    logo: gpaLogo.url,
+    coverImage: gpaClienteMaisCover.url,
   },
 ];
 
