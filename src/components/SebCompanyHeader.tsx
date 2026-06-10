@@ -1,0 +1,45 @@
+import { Milestone, Globe, Award } from "lucide-react";
+import logo from "@/assets/seb-logo.png.asset.json";
+import cover from "@/assets/seb-cover.jpg.asset.json";
+
+const stats = [
+  { icon: Milestone, value: "160+", label: "Anos" },
+  { icon: Globe, value: "150+", label: "Países" },
+  { icon: Award, value: "+40", label: "Marcas" },
+];
+
+export const SebCompanyHeader = () => (
+  <section data-pdf-section="company-header" className="container mx-auto px-6 py-12">
+    <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+      <div>
+        <img src={logo.url} alt="Groupe SEB" className="h-20 w-auto md:h-24" />
+
+        <p className="mt-10 max-w-xl text-base leading-relaxed text-muted-foreground">
+          <strong className="font-bold text-foreground">Líder mundial em eletroportáteis e utensílios domésticos, com mais de 33 mil colaboradores.</strong>{" "}
+          Controla marcas reconhecidas como Arno, Rochedo, Tefal e Moulinex, sendo referência global em inovação, design e excelência industrial.
+        </p>
+
+        <div className="mt-8 grid grid-cols-3 gap-4">
+          {stats.map(({ icon: Icon, value, label }) => (
+            <div
+              key={label}
+              className="rounded-2xl border border-border bg-card p-5 shadow-soft"
+            >
+              <Icon className="h-6 w-6 text-primary" strokeWidth={2} />
+              <p className="mt-3 text-2xl font-bold leading-none text-foreground">{value}</p>
+              <p className="mt-2 text-xs font-medium text-muted-foreground">{label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-elevated">
+        <img
+          src={cover.url}
+          alt="Groupe SEB — Indústria"
+          className="h-full w-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+);
