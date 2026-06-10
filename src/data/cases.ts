@@ -63,6 +63,7 @@ import gpaVencimentoCover from "@/assets/gpa-vencimento-cover.png.asset.json";
 import gpaGcpCover from "@/assets/gpa-gcp-cover.png.asset.json";
 import sebLogo from "@/assets/seb-logo.png.asset.json";
 import sebCover from "@/assets/seb-cover.jpg.asset.json";
+import sebVentiladorMockup from "@/assets/seb-ventilador-mockup.png.asset.json";
 
 
 
@@ -469,7 +470,7 @@ export const cases: CaseItem[] = [
       "App pioneiro para controlar o ventilador Arno Ultra Silence Force via Bluetooth, com interface intuitiva, alta performance e Machine Learning.",
     tags: ["Indústria", "Mobile App", "Bluetooth", "Swift", "Kotlin", "Firebase"],
     logo: sebLogo.url,
-    coverImage: sebCover.url,
+    coverImage: sebVentiladorMockup.url,
   },
 ];
 
