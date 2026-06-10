@@ -23,6 +23,7 @@ import CaseEurochemTaNaMao from "./pages/CaseEurochemTaNaMao.tsx";
 import CaseGpaPlataformaLogistica from "./pages/CaseGpaPlataformaLogistica.tsx";
 import CaseGpaClienteMais from "./pages/CaseGpaClienteMais.tsx";
 import CaseGpaGamification from "./pages/CaseGpaGamification.tsx";
+import CaseGpaProgramaClienteMais from "./pages/CaseGpaProgramaClienteMais.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/case/gpa-plataforma-logistica" element={<CaseGpaPlataformaLogistica />} />
           <Route path="/case/gpa-cliente-mais" element={<CaseGpaClienteMais />} />
           <Route path="/case/gpa-gamification" element={<CaseGpaGamification />} />
+          <Route path="/case/gpa-programa-cliente-mais" element={<CaseGpaProgramaClienteMais />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
