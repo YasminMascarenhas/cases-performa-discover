@@ -1,7 +1,7 @@
 import { ArrowLeft, Target, Lightbulb, TrendingUp, Gauge, Database, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { GpaCompanyHeader } from "@/components/GpaCompanyHeader";
-import sideImage from "@/assets/gpa-gcp-cover.png.asset.json";
+
 
 const resultGroups = [
   {
@@ -48,36 +48,26 @@ const CaseGpaMigracaoGcp = () => {
 
       <section className="bg-surface border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="space-y-10">
-              <div>
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                  <Target className="h-7 w-7 text-primary" />
-                </div>
-                <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  <strong className="font-bold text-foreground">Modernizar o ecossistema de tecnologia do GPA.</strong>
-                </p>
+          <div className="space-y-10">
+            <div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                <Target className="h-7 w-7 text-primary" />
               </div>
-
-              <div>
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-                  <Lightbulb className="h-7 w-7 text-primary" />
-                </div>
-                <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — Migração para GCP</h2>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  <strong className="font-bold text-foreground">Migração da estrutura para a AWS com zero impacto em produção,</strong>{" "}
-                  com maior estabilidade, melhor desempenho e visibilidade técnica em 14 dias.
-                </p>
-              </div>
+              <h2 className="mt-5 text-2xl font-bold text-foreground">Desafio</h2>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+                <strong className="font-bold text-foreground">Modernizar o ecossistema de tecnologia do GPA.</strong>
+              </p>
             </div>
 
-            <div className="flex justify-center">
-              <img
-                src={sideImage.url}
-                alt="GPA — Migração para GCP"
-                className="max-h-[520px] w-full rounded-3xl object-cover shadow-elevated"
-              />
+            <div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+                <Lightbulb className="h-7 w-7 text-primary" />
+              </div>
+              <h2 className="mt-5 text-2xl font-bold text-foreground">Solução — Migração para GCP</h2>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+                <strong className="font-bold text-foreground">Migração da estrutura para a AWS com zero impacto em produção,</strong>{" "}
+                com maior estabilidade, melhor desempenho e visibilidade técnica em 14 dias.
+              </p>
             </div>
           </div>
         </div>
