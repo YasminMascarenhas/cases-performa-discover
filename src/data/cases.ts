@@ -64,6 +64,8 @@ import gpaGcpCover from "@/assets/gpa-gcp-cover.png.asset.json";
 import sebLogo from "@/assets/seb-logo-v2.png.asset.json";
 import sebCover from "@/assets/seb-cover.jpg.asset.json";
 import sebVentiladorMockup from "@/assets/seb-ventilador-mockup.png.asset.json";
+import hpeLogo from "@/assets/hpe-logo.png.asset.json";
+import hpeCover from "@/assets/hpe-cover.png.asset.json";
 
 
 
@@ -111,7 +113,7 @@ export const segments: Segment[] = [
   },
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
-  { name: "Serviços", icon: Briefcase },
+  { name: "Serviços", icon: Briefcase, projects: [{ company: "HPE", title: "IA para Forecast Financeiro", logo: hpeLogo.url }] },
   { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }, { company: "GPA", title: "Programa Cliente Mais", logo: gpaLogo.url }, { company: "GPA", title: "Pra Já + Marketing", logo: gpaLogo.url }, { company: "GPA", title: "Acessibilidade", logo: gpaLogo.url }, { company: "GPA", title: "Produtos Próximos ao Vencimento", logo: gpaLogo.url }, { company: "GPA", title: "Migração para GCP", logo: gpaLogo.url }] },
 ];
 
@@ -487,6 +489,21 @@ export const cases: CaseItem[] = [
     tags: ["Indústria", "SAP", "TPM", "Manutenção", "B2B"],
     logo: sebLogo.url,
     coverImage: sebCover.url,
+  },
+  {
+    id: "32",
+    slug: "hpe-forecast-financeiro",
+    title: "IA para Forecast Financeiro",
+    company: "HPE",
+    segment: "Serviços",
+    category: "Katalysis",
+    solution: "IA sob medida integrada ao Salesforce",
+    method: "AI Sprint + AI Strategy",
+    description:
+      "IA treinada com +3 anos de dados reais do Salesforce para gerar previsões ágeis e confiáveis, elevando a acuracidade do forecast em +85%.",
+    tags: ["Serviços", "IA", "Salesforce", "Forecast", "AI Strategy"],
+    logo: hpeLogo.url,
+    coverImage: hpeCover.url,
   },
 ];
 
