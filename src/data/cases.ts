@@ -52,6 +52,8 @@ import eduflexLogo from "@/assets/eduflex-logo.png.asset.json";
 import eduflexCover from "@/assets/eduflex-cover.jpg.asset.json";
 import eurochemLogoSvg from "@/assets/eurochem-logo.svg.asset.json";
 import eurochemCaseCover from "@/assets/eurochem-cover.png.asset.json";
+import gpaLogo from "@/assets/gpa-logo.png.asset.json";
+import gpaCover from "@/assets/gpa-cover.png.asset.json";
 
 
 
@@ -98,7 +100,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -323,6 +325,21 @@ export const cases: CaseItem[] = [
     tags: ["Portal Cliente", "Multicanal", "Agro", "Pedidos", "Rastreabilidade"],
     logo: eurochemLogoSvg.url,
     coverImage: eurochemCaseCover.url,
+  },
+  {
+    id: "22",
+    slug: "gpa-plataforma-logistica",
+    title: "Plataforma Logística",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Integração com Instaleap",
+    method: "Discovery & Design + Integração Logística",
+    description:
+      "Integração com a Instaleap para expandir as entregas próprias do GPA, ampliando cobertura logística e gerando R$ 5,2 milhões de receita incremental.",
+    tags: ["Varejo", "Logística", "Instaleap", "Entregas", "Discovery"],
+    logo: gpaLogo.url,
+    coverImage: gpaCover.url,
   },
 ];
 
