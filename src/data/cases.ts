@@ -273,6 +273,21 @@ export const cases: CaseItem[] = [
     logo: eatonLogo.url,
     coverImage: eatonPortoFelizCover.url,
   },
+  {
+    id: "19",
+    slug: "eaton-blue-guardian",
+    title: "Blue Guardian",
+    company: "Eaton",
+    segment: "Indústria",
+    category: "Agile Development",
+    solution: "IA preditiva para Forecast Financeiro",
+    method: "Agile Development + IA",
+    description:
+      "Plataforma inteligente com análise preditiva baseada em dados históricos e variações sazonais, com automação e insights em tempo real para o time de vendas.",
+    tags: ["IA Preditiva", "Forecast", "Vendas", "Indústria"],
+    logo: eatonLogo.url,
+    coverImage: eatonBlueGuardianCover.url,
+  },
 ];
 
 
