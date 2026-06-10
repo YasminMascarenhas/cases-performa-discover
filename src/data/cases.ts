@@ -106,6 +106,7 @@ export const segments: Segment[] = [
       { company: "Eaton", title: "Porto Feliz Power Systems", logo: eatonLogo.url },
       { company: "Eaton", title: "Blue Guardian", logo: eatonLogo.url },
       { company: "Groupe SEB", title: "Ventilador por App Mobile", logo: sebLogo.url },
+      { company: "Groupe SEB", title: "Processos Digitais Integrados", logo: sebLogo.url },
     ],
   },
   { name: "Financeiro", icon: Landmark },
