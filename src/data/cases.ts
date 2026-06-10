@@ -52,6 +52,8 @@ import eduflexLogo from "@/assets/eduflex-logo.png.asset.json";
 import eduflexCover from "@/assets/eduflex-cover.jpg.asset.json";
 import eurochemLogoSvg from "@/assets/eurochem-logo.svg.asset.json";
 import eurochemCaseCover from "@/assets/eurochem-cover.png.asset.json";
+import gpaLogo from "@/assets/gpa-logo.png.asset.json";
+import gpaCover from "@/assets/gpa-cover.png.asset.json";
 
 
 
