@@ -15,6 +15,7 @@ const Index = () => {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [activeSegment, setActiveSegment] = useState<SegmentName | null>(null);
+  const [activeCompany, setActiveCompany] = useState<string | null>(null);
   const [selectionMode, setSelectionMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [exporting, setExporting] = useState(false);
