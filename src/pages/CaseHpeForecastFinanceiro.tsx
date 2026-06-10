@@ -1,7 +1,7 @@
 import { ArrowLeft, Target, Lightbulb, TrendingUp, ShieldCheck, Lightbulb as Idea, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { HpeCompanyHeader } from "@/components/HpeCompanyHeader";
-import sideImage from "@/assets/hpe-cover.png.asset.json";
+import sideImage from "@/assets/hpe-mockup.png.asset.json";
 
 const results = [
   { icon: TrendingUp, label: "+85% de acuracidade para oportunidades com alta probabilidade de fechamento" },
@@ -57,7 +57,7 @@ const CaseHpeForecastFinanceiro = () => {
               <img
                 src={sideImage.url}
                 alt="HPE — IA para Forecast Financeiro"
-                className="max-h-[520px] w-full rounded-3xl object-cover shadow-elevated"
+                className="max-h-[520px] w-full object-contain"
               />
             </div>
           </div>
