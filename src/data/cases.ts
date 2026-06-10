@@ -50,6 +50,8 @@ import eatonPortoFelizCover from "@/assets/eaton-porto-feliz-cover.png.asset.jso
 import eatonBlueGuardianCover from "@/assets/eaton-blue-guardian-cover.png.asset.json";
 import eduflexLogo from "@/assets/eduflex-logo.png.asset.json";
 import eduflexCover from "@/assets/eduflex-cover.jpg.asset.json";
+import eurochemLogoSvg from "@/assets/eurochem-logo.svg.asset.json";
+import eurochemCaseCover from "@/assets/eurochem-cover.png.asset.json";
 
 
 
@@ -306,6 +308,21 @@ export const cases: CaseItem[] = [
     tags: ["IA", "Educação Inclusiva", "BNCC", "POC", "Katalysis"],
     logo: eduflexLogo.url,
     coverImage: eduflexCover.url,
+  },
+  {
+    id: "21",
+    slug: "eurochem-ta-na-mao",
+    title: "Portal Tá na Mão",
+    company: "EuroChem",
+    segment: "Agro",
+    category: "Agile Development",
+    solution: "Sistema Multicanal para clientes",
+    method: "Agile Development + Portal Multicanal",
+    description:
+      "Portal Tá na Mão: sistema multicanal que dá mais autonomia e transparência aos clientes EuroChem na gestão de pedidos, entregas e pagamentos.",
+    tags: ["Portal Cliente", "Multicanal", "Agro", "Pedidos", "Rastreabilidade"],
+    logo: eurochemLogoSvg.url,
+    coverImage: eurochemCaseCover.url,
   },
 ];
 
