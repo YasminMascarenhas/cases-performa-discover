@@ -1,5 +1,5 @@
 import { Milestone, Globe, Award } from "lucide-react";
-import logo from "@/assets/seb-logo.png.asset.json";
+import logo from "@/assets/seb-logo-v2.png.asset.json";
 import cover from "@/assets/seb-cover.jpg.asset.json";
 
 const stats = [
