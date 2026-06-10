@@ -48,6 +48,8 @@ import eatonCover from "@/assets/eaton-cover.png.asset.json";
 import eatonLifeCover from "@/assets/eaton-life-cover.png.asset.json";
 import eatonPortoFelizCover from "@/assets/eaton-porto-feliz-cover.png.asset.json";
 import eatonBlueGuardianCover from "@/assets/eaton-blue-guardian-cover.png.asset.json";
+import eduflexLogo from "@/assets/eduflex-logo.png.asset.json";
+import eduflexCover from "@/assets/eduflex-cover.jpg.asset.json";
 
 
 
@@ -76,7 +78,7 @@ export const segments: Segment[] = [
       { company: "Yara", title: "Portal Automatizado", logo: yaraLogo },
     ],
   },
-  { name: "Educação", icon: GraduationCap, projects: [{ company: "Cogna", title: "AI Journey", logo: cognaLogo.url }] },
+  { name: "Educação", icon: GraduationCap, projects: [{ company: "Cogna", title: "AI Journey", logo: cognaLogo.url }, { company: "EduFlex", title: "POC IA Educação Inclusiva", logo: eduflexLogo.url }] },
   { name: "E-games", icon: Gamepad2 },
   {
     name: "Indústria",
@@ -289,6 +291,21 @@ export const cases: CaseItem[] = [
     tags: ["IA Preditiva", "Forecast", "Vendas", "Indústria"],
     logo: eatonLogo.url,
     coverImage: eatonBlueGuardianCover.url,
+  },
+  {
+    id: "20",
+    slug: "eduflex-poc-ia",
+    title: "POC IA Educação Inclusiva",
+    company: "EduFlex",
+    segment: "Educação",
+    category: "Katalysis",
+    solution: "POC com IA para adaptação de atividades",
+    method: "Katalysis + IA aplicada à BNCC",
+    description:
+      "POC com IA que adapta atividades escolares ao perfil cognitivo e sensorial de cada estudante, apoiando professores em inclusão e personalização.",
+    tags: ["IA", "Educação Inclusiva", "BNCC", "POC", "Katalysis"],
+    logo: eduflexLogo.url,
+    coverImage: eduflexCover.url,
   },
 ];
 
