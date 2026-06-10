@@ -55,6 +55,7 @@ import eurochemCaseCover from "@/assets/eurochem-cover.png.asset.json";
 import gpaLogo from "@/assets/gpa-logo.png.asset.json";
 import gpaCover from "@/assets/gpa-cover.png.asset.json";
 import gpaClienteMaisCover from "@/assets/gpa-cliente-mais-cover.png.asset.json";
+import gpaGamificationCover from "@/assets/gpa-gamification-cover.png.asset.json";
 
 
 
@@ -101,7 +102,7 @@ export const segments: Segment[] = [
   { name: "Financeiro", icon: Landmark },
   { name: "Saúde", icon: HeartPulse },
   { name: "Serviços", icon: Briefcase },
-  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }] },
+  { name: "Varejo", icon: ShoppingBag, projects: [{ company: "GPA", title: "Plataforma Logística", logo: gpaLogo.url }, { company: "GPA", title: "Precificação Justa", logo: gpaLogo.url }, { company: "GPA", title: "Gamification Design", logo: gpaLogo.url }] },
 ];
 
 export const categories: Category[] = [
@@ -356,6 +357,21 @@ export const cases: CaseItem[] = [
     tags: ["Varejo", "Peso variável", "App", "WhatsApp", "Discovery"],
     logo: gpaLogo.url,
     coverImage: gpaClienteMaisCover.url,
+  },
+  {
+    id: "24",
+    slug: "gpa-gamification",
+    title: "Gamification Design",
+    company: "GPA",
+    segment: "Varejo",
+    category: "Discovery & Design",
+    solution: "Gamification Design em 3 etapas",
+    method: "Discovery + Design Sprint + Prototyping",
+    description:
+      "Processo ágil e colaborativo para compreender a jornada dos entregadores do GPA e engajá-los por meio da gamificação no app.",
+    tags: ["Varejo", "Gamification", "Design Sprint", "Discovery", "Prototyping"],
+    logo: gpaLogo.url,
+    coverImage: gpaGamificationCover.url,
   },
 ];
 
