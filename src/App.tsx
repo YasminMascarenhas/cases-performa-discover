@@ -31,6 +31,7 @@ import CaseGpaMigracaoGcp from "./pages/CaseGpaMigracaoGcp.tsx";
 import CaseSebVentiladorApp from "./pages/CaseSebVentiladorApp.tsx";
 import CaseSebProcessosDigitais from "./pages/CaseSebProcessosDigitais.tsx";
 import CaseHpeForecastFinanceiro from "./pages/CaseHpeForecastFinanceiro.tsx";
+import CaseJllWorkshopColaborativo from "./pages/CaseJllWorkshopColaborativo.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -77,6 +78,7 @@ const App = () => {
           <Route path="/case/seb-ventilador-app" element={<CaseSebVentiladorApp />} />
           <Route path="/case/seb-processos-digitais" element={<CaseSebProcessosDigitais />} />
           <Route path="/case/hpe-forecast-financeiro" element={<CaseHpeForecastFinanceiro />} />
+          <Route path="/case/jll-workshop-colaborativo" element={<CaseJllWorkshopColaborativo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
