@@ -1,7 +1,6 @@
 import { ArrowLeft, Target, Lightbulb, TrendingUp, Users, ClipboardList, Landmark, Gem } from "lucide-react";
 import { Link } from "react-router-dom";
 import { JllCompanyHeader } from "@/components/JllCompanyHeader";
-import workshopTeam from "@/assets/jll-workshop-team.png.asset.json";
 import workshopBoard from "@/assets/jll-workshop-board.png.asset.json";
 
 const results = [
@@ -58,16 +57,11 @@ const CaseJllWorkshopColaborativo = () => {
               </div>
             </div>
 
-            <div className="grid gap-4">
-              <img
-                src={workshopTeam.url}
-                alt="JLL — Equipe do Workshop"
-                className="w-full rounded-2xl object-cover shadow-elevated"
-              />
+            <div className="flex justify-center">
               <img
                 src={workshopBoard.url}
                 alt="JLL — Quadro de Workshop"
-                className="w-full rounded-2xl object-cover shadow-elevated"
+                className="w-full max-h-[600px] rounded-2xl object-contain shadow-elevated"
               />
             </div>
           </div>
