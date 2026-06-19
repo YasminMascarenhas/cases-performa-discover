@@ -58,16 +58,11 @@ const CaseJllWorkshopColaborativo = () => {
               </div>
             </div>
 
-            <div className="grid gap-4">
-              <img
-                src={workshopTeam.url}
-                alt="JLL — Equipe do Workshop"
-                className="w-full rounded-2xl object-cover shadow-elevated"
-              />
+            <div className="flex justify-center">
               <img
                 src={workshopBoard.url}
                 alt="JLL — Quadro de Workshop"
-                className="w-full rounded-2xl object-cover shadow-elevated"
+                className="w-full max-h-[600px] rounded-2xl object-contain shadow-elevated"
               />
             </div>
           </div>
