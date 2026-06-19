@@ -1,7 +1,6 @@
 import { ArrowLeft, Target, Lightbulb, TrendingUp, Users, ClipboardList, Landmark, Gem } from "lucide-react";
 import { Link } from "react-router-dom";
 import { JllCompanyHeader } from "@/components/JllCompanyHeader";
-import workshopTeam from "@/assets/jll-workshop-team.png.asset.json";
 import workshopBoard from "@/assets/jll-workshop-board.png.asset.json";
 
 const results = [
