@@ -507,6 +507,20 @@ export const cases: CaseItem[] = [
     logo: hpeLogo.url,
     coverImage: hpeCover.url,
   },
+  {
+    id: "33",
+    slug: "jll-workshop-colaborativo",
+    title: "Workshop Colaborativo",
+    company: "JLL",
+    segment: "Serviços",
+    solution: "Workshop colaborativo com lideranças",
+    method: "Governança ágil + OKRs + Solution Cards",
+    description:
+      "Workshop colaborativo com lideranças JLL para estruturar governança ágil, conectar estratégia à execução e fortalecer a autonomia dos times.",
+    tags: ["Serviços", "Workshop", "Governança ágil", "OKRs", "Liderança"],
+    logo: jllLogo.url,
+    coverImage: jllCover.url,
+  },
 ];
 
 
