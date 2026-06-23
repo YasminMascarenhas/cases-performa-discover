@@ -68,6 +68,8 @@ import hpeLogo from "@/assets/hpe-logo.png.asset.json";
 import hpeCover from "@/assets/hpe-cover.png.asset.json";
 import jllLogo from "@/assets/jll-logo.png.asset.json";
 import jllCover from "@/assets/jll-workshop-team.png.asset.json";
+import ligaLogo from "@/assets/liga-logo.svg.asset.json";
+import ligaCover from "@/assets/liga-cover.png.asset.json";
 
 
 
@@ -97,7 +99,7 @@ export const segments: Segment[] = [
     ],
   },
   { name: "Educação", icon: GraduationCap, projects: [{ company: "Cogna", title: "AI Journey", logo: cognaLogo.url }, { company: "EduFlex", title: "POC IA Educação Inclusiva", logo: eduflexLogo.url }] },
-  { name: "E-games", icon: Gamepad2 },
+  { name: "E-games", icon: Gamepad2, projects: [{ company: "Liga", title: "WhatsApp: Robustez e Performance em Picos de Atendimento e Vendas", logo: ligaLogo.url }] },
   {
     name: "Indústria",
     icon: Factory,
@@ -520,6 +522,21 @@ export const cases: CaseItem[] = [
     tags: ["Serviços", "Workshop", "Governança ágil", "OKRs", "Liderança"],
     logo: jllLogo.url,
     coverImage: jllCover.url,
+  },
+  {
+    id: "34",
+    slug: "liga-whatsapp",
+    title: "WhatsApp: Robustez e Performance em Picos de Atendimento e Vendas",
+    company: "Liga",
+    segment: "E-games",
+    category: "Agile Development",
+    solution: "Testes automatizados em picos reais",
+    method: "Agile Development + Testes de carga",
+    description:
+      "Testes automatizados para validar a plataforma de WhatsApp da Liga em picos reais, com mais segurança, velocidade e confiabilidade nos dias de jogo.",
+    tags: ["E-games", "WhatsApp", "Performance", "Testes de carga", "Arquitetura"],
+    logo: ligaLogo.url,
+    coverImage: ligaCover.url,
   },
 ];
 
