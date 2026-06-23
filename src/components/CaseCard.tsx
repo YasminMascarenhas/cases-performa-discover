@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const CaseCard = ({ item, variant = "default", selectable = false, selected = false, onSelectToggle }: Props) => {
-  const Icon = categoryIcon[item.category];
+  const Icon = item.category ? categoryIcon[item.category] : undefined;
   const isFeatured = variant === "featured";
 
   const borderClass = selectable && selected
@@ -57,7 +57,7 @@ export const CaseCard = ({ item, variant = "default", selectable = false, select
                     src={item.logo}
                     alt={`${item.company} logo`}
                     loading="lazy"
-                    className={`w-auto object-contain ${item.company === "ALE Combustíveis" ? "max-h-10 md:max-h-12" : item.company === "BorgWarner" ? "max-h-20 md:max-h-28" : item.company === "Cogna" ? "max-h-10 md:max-h-12" : item.company === "Continental" ? "max-h-14 md:max-h-16" : item.company === "Eaton" ? "max-h-10 md:max-h-12" : item.company === "Croda" ? "max-h-20 md:max-h-24" : item.company === "EduFlex" ? "max-h-10 md:max-h-12" : item.company === "EuroChem" ? "max-h-14 md:max-h-16" : item.company === "GPA" ? "max-h-10 md:max-h-12" : item.company === "HPE" ? "max-h-8 md:max-h-10" : item.company === "JLL" ? "max-h-10 md:max-h-12" : "max-h-16 md:max-h-20"}`}
+                    className={`w-auto object-contain ${item.company === "ALE Combustíveis" ? "max-h-10 md:max-h-12" : item.company === "BorgWarner" ? "max-h-20 md:max-h-28" : item.company === "Cogna" ? "max-h-10 md:max-h-12" : item.company === "Continental" ? "max-h-14 md:max-h-16" : item.company === "Eaton" ? "max-h-10 md:max-h-12" : item.company === "Croda" ? "max-h-20 md:max-h-24" : item.company === "EduFlex" ? "max-h-10 md:max-h-12" : item.company === "EuroChem" ? "max-h-14 md:max-h-16" : item.company === "GPA" ? "max-h-10 md:max-h-12" : item.company === "HPE" ? "max-h-8 md:max-h-10" : item.company === "JLL" ? "max-h-10 md:max-h-12" : item.company === "Liga" ? "max-h-12 md:max-h-14" : "max-h-16 md:max-h-20"}`}
                   />
                 </div>
               )}

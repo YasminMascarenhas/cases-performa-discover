@@ -32,6 +32,7 @@ import CaseSebVentiladorApp from "./pages/CaseSebVentiladorApp.tsx";
 import CaseSebProcessosDigitais from "./pages/CaseSebProcessosDigitais.tsx";
 import CaseHpeForecastFinanceiro from "./pages/CaseHpeForecastFinanceiro.tsx";
 import CaseJllWorkshopColaborativo from "./pages/CaseJllWorkshopColaborativo.tsx";
+import CaseLigaWhatsapp from "./pages/CaseLigaWhatsapp.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -79,6 +80,7 @@ const App = () => {
           <Route path="/case/seb-processos-digitais" element={<CaseSebProcessosDigitais />} />
           <Route path="/case/hpe-forecast-financeiro" element={<CaseHpeForecastFinanceiro />} />
           <Route path="/case/jll-workshop-colaborativo" element={<CaseJllWorkshopColaborativo />} />
+          <Route path="/case/liga-whatsapp" element={<CaseLigaWhatsapp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
