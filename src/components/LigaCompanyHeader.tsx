@@ -1,6 +1,6 @@
 import { Rocket, ShieldCheck } from "lucide-react";
 import logo from "@/assets/liga-logo.svg.asset.json";
-import cover from "@/assets/liga-cover.png.asset.json";
+import cover from "@/assets/liga-cover-v2.png.asset.json";
 
 const stats = [
   { icon: Rocket, value: "Startup", label: "Brasileira" },
